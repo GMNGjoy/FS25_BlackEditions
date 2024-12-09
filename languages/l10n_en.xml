@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <translationContributors/>
+    <texts>
+        <text name="storeItem_batwing" text="BatWing MM8000" />
+
+        <text name="workMode_Mower" text="Mower" />
+        <text name="workMode_Swather" text="Swathing Mower" />
+        <text name="workMode_BrushHog" text="Brush Hog" />
+        <text name="workMode_Mulcher" text="Mulcher" />
+        <text name="workMode_StumpGrinder" text="Stump Grinder" />
+        <text name="workMode_Destroyer" text="Destroyer" />
+
+        <text name="color_hellaBlack" text="Hella Black, Yo!" />
+        <text name="color_hellaOldBlack" text="Hella Old Black" />
+    </texts>
+</l10n>

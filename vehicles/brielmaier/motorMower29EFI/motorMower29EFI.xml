@@ -1,0 +1,823 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="handToolMower" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>29 EFI BLACK</name>
+        <specs>
+            <power>75</power>
+            <maxSpeed>25</maxSpeed>
+        </specs>
+        <functions>
+            <function>$l10n_function_mower</function>
+        </functions>
+        <image>$data/vehicles/brielmaier/motorMower29EFI/store_motorMower29EFI.png</image>
+        <price>12000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>BRIELMAIER</brand>
+        <category>handtoolsMisc</category>
+        <shopTranslationOffset>0 0.009 0</shopTranslationOffset>
+        <shopRotationOffset>2.36 0 0</shopRotationOffset>
+        <shopIgnoreLastComponentPositions>true</shopIgnoreLastComponentPositions>
+        <vertexBufferMemoryUsage>1687296</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>437504</indexBufferMemoryUsage>
+        <textureMemoryUsage>1245184</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>424284</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_tool</typeDesc>
+        <filename>vehicles/brielmaier/motorMower29EFI/motorMower29EFI.i3d</filename>
+        <sounds filename="$data/vehicles/brielmaier/motorMower29EFI/sounds/motorMower29EFI.xml" volumeFactor="0.6"/>
+        <size width="4.6" length="3.45" height="1.65" lengthOffset="0.7" widthOffset="-0.52"/>
+        <speedLimit value="18" />
+        <supportsRadio>false</supportsRadio>
+        <components>
+            <component centerOfMass="0 0.413 0.4" solverIterationCount="30" mass="147" />
+            <component centerOfMass="0 -0.08 0"   solverIterationCount="10" mass="240" />
+            <joint component1="1" component2="2" node="componentJointAttachment" rotLimit="0 0 15" transLimit="0 0 0" />
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="VEHICLE"/>
+    </base>
+
+    <configurationSets title="$l10n_configuration_design">
+        <configurationSet name="$l10n_configuration_mower">
+            <configuration name="vehicleType" index="1"/>
+            <configuration name="wheel"       index="1"/>
+            <configuration name="workArea"    index="1"/>
+            <configuration name="workMode"    index="1"/>
+            <configuration name="ai"          index="1"/>
+        </configurationSet>
+        <configurationSet name="$l10n_configuration_windrower">
+            <configuration name="vehicleType" index="2"/>
+            <configuration name="wheel"       index="2"/>
+            <configuration name="workArea"    index="2"/>
+            <configuration name="workMode"    index="2"/>
+            <configuration name="ai"          index="2"/>
+        </configurationSet>
+    </configurationSets>
+
+    <vehicleTypeConfigurations>
+        <vehicleTypeConfiguration name="1" vehicleType="handToolMower" workingWidth="4.15">
+            <objectChange node="mowerFrame"              visibilityActive="true"    visibilityInactive="false"/>
+            <objectChange node="hosesMower"              visibilityActive="true"    visibilityInactive="false"/>
+            <objectChange node="wheelMowerFrontReprPhys" visibilityActive="true"    visibilityInactive="false"/>
+            <objectChange node="mowerColPart01"          compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="mowerColPart02"          compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="mowerColPart03"          compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="mowerColPart04"          compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="mowerColPart05"          compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="steeringCenterNode"      translationActive="-0.548 0 0"/>
+        </vehicleTypeConfiguration>
+        <vehicleTypeConfiguration name="2" price="5000" vehicleType="handToolWindrower" workingWidth="2.2">
+            <objectChange node="windrowerFrame"                        visibilityActive="true"    visibilityInactive="false"/>
+            <objectChange node="hosesWindrower"                        visibilityActive="true"    visibilityInactive="false"/>
+            <objectChange node="windrowerColPart01"                    compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="windrowerColPart02"                    compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="windrowerColPart03"                    compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="steeringCenterNode"                    translationActive="0 0 0"/>
+            <objectChange node="motorMower29EFI_attachment_component2" massActive="210" massInactive="240" />
+            <foliageBendingModifier index="2" minX="-1.1" maxX="1.1" minZ="-0.03" maxZ="1" yOffset="-0.3"/>
+            <size width="2.25"/>
+        </vehicleTypeConfiguration>
+    </vehicleTypeConfigurations>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="1" price="0" brand="LIZARD" saveId="LIZARD_DEFAULT">
+                <wheels autoRotateBackSpeed="7">
+                    <wheel filename="shared/wheels/tires/brielmaier/spikes/spikes.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics rotSpeed="0" restLoad="0.2" repr="wheelFrontLeft" useReprDirection="true" forcePointRatio="0.3" initialCompression="12" suspTravel="0.1" spring="12" damper="20" showSteeringAngle="false"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/tires/brielmaier/spikes/spikes.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.2" repr="wheelFrontRight" useReprDirection="true" forcePointRatio="0.3" initialCompression="12" suspTravel="0.1" spring="12" damper="20" showSteeringAngle="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics rotSpeed="1" restLoad="0.1" repr="wheelMowerLeft" radius="0.17" mass="0.01" width="0.1" forcePointRatio="0.3" initialCompression="7" suspTravel="0.1" spring="10" damper="50" showSteeringAngle="false" brakeFactor="0" supportsWheelSink="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics rotSpeed="-1" restLoad="0.1" repr="wheelMowerRight" radius="0.17" mass="0.01" width="0.1" forcePointRatio="0.3" initialCompression="7" suspTravel="0.1" spring="10" damper="50" showSteeringAngle="false" brakeFactor="0" supportsWheelSink="false"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="2" price="0" brand="LIZARD" saveId="LIZARD_DEFAULT2">
+                <wheels autoRotateBackSpeed="7">
+                    <wheel filename="shared/wheels/tires/brielmaier/spikes/spikes.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics rotSpeed="0" restLoad="0.2" repr="wheelFrontLeft" useReprDirection="true" forcePointRatio="0.3" initialCompression="12" suspTravel="0.1" spring="12" damper="20" showSteeringAngle="false"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/tires/brielmaier/spikes/spikes.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.2" repr="wheelFrontRight" useReprDirection="true" forcePointRatio="0.3" initialCompression="12" suspTravel="0.1" spring="12" damper="20" showSteeringAngle="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics rotSpeed="1" restLoad="0.1" repr="wheelWindrowerLeft" radius="0.15" mass="0.01" width="0.1" forcePointRatio="0.3" initialCompression="7" suspTravel="0.1" spring="5" damper="50" showSteeringAngle="false" brakeFactor="0" useReprDirection="true"/>
+                    </wheel>
+                    <wheel>
+                        <physics rotSpeed="-1" restLoad="0.1" repr="wheelWindrowerRight" radius="0.15" mass="0.01" width="0.1" forcePointRatio="0.3" initialCompression="7" suspTravel="0.1" spring="5" damper="50" showSteeringAngle="false" brakeFactor="0" useReprDirection="true"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <dynamicallyLoadedWheels>
+            <dynamicallyLoadedWheel linkNode="wheelMowerFrontDriveNodePhys" filename="$data/shared/wheels/tires/lizard/implement/260_40R10.xml" isLeft="false"/>
+        </dynamicallyLoadedWheels>
+
+        <ackermannSteeringConfigurations>
+            <ackermannSteering rotSpeed="80" rotMax="85" rotCenterNode="steeringCenterNode"/>
+        </ackermannSteeringConfigurations>
+
+        <hubMaterial materialTemplateName="STIHL_ORANGE_1"/>
+
+        <hubs>
+            <hub linkNode="wheelMowerFrontDriveNodePhys" filename="$data/shared/wheels/hubs/hub_n6_2.xml" isLeft="false" scale="0.09 0.09 0.09" offset="0.01"/>
+        </hubs>
+    </wheels>
+
+    <speedRotatingParts>
+        <speedRotatingPart node="wheelMowerFrontReprPhys"   driveNode="wheelMowerFrontDriveNodePhys" radius="0.23" versatileYRot="true" minYRot="-45" maxYRot="45" foldMinLimit="1" foldMaxLimit="1" fadeOutTime="1"/>
+        <speedRotatingPart node="wheelWindrowerLeftVisual"  wheelIndex="3" wheelScale="1.25"/>
+        <speedRotatingPart node="wheelWindrowerRightVisual" wheelIndex="4" wheelScale="1.25"/>
+    </speedRotatingParts>
+
+    <powerConsumer ptoRpm="500" neededMaxPtoPower="0"/>
+
+    <lights>
+        <states>
+            <state lightTypes="0"/>
+        </states>
+
+        <sharedLight linkNode="hellaWorkingLightRound_01_01" filename="$data/shared/assets/lights/hella/hellaWorkingLight02.xml" lightTypes="0">
+            <rotationNode name="rotationNode1" rotation="-45 0 0"/>
+        </sharedLight>
+        <sharedLight linkNode="hellaWorkingLightRound_01_02" filename="$data/shared/assets/lights/hella/hellaWorkingLight02.xml" lightTypes="0">
+            <rotationNode name="rotationNode1" rotation="-45 0 0"/>
+        </sharedLight>
+
+        <realLights>
+            <low>
+                <light node="workLightFrontLow"  lightTypes="0"/>
+            </low>
+            <high>
+                <light node="workLightFrontHigh" lightTypes="0"/>
+            </high>
+        </realLights>
+
+        <dashboards>
+            <dashboard displayType="EMITTER" valueType="lightState" node="iconsDefaultLightUp_decals" lightTypes="0" intensity="0.2" groups="MOTOR_ACTIVE"/>
+        </dashboards>
+    </lights>
+
+    <enterable isTabbable="true" >
+        <enterReferenceNode node="exitPoint" interactionRadius="3.0"/>
+        <exitPoint node="exitPoint" />
+
+        <nicknameRenderNode node="nicknameRenderingNode" offset="0 0.5 0"/>
+
+        <cameras>
+            <camera node="outdoorCamera" rotatable="true" limit="true" rotMinX="-1.4" rotMaxX="1.0" transMin="3.5" transMax="15" rotateNode="outdoorCameraTarget" useWorldXZRotation="true" translation="0 0 7" rotation="-17.5 180 0" >
+                <raycastNode node="cameraRaycastNode1"/>
+                <raycastNode node="cameraRaycastNode2"/>
+            </camera>
+            <camera node="indoorCamera" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0.0" transMax="0" useMirror="true" isInside="true" useOutdoorSounds="true"  shadowFocusBox="shadowFocusBox" />
+        </cameras>
+
+        <characterNode node="skeleton" cameraMinDistance="0.75" useAnimation="true" />
+
+        <enterAnimation name="enterAnimation"/>
+    </enterable>
+
+    <pushHandTool>
+        <raycast node1="raycast01" node2="raycast02" playerNode="playerNode" positionSmoothnessFactor="0.65" positionSmoothnessFactorSteering="0"/>
+        <wheels front="3 4" back="1 2"/>
+
+        <effect>
+            <effectNode effectClass="CutterMotionPathEffect" effectType="CUTTER" linkNode="mowerEffectNode">
+                <motionPathEffect textureFilename="$data/vehicles/brielmaier/motorMower29EFI/mowerEffectArray.dds" speedScale="1.0" verticalOffset="-0.025" numRows="12" rowLength="26" minFade="0.06" textureRealWidth="4.3" density="0.75"/>
+            </effectNode>
+        </effect>
+
+        <driveMode animationName="driveModeAnim" animationSpeed="1.5" maxSpeed="18" gearRatio="45">
+            <characterNode node="playerSkin">
+                <target ikChain="rightFoot" targetNode="playerRightFootTarget" />
+                <target ikChain="leftFoot"  targetNode="playerLeftFootTarget" />
+                <target ikChain="rightArm"  targetNode="playerRightHandTarget" poseId="narrowFingers"/>
+                <target ikChain="leftArm"   targetNode="playerLeftHandTarget"  poseId="narrowFingers"/>
+            </characterNode>
+        </driveMode>
+
+        <ikChains>
+            <target ikChain="rightArm" targetNode="playerRightHandTargetHand" poseId="narrowFingers"/>
+            <target ikChain="leftArm"  targetNode="playerLeftHandTargetHand"  poseId="narrowFingers"/>
+        </ikChains>
+
+        <customChainLimits>
+            <customChainLimit chainId="leftArm" nodeIndex="1" minRx="-50" maxRx="50" minRy="-80" maxRy="80" minRz="-75" maxRz="10" localLimits="true"/>
+            <customChainLimit chainId="leftArm" nodeIndex="2" minRx="-25" maxRx="25" minRy="-144" maxRy="-25" minRz="-10" maxRz="10" localLimits="true"/>
+
+            <customChainLimit chainId="rightArm" nodeIndex="1" minRx="-50" maxRx="50" minRy="-80" maxRy="80" minRz="-75" maxRz="10" localLimits="true"/>
+            <customChainLimit chainId="rightArm" nodeIndex="2" minRx="-25" maxRx="25" minRy="-144" maxRy="-25" minRz="-10" maxRz="10" localLimits="true"/>
+        </customChainLimits>
+
+        <playerConditionalAnimation>
+            <item id="idle" entryTransitionDuration="0.25" exitTransitionDuration="0.25" >
+                <clips>
+                    <clip clipName="idle1Source" />
+                </clips>
+                <conditions>
+                    <conditionGroup>
+                        <condition parameter="absSmoothedForwardVelocity" lower="0.2" />
+                    </conditionGroup>
+                </conditions>
+            </item>
+            <item id="walk" entryTransitionDuration="0.25" exitTransitionDuration="0.25" >
+                <clips speedScaleType="distance" speedScaleParameter="2.25">
+                    <clip clipName="walkFwd1Source" />
+                </clips>
+                <conditions>
+                    <conditionGroup>
+                        <condition parameter="smoothedForwardVelocity" between="0.3, 4"/>
+                    </conditionGroup>
+                </conditions>
+            </item>
+            <item id="walkBack" entryTransitionDuration="0.5" exitTransitionDuration="0.25" >
+                <clips speedScaleType="distance" speedScaleParameter="2.25">
+                    <clip clipName="walkBwdLoopSource" />
+                </clips>
+                <conditions>
+                    <conditionGroup>
+                        <condition parameter="smoothedForwardVelocity" between="-3, -0.3" />
+                    </conditionGroup>
+                </conditions>
+            </item>
+        </playerConditionalAnimation>
+    </pushHandTool>
+
+    <motorized forceSpeedHudDisplay="true">
+        <consumerConfigurations>
+            <consumerConfiguration>
+                <consumer fillUnitIndex="1" usage="5.2" fillType="diesel" /> <!-- usage is per hour at max load and max rpm -->
+            </consumerConfiguration>
+        </consumerConfigurations>
+
+        <differentialConfigurations>
+            <differentialConfiguration>
+                <differentials>
+                    <differential torqueRatio="0.5" maxSpeedRatio="2" wheelIndex1="1" wheelIndex2="2" /> <!-- front left-right -->
+                </differentials>
+            </differentialConfiguration>
+        </differentialConfigurations>
+
+        <motorConfigurations>
+            <motorConfiguration hp="75" price="0">
+                <motor torqueScale="1.1" minRpm="850" maxRpm="2200" maxForwardSpeed="18" maxBackwardSpeed="12" brakeForce="2.4" lowBrakeForceScale="0.15" dampingRateScale="0.11">
+                    <torque normRpm="0.45" torque="0.9"/>
+                    <torque normRpm="0.5"  torque="0.97"/>
+                    <torque normRpm="0.59" torque="1"/>
+                    <torque normRpm="0.72" torque="1"/>
+                    <torque normRpm="0.86" torque="0.88"/>
+                    <torque normRpm="1"    torque="0.72"/>
+                </motor>
+                <transmission minForwardGearRatio="104" maxForwardGearRatio="350" minBackwardGearRatio="138" maxBackwardGearRatio="350" name="$l10n_info_transmission_automatic" />
+            </motorConfiguration>
+        </motorConfigurations>
+
+        <motorStartDuration>150</motorStartDuration>
+
+        <exhaustEffects>
+            <exhaustEffect node="exhaustParticle" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.9 0.9 0.9 0.1" maxRpmColor="0.9 0.9 0.9 0.4" minRpmScale="0.02" maxRpmScale="0.1" />
+        </exhaustEffects>
+
+        <dashboards>
+            <dashboard displayType="VISIBILITY"  valueType="directionForward"  node="iconForward_decal"   idleValue="-1" intensity="0.2" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="VISIBILITY"  valueType="directionBackward" node="iconBackwards_decal" idleValue="-1" intensity="0.2" groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="MULTI_STATE" valueType="ignitionState"     node="keyIgnitionPart01"   doInterpolation="true"         groups="MOTOR_ACTIVE">
+                <state value="0" rotation="0 0 0"/>
+                <state value="1" rotation="0 0 -80"/>
+                <state value="2" rotation="0 0 0"/>
+            </dashboard>
+            <dashboard displayType="MULTI_STATE" valueType="ignitionState" node="keyIgnitionPart02" doInterpolation="true" groups="MOTOR_ACTIVE">
+                <state value="0" rotation="0 0 0"/>
+                <state value="1" rotation="-75 0 0"/>
+            </dashboard>
+        </dashboards>
+    </motorized>
+
+    <groundReferenceNodes>
+        <groundReferenceNode node="groundReferenceNode" threshold="0.25" onlyActiveWhenLowered="false"/>
+    </groundReferenceNodes>
+
+    <workAreas>
+        <workAreaConfigurations >
+            <workAreaConfiguration name="1">
+                <workArea type="mower" functionName="processMowerArea" disableBackwards="true" >
+                    <area startNode="workAreaStartMower" widthNode="workAreaWidthMower" heightNode="workAreaHeightMower" />
+                    <groundReferenceNode index="1" />
+                    <mower dropWindrow="true" dropAreaIndex="2" />
+                    <testAreas autoGenerate="true" zOffset="0.5" xOffset="0" length="0.6" numAreas="6" areaWidthScale="0.25"/>
+                </workArea>
+                <workArea type="auxiliary" >
+                    <area startNode="dropAreaStartMower" widthNode="dropAreaWidthMower" heightNode="dropAreaHeightMower" />
+                </workArea>
+            </workAreaConfiguration >
+            <workAreaConfiguration name="2">
+                <workArea type="windrower" functionName="processWindrowerArea" disableBackwards="true">
+                    <area startNode="workAreaStartWindrower" widthNode="workAreaWidthWindrower" heightNode="workAreaHeightWindrower"/>
+                    <groundReferenceNode index="1"/>
+                    <windrower dropWindrowWorkAreaIndex="3"/>
+                    <testAreas autoGenerate="true" zOffset="0.5" xOffset="0" length="1.5" numAreas="4" areaWidthScale="0.35"/>
+                </workArea>
+
+                <workArea type="auxiliary">
+                    <area startNode="dropAreaStartWindrowerLeft" widthNode="dropAreaWidthWindrowerLeft" heightNode="dropAreaHeightWindrowerLeft"/>
+                </workArea>
+                <workArea type="auxiliary">
+                    <area startNode="dropAreaStartWindrowerRight" widthNode="dropAreaWidthWindrowerRight" heightNode="dropAreaHeightWindrowerRight"/>
+                </workArea>
+            </workAreaConfiguration >
+        </workAreaConfigurations >
+    </workAreas>
+
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts startMoveDirection="1" turnOnFoldDirection="1" posDirectionText="$l10n_action_liftOBJECT" negDirectionText="$l10n_action_lowerOBJECT" foldInputButton="LOWER_IMPLEMENT">
+                    <foldingPart animationName="lowerAnimation" speedScale="1" />
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <animations>
+        <animation name="lowerAnimation" soundVolumeFactor="0.7">
+            <part node="player"                   startTime="0" endTime="0.75" startTrans="0 0.3 0.1"  endTrans="0 0 0"/>
+            <part node="groundReferenceNode"      startTime="0" endTime="0.75" startTrans="0 0.6 0"    endTrans="0 0 0"/>
+            <part node="wheelMowerLeftTrans"      startTime="0" endTime="0.75" startTrans="0 -0.125 0" endTrans="0 0.025 0"/>
+            <part node="wheelWindrowerLeftTrans"  startTime="0" endTime="0.75" startTrans="0 -0.10 0"  endTrans="0 -0.02 0" startRot="7 0 0" endRot="0 0 0"/>
+            <part node="wheelMowerRightTrans"     startTime="0" endTime="0.75" startTrans="0 -0.125 0" endTrans="0 0.025 0"/>
+            <part node="wheelWindrowerRightTrans" startTime="0" endTime="0.75" startTrans="0 -0.10 0"  endTrans="0 -0.02 0" startRot="7 0 0" endRot="0 0 0"/>
+
+            <part node="playerLeftHandTargetHand" startTime="0" endTime="0.75" startRot="0 0 -40" endRot="0 0 0" requiredAnimation="driveModeAnim" requiredAnimationRange="0 0.01"/>
+            <part node="playerRightHandTargetHand" startTime="0" endTime="0.75" startRot="0 0 40" endRot="0 0 0" requiredAnimation="driveModeAnim" requiredAnimationRange="0 0.01"/>
+            <part node="steeringArm01" startTime="0" endTime="0.75" startRot="-10 0 0" endRot="-15 0 0" requiredAnimation="driveModeAnim" requiredAnimationRange="0 0.01"/>
+
+            <sound template="clackVar6"      startTime="0.7" direction="1" volumeScale="2"   pitchScale="0.8"/>
+            <sound template="sheetImp02"     startTime="0.7" direction="1" volumeScale="3"   pitchScale="0.8"/>
+            <sound template="metalImpHigh02" startTime="0.7" direction="1" volumeScale="0.9" pitchScale="0.5"/>
+            <sound template="sheetImp01"     startTime="0.7" direction="1" volumeScale="0.9" pitchScale="0.9"/>
+            <sound template="sheetImp01"     startTime="0.7" direction="1" volumeScale="1.4" pitchScale="1.9"/>
+        </animation>
+
+        <animation name="flapAnimation">
+            <part node="flapLeft"  startTime="0.0" endTime="0.2" startRot="0 180 0"  endRot="0 0 0" />
+            <part node="flapRight" startTime="0.2" endTime="0.4" startRot="0 0 0"    endRot="0 -180 0" />
+            <part node="flapLeft"  startTime="0.6" endTime="0.8" startRot="0 0 0"    endRot="0 180 0" />
+            <part node="flapRight" startTime="0.8" endTime="1.0" startRot="0 -180 0" endRot="0 0 0" />
+
+            <sound template="slideOpen"  startTime="0.6"  endTime="0.8"  direction="1"  volumeScale="3" pitchScale="1.5" linkNode="flapLeft"/>
+            <sound template="slideOpen"  startTime="0.8"  endTime="0.99" direction="1"  volumeScale="3" pitchScale="1.5" linkNode="flapRight"/>
+            <sound template="sheetImp02" startTime="0.8"                 direction="1"  volumeScale="3" pitchScale="1.5" linkNode="flapLeft"/>
+            <sound template="clackVar6"  startTime="0.8"                 direction="1"  volumeScale="2" pitchScale="1.0" linkNode="flapLeft"/>
+            <sound template="sheetImp02" startTime="0.99"                direction="1"  volumeScale="3" pitchScale="1.3" linkNode="flapRight"/>
+            <sound template="clackVar6"  startTime="0.99"                direction="1"  volumeScale="2" pitchScale="1.2" linkNode="flapRight"/>
+            <sound template="sheetImp02" startTime="0.8"                 direction="-1" volumeScale="3" pitchScale="1.5" linkNode="flapRight"/>
+            <sound template="clackVar6"  startTime="0.8"                 direction="-1" volumeScale="2" pitchScale="1.0" linkNode="flapRight"/>
+            <sound template="sheetImp02" startTime="0.6"                 direction="-1" volumeScale="3" pitchScale="1.3" linkNode="flapLeft"/>
+            <sound template="clackVar6"  startTime="0.6"                 direction="-1" volumeScale="2" pitchScale="1.2" linkNode="flapLeft"/>
+            <sound template="slideOpen"  startTime="0.8"  endTime="0.99" direction="-1" volumeScale="3" pitchScale="1.5" linkNode="flapRight"/>
+            <sound template="slideOpen"  startTime="0.6"  endTime="0.8"  direction="-1" volumeScale="3" pitchScale="1.2" linkNode="flapLeft"/>
+            <sound template="sheetImp02" startTime="0.2"                 direction="1"  volumeScale="3" pitchScale="1.5" linkNode="flapLeft"/>
+            <sound template="clackVar6"  startTime="0.2"                 direction="1"  volumeScale="2" pitchScale="1.0" linkNode="flapLeft"/>
+            <sound template="slideOpen"  startTime="0.01" endTime="0.2"  direction="1"  volumeScale="2" pitchScale="1.5" linkNode="flapLeft"/>
+            <sound template="sheetImp02" startTime="0.4"                 direction="1"  volumeScale="3" pitchScale="1.3" linkNode="flapRight"/>
+            <sound template="clackVar6"  startTime="0.4"                 direction="1"  volumeScale="2" pitchScale="1.2" linkNode="flapRight"/>
+            <sound template="slideOpen"  startTime="0.2"  endTime="0.4"  direction="1"  volumeScale="2" pitchScale="1.2" linkNode="flapRight"/>
+        </animation>
+
+        <animation name="turnedOnAnim" looping="true">
+            <part node="windrowerBelt" startTime="0"      endTime="0.9999" shaderParameter="scrollPos" shaderStartValues="0 0 0 0" shaderEndValues="1 0 0 0"/>
+            <part node="windrowerBelt" startTime="0.9999" endTime="1"      shaderParameter="scrollPos" shaderStartValues="1 0 0 0" shaderEndValues="0 0 0 0"/>
+        </animation>
+
+        <animation name="driveModeAnim">
+            <part node="footSteps"           startTime="0.00" endTime="0.5" startRot="90 0 0"      endRot="0 0 0"/>
+            <part node="steeringArm01"       startTime="0.50" endTime="2.0" startRot="-15 0 0"     endRot="75 0 0"/>
+            <part node="steeringArm02"       startTime="0.50" endTime="2.0" startTrans="0 0 0"     endTrans="0 0 -0.199"/>
+            <part node="steeringBase"        startTime="0.50" endTime="2.0" startRot="0 0 0"       endRot="-70 0 0"/>
+            <part node="indoorCameraAnim"    startTime="0.50" endTime="2.0" startTrans="0 0 0"     endTrans="0 -0.1 -0.15"/>
+            <part node="outdoorCameraTarget" startTime="0.50" endTime="2.0" startTrans="0 0.8 0.4" endTrans="0 0.8 0.8"/>
+
+            <part node="playerCollision01" startTime="0.0" endTime="2.0" startTrans="0 0.55 -0.05" endTrans="0 1.05 1.15" requiredAnimation="enterAnimation" requiredAnimationRange="0.01 1"/>
+
+            <part node="dynamicPlayerRoot"   startTime="0.00" endTime="0.01" startVisibility="true"  endVisibility="false"/>
+            <part node="staticPlayerRoot"    startTime="1.99" endTime="2.00" startVisibility="false" endVisibility="true"/>
+
+            <sound template="sheetImp02"       startTime="0.40" direction="1"  volumeScale="5"   pitchScale="1.8" />
+            <sound template="sheetImp02"       startTime="0.01" direction="-1" volumeScale="5"   pitchScale="1.8" />
+            <sound template="metalScrape"      startTime="0.50" endTime="1.9"  volumeScale="1"   pitchScale="1.0" />
+            <sound template="clackVar6"        startTime="1.90" direction="1"  volumeScale="2"   pitchScale="1.0" />
+            <sound template="metalImpMechanic" startTime="1.70" direction="1"  volumeScale="1"   pitchScale="1.0" />
+            <sound template="metalImpHigh01"   startTime="1.90" direction="1"  volumeScale="1"   pitchScale="1.0" />
+            <sound template="clackVar6"        startTime="0.40" direction="-1" volumeScale="2"   pitchScale="0.8" />
+            <sound template="sheetImp02"       startTime="0.40" direction="-1" volumeScale="3"   pitchScale="0.8" />
+            <sound template="metalImpHigh02"   startTime="0.40" direction="-1" volumeScale="0.7" pitchScale="0.8" />
+        </animation>
+
+        <animation name="enterAnimation">
+            <part node="playerCollision01" startTime="0" endTime="0.001" startTrans="0 0.6 1.72" endTrans="0 0.55 -0.05" requiredAnimation="driveModeAnim" requiredAnimationRange="0 0.5"/>
+            <part node="playerCollision01" startTime="0" endTime="0.001" startTrans="0 0.6 1.72" endTrans="0 1.05 1.15" requiredAnimation="driveModeAnim" requiredAnimationRange="0.5 1"/>
+            <part node="playerCollision02" startTime="0" endTime="0.001" startTrans="0 0 0" endTrans="0 0.8 0"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="wheelMowerLeftTrans"      wheelIndices="3"/>
+            <movingTool node="wheelWindrowerLeftTrans"  wheelIndices="3"/>
+            <movingTool node="wheelMowerRightTrans"     wheelIndices="4"/>
+            <movingTool node="wheelWindrowerRightTrans" wheelIndices="4"/>
+
+            <movingTool node="cutterBarTopMotorRotNode">
+                <dependentPart node="cutterBarTopMotorArm01" />
+                <dependentPart node="cutterBarBottomMotorArm01" />
+            </movingTool >
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="mowerAxle" referenceFrame="wheelMowerFrontReprPhys" limitedAxis="2" isActiveDirty="true" maxUpdateDistance="50"/>
+            <movingPart node="attachmentAlignment" referencePoint="attachmentAlignmentRef" referenceFrame="attachmentAlignmentRefFrame" limitedAxis="1" isActiveDirty="true" maxUpdateDistance="100"/>
+
+            <!-- top row -->
+            <movingPart node="cutterBarTopMotorArm01" localReferencePoint="cutterBarTopMotorArm02" referencePoint="cutterBarTopMotorArmRef" referenceFrame="cutterBarTopMotorArm01RefFrame" limitedAxis="1">
+                <dependentPart node="cutterBarTopMotorArm02"/>
+            </movingPart>
+            <movingPart node="cutterBarTopMotorArm02" referencePoint="cutterBarTopMotorArmRef" referenceFrame="cutterBarTopMotorArm02RefFrame" limitedAxis="1">
+                <dependentPart node="cutterBarTop"/>
+            </movingPart>
+            <movingPart node="cutterBarTop" referenceFrame="mowerFrame" >
+                <dependentPart node="cutterBarTopArm01"/>
+            </movingPart>
+            <movingPart node="cutterBarTopArm01" referencePoint="cutterBarTopArm01Ref" referenceFrame="cutterBarTopArm01Ref" >
+                <dependentPart node="cutterBarTopArm02"/>
+                <dependentPart node="cutterBarTopArm03"/>
+                <dependentPart node="cutterBarTopArm04"/>
+                <dependentPart node="cutterBarTopArm05"/>
+                <dependentPart node="cutterBarTopArm06"/>
+                <dependentPart node="cutterBarTopArm07"/>
+                <dependentPart node="cutterBarTopArm08"/>
+                <dependentPart node="cutterBarTopArm09"/>
+                <dependentPart node="cutterBarTopArm10"/>
+                <dependentPart node="cutterBarTopArm11"/>
+            </movingPart>
+            <movingPart node="cutterBarTopArm02" referenceFrame="cutterBarTopArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarTopArm03" referenceFrame="cutterBarTopArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarTopArm04" referenceFrame="cutterBarTopArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarTopArm05" referenceFrame="cutterBarTopArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarTopArm06" referenceFrame="cutterBarTopArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarTopArm07" referenceFrame="cutterBarTopArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarTopArm08" referenceFrame="cutterBarTopArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarTopArm09" referenceFrame="cutterBarTopArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarTopArm10" referenceFrame="cutterBarTopArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarTopArm11" referenceFrame="cutterBarTopArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+
+            <!-- bottom row -->
+            <movingPart node="cutterBarBottomMotorArm01" localReferencePoint="cutterBarBottomMotorArm02" referencePoint="cutterBarBottomMotorArmRef" referenceFrame="cutterBarBottomMotorArm01RefFrame" limitedAxis="1">
+                <dependentPart node="cutterBarBottomMotorArm02"/>
+            </movingPart>
+            <movingPart node="cutterBarBottomMotorArm02" referencePoint="cutterBarBottomMotorArmRef" referenceFrame="cutterBarBottomMotorArm02RefFrame" limitedAxis="1">
+                <dependentPart node="cutterBarBottom"/>
+            </movingPart>
+            <movingPart node="cutterBarBottom" referenceFrame="mowerFrame" >
+                <dependentPart node="cutterBarBottomArm01"/>
+            </movingPart>
+            <movingPart node="cutterBarBottomArm01" referencePoint="cutterBarBottomArm01Ref" referenceFrame="cutterBarBottomArm01Ref" >
+                <dependentPart node="cutterBarBottomArm02"/>
+                <dependentPart node="cutterBarBottomArm03"/>
+                <dependentPart node="cutterBarBottomArm04"/>
+                <dependentPart node="cutterBarBottomArm05"/>
+                <dependentPart node="cutterBarBottomArm06"/>
+                <dependentPart node="cutterBarBottomArm07"/>
+                <dependentPart node="cutterBarBottomArm08"/>
+                <dependentPart node="cutterBarBottomArm09"/>
+                <dependentPart node="cutterBarBottomArm10"/>
+            </movingPart>
+            <movingPart node="cutterBarBottomArm02" referenceFrame="cutterBarBottomArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarBottomArm03" referenceFrame="cutterBarBottomArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarBottomArm04" referenceFrame="cutterBarBottomArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarBottomArm05" referenceFrame="cutterBarBottomArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarBottomArm06" referenceFrame="cutterBarBottomArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarBottomArm07" referenceFrame="cutterBarBottomArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarBottomArm08" referenceFrame="cutterBarBottomArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarBottomArm09" referenceFrame="cutterBarBottomArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+            <movingPart node="cutterBarBottomArm10" referenceFrame="cutterBarBottomArm01" doRotationAlignment="true" doDirectionAlignment="false" rotMultiplier="1"/>
+        </movingParts>
+    </cylindered>
+
+    <mower fruitTypeConverter="MOWER">
+        <animationNodes>
+            <animationNode node="cutterBarTopMotorRotNode" rotSpeed="2500" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        </animationNodes>
+        <sounds>
+            <cut template="grassCut"     linkNode="motorMower29EFI_main_component1" volumeScale="0.2"/>
+            <cut template="woodchipFill" linkNode="motorMower29EFI_main_component1" volumeScale="3.5"/>
+        </sounds>
+    </mower>
+
+    <windrower fillTypeCategories="WINDROW">
+        <effects>
+            <effect workAreaIndex="1" dropAreaIndex="2">
+                <effectNode effectClass="WindrowerMotionPathEffect" effectType="WINDROWER" linkNode="windowerEffectLeftNode">
+                    <motionPathEffect textureFilename="$data/vehicles/brielmaier/motorMower29EFI/windrowerEffectLeftDropArray.dds" numRows="13" rowLength="32" isLeft="true" isPickup="true" speedScale="0.5" shapeScale="1.0" maxShapeScale="1.2"/>
+                </effectNode>
+                <effectNode effectNode="smokeEmitterWindrower" effectClass="ParticleEffect" particleType="smoke" materialType="smokeParticle" worldSpace="false" emitCountScale="0.15"/>
+                <sounds>
+                    <work template="woodchipFill" volumeScale="3.5" pitchScale="1.2"/>
+                </sounds>
+            </effect>
+
+            <effect workAreaIndex="1" dropAreaIndex="3">
+                <effectNode effectClass="WindrowerMotionPathEffect" effectType="WINDROWER" linkNode="windowerEffectRightNode">
+                    <motionPathEffect textureFilename="$data/vehicles/brielmaier/motorMower29EFI/windrowerEffectRightDropArray.dds" numRows="11" rowLength="32" isLeft="false" isPickup="true" speedScale="0.5" shapeScale="1.0" maxShapeScale="1.2"/>
+                </effectNode>
+                <effectNode effectNode="smokeEmitterWindrower" effectClass="ParticleEffect" particleType="smoke" materialType="smokeParticle" worldSpace="false" emitCountScale="0.15"/>
+                <sounds>
+                    <work template="woodchipFill" volumeScale="3.5" pitchScale="1.2"/>
+                </sounds>
+            </effect>
+        </effects>
+
+        <animationNodes>
+            <animationNode node="tines" rotSpeed="-700" rotAxis="1"/>
+        </animationNodes>
+    </windrower>
+
+    <workModes>
+        <workModeConfigurations>
+            <workModeConfiguration/>
+            <workModeConfiguration>
+                <workMode name="$l10n_action_workMode_leftSwath" inputBindingName="WORKMODE_LEFT">
+                    <turnedOnAnimations>
+                        <turnedOnAnimation name="turnedOnAnim" speedScale="-0.4" turnOnFadeTime="1" turnOffFadeTime="1"/>
+                    </turnedOnAnimations>
+
+                    <workAreas>
+                        <workArea workAreaIndex="1" dropAreaIndex="2"/>
+                    </workAreas>
+
+                    <animation name="flapAnimation" speed="0.25" stopTime="1"/>
+
+                    <ai>
+                        <areaMarkers leftNode="aiMarkerLeftWindrowerLeft" rightNode="aiMarkerRightWindrowerLeft" backNode="aiMarkerBackWindrower" sideOffset="-0.3" sideOffsetHeadlandAlternate="true"/>
+                    </ai>
+                </workMode>
+                <workMode name="$l10n_action_workMode_rightSwath" inputBindingName="WORKMODE_RIGHT">
+                    <turnedOnAnimations>
+                        <turnedOnAnimation name="turnedOnAnim" speedScale="0.4" turnOnFadeTime="1" turnOffFadeTime="1"/>
+                    </turnedOnAnimations>
+
+                    <workAreas>
+                        <workArea workAreaIndex="1" dropAreaIndex="3"/>
+                    </workAreas>
+
+                    <animation name="flapAnimation" speed="0.25" stopTime="0.5"/>
+
+                    <ai>
+                        <areaMarkers leftNode="aiMarkerLeftWindrowerRight" rightNode="aiMarkerRightWindrowerRight" backNode="aiMarkerBackWindrower" sideOffset="0.3" sideOffsetHeadlandAlternate="true"/>
+                    </ai>
+                </workMode>
+            </workModeConfiguration>
+        </workModeConfigurations>
+    </workModes>
+
+    <turnOnVehicle turnOffIfNotAllowed="true" >
+        <sounds>
+            <work file="$data/vehicles/brielmaier/motorMower29EFI/sounds/motorMowerBlades.wav" linkNodeOffset="0.6 0 2" innerRadius="5" outerRadius="40" fadeIn="0.4" fadeOut="1" pitchScale="0.8" linkNode="mowerFrame">
+                <volume indoor="0.7" outdoor="1.5" />
+                <lowpassGain indoor="0.5" outdoor="1" />
+            </work>
+            <work file="$data/vehicles/brielmaier/motorMower29EFI/sounds/motorMowerBlades.wav" linkNodeOffset="-0.6 0 2" innerRadius="5" outerRadius="40" fadeIn="0.4" fadeOut="1" linkNode="mowerFrame">
+                <volume indoor="0.7" outdoor="1.5" />
+                <lowpassGain indoor="0.5" outdoor="1" />
+            </work>
+            <work file="$data/vehicles/brielmaier/motorMower29EFI/sounds/motorMowerWindrowerWork.wav" linkNodeOffset="0 0 0.5" innerRadius="5" outerRadius="40" fadeIn="0.4" fadeOut="1" pitchScale="1.3" linkNode="windrowerFrame">
+                <volume indoor="3.0" outdoor="5" />
+                <lowpassGain indoor="0.5" outdoor="1" />
+            </work>
+        </sounds>
+    </turnOnVehicle>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="diesel" capacity="10">
+                        <exactFillRootNode node="exactFillRootNodeFuel"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <dashboard>
+        <groups>
+            <group name="MOTOR_STARTING" electronicsStarting="true"/>
+            <group name="MOTOR_ACTIVE" electronicsStarting="true" electronicsRunning="true"/>
+        </groups>
+
+        <default>
+            <dashboard displayType="VISIBILITY" node="iconGear_decal"                            groups="MOTOR_ACTIVE"/>
+            <dashboard displayType="EMITTER"    node="display_decal" idleValue="0" intensity="0" groups="MOTOR_ACTIVE"/>
+        </default>
+    </dashboard>
+
+    <ai>
+        <aiConfigurations>
+            <aiConfiguration>
+                <collisionTrigger node="aiCollisionNodeMower" width="4.6" length="3.45" height="1.65"/>
+                <areaMarkers leftNode="aiMarkerLeftMower" rightNode="aiMarkerRightMower" backNode="aiMarkerBackMower" />
+                <aiAgent frontWheelNodes="wheelMowerLeft wheelMowerRight"/>
+            </aiConfiguration>
+            <aiConfiguration>
+                <collisionTrigger node="aiCollisionNodeWindrower" width="2.25" length="3.45" height="1.65"/>
+                <areaMarkers leftNode="aiMarkerLeftWindrowerLeft" rightNode="aiMarkerRightWindrowerLeft" backNode="aiMarkerBackWindrower" />
+                <aiAgent frontWheelNodes="wheelWindrowerLeft wheelWindrowerRight"/>
+            </aiConfiguration>
+        </aiConfigurations>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-1.05" maxX="1.05" minZ="0.100" maxZ="0.95" yOffset="0.3" />
+        <bendingNode minX="-2.80" maxX="1.80" minZ="-0.03" maxZ="0.80" yOffset="-0.2" node="motorMower29EFI_attachment_component2" />
+    </foliageBending>
+
+
+    <!--
+    colors
+    orange: 0.747 0.23 0.038
+    dark orange: 0.251 0.077 0.013
+    -->
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90"  workMultiplier="4" fieldMultiplier="2" washDuration="1"/>
+
+    <i3dMappings>
+        <i3dMapping id="motorMower29EFI_main_component1" node="0>" />
+        <i3dMapping id="motorMower29EFI_vis" node="0>0" />
+        <i3dMapping id="wheelFrontLeft" node="0>0|0|0" />
+        <i3dMapping id="wheelFrontRight" node="0>0|0|1" />
+        <i3dMapping id="steeringCenterNode" node="0>0|0|2" />
+        <i3dMapping id="exitPoint" node="0>0|1" />
+        <i3dMapping id="exhaustParticle" node="0>0|2" />
+        <i3dMapping id="outdoorCameraTarget" node="0>0|3|0" />
+        <i3dMapping id="outdoorCamera" node="0>0|3|0|0" />
+        <i3dMapping id="cameraRaycastNode1" node="0>0|3|1" />
+        <i3dMapping id="cameraRaycastNode2" node="0>0|3|2" />
+        <i3dMapping id="shadowFocusBox" node="0>0|3|3" />
+        <i3dMapping id="steeringArm01" node="0>0|4|0" />
+        <i3dMapping id="steeringArm02" node="0>0|4|0|0|0" />
+        <i3dMapping id="steeringBase" node="0>0|4|0|0|0|0|0" />
+        <i3dMapping id="hellaWorkingLightRound_01_01" node="0>0|4|0|0|0|0|0|0|0|0" />
+        <i3dMapping id="hellaWorkingLightRound_01_02" node="0>0|4|0|0|0|0|0|0|0|1" />
+        <i3dMapping id="workLightFrontLow" node="0>0|4|0|0|0|0|0|0|1|0" />
+        <i3dMapping id="workLightFrontHigh" node="0>0|4|0|0|0|0|0|0|1|1" />
+        <i3dMapping id="playerLeftHandTargetHand" node="0>0|4|0|0|0|0|0|1|0|0" />
+        <i3dMapping id="playerRightHandTargetHand" node="0>0|4|0|0|0|0|0|1|1|0" />
+        <i3dMapping id="playerLeftHandTarget" node="0>0|4|0|0|0|0|0|1|2" />
+        <i3dMapping id="playerRightHandTarget" node="0>0|4|0|0|0|0|0|1|3" />
+        <i3dMapping id="indoorCameraAnim" node="0>0|4|0|0|0|0|0|2" />
+        <i3dMapping id="indoorCamera" node="0>0|4|0|0|0|0|0|2|0" />
+        <i3dMapping id="nicknameRenderingNode" node="0>0|4|0|0|0|0|0|2|1" />
+        <i3dMapping id="keyIgnitionPart01" node="0>0|4|0|0|0|0|0|3|0|0" />
+        <i3dMapping id="keyIgnitionPart02" node="0>0|4|0|0|0|0|0|3|0|0|0" />
+        <i3dMapping id="iconsDefaultLightUp_decals" node="0>0|4|0|0|0|0|0|3|1" />
+        <i3dMapping id="iconForward_decal" node="0>0|4|0|0|0|0|0|3|2" />
+        <i3dMapping id="iconBackwards_decal" node="0>0|4|0|0|0|0|0|3|3" />
+        <i3dMapping id="iconGear_decal" node="0>0|4|0|0|0|0|0|3|4" />
+        <i3dMapping id="display_decal" node="0>0|4|0|0|0|0|0|3|5" />
+        <i3dMapping id="steeringArm02Handle" node="0>0|4|0|1" />
+        <i3dMapping id="supportArm" node="0>0|4|0|3" />
+        <i3dMapping id="steeringArm01Handle" node="0>0|4|1" />
+        <i3dMapping id="footSteps" node="0>0|4|3" />
+        <i3dMapping id="attachmentAlignmentRefFrame" node="0>0|4|4" />
+        <i3dMapping id="attachmentAlignment" node="0>0|4|4|0" />
+        <i3dMapping id="mowerFrame" node="0>0|4|4|0|0" />
+        <i3dMapping id="cutterBarTopMotorRotNode" node="0>0|4|4|0|0|0|0|0" />
+        <i3dMapping id="cutterBarTopMotorArmRef" node="0>0|4|4|0|0|0|0|0|0" />
+        <i3dMapping id="cutterBarBottomMotorArmRef" node="0>0|4|4|0|0|0|0|0|1" />
+        <i3dMapping id="cutterBarTopMotorArm01RefFrame" node="0>0|4|4|0|0|0|1" />
+        <i3dMapping id="cutterBarTopMotorArm01" node="0>0|4|4|0|0|0|1|0" />
+        <i3dMapping id="cutterBarTopMotorArm02RefFrame" node="0>0|4|4|0|0|0|1|0|0" />
+        <i3dMapping id="cutterBarTopMotorArm02" node="0>0|4|4|0|0|0|1|0|0|0" />
+        <i3dMapping id="cutterBarTop" node="0>0|4|4|0|0|0|1|0|1|0" />
+        <i3dMapping id="cutterBarTopArm01Ref" node="0>0|4|4|0|0|0|1|0|1|0|0" />
+        <i3dMapping id="cutterBarBottomMotorArm01RefFrame" node="0>0|4|4|0|0|0|2" />
+        <i3dMapping id="cutterBarBottomMotorArm01" node="0>0|4|4|0|0|0|2|0" />
+        <i3dMapping id="cutterBarBottomMotorArm02RefFrame" node="0>0|4|4|0|0|0|2|0|0" />
+        <i3dMapping id="cutterBarBottomMotorArm02" node="0>0|4|4|0|0|0|2|0|0|0" />
+        <i3dMapping id="cutterBarBottom" node="0>0|4|4|0|0|0|2|0|1|0" />
+        <i3dMapping id="cutterBarBottomArm01Ref" node="0>0|4|4|0|0|0|2|0|1|0|0" />
+        <i3dMapping id="cutterBarTopArm01" node="0>0|4|4|0|0|0|3|0" />
+        <i3dMapping id="cutterBarTopArm02" node="0>0|4|4|0|0|0|3|1" />
+        <i3dMapping id="cutterBarTopArm03" node="0>0|4|4|0|0|0|3|2" />
+        <i3dMapping id="cutterBarTopArm04" node="0>0|4|4|0|0|0|3|3" />
+        <i3dMapping id="cutterBarTopArm05" node="0>0|4|4|0|0|0|3|4" />
+        <i3dMapping id="cutterBarTopArm06" node="0>0|4|4|0|0|0|3|5" />
+        <i3dMapping id="cutterBarTopArm07" node="0>0|4|4|0|0|0|3|6" />
+        <i3dMapping id="cutterBarTopArm08" node="0>0|4|4|0|0|0|3|7" />
+        <i3dMapping id="cutterBarTopArm09" node="0>0|4|4|0|0|0|3|8" />
+        <i3dMapping id="cutterBarTopArm10" node="0>0|4|4|0|0|0|3|9" />
+        <i3dMapping id="cutterBarTopArm11" node="0>0|4|4|0|0|0|3|10" />
+        <i3dMapping id="cutterBarBottomArm01" node="0>0|4|4|0|0|0|3|11" />
+        <i3dMapping id="cutterBarBottomArm02" node="0>0|4|4|0|0|0|3|12" />
+        <i3dMapping id="cutterBarBottomArm03" node="0>0|4|4|0|0|0|3|13" />
+        <i3dMapping id="cutterBarBottomArm04" node="0>0|4|4|0|0|0|3|14" />
+        <i3dMapping id="cutterBarBottomArm05" node="0>0|4|4|0|0|0|3|15" />
+        <i3dMapping id="cutterBarBottomArm06" node="0>0|4|4|0|0|0|3|16" />
+        <i3dMapping id="cutterBarBottomArm07" node="0>0|4|4|0|0|0|3|17" />
+        <i3dMapping id="cutterBarBottomArm08" node="0>0|4|4|0|0|0|3|18" />
+        <i3dMapping id="cutterBarBottomArm09" node="0>0|4|4|0|0|0|3|19" />
+        <i3dMapping id="cutterBarBottomArm10" node="0>0|4|4|0|0|0|3|20" />
+        <i3dMapping id="mowerAxle" node="0>0|4|4|0|0|0|4|0" />
+        <i3dMapping id="mowerEffectNode" node="0>0|4|4|0|0|1|0" />
+        <i3dMapping id="smokeEmitterMower" node="0>0|4|4|0|0|1|1" />
+        <i3dMapping id="windrowerFrame" node="0>0|4|4|0|1" />
+        <i3dMapping id="flapLeftRotNode" node="0>0|4|4|0|1|0|0|0" />
+        <i3dMapping id="flapLeft" node="0>0|4|4|0|1|0|0|0|0|0" />
+        <i3dMapping id="flapRightRotNode" node="0>0|4|4|0|1|0|1|0" />
+        <i3dMapping id="flapRight" node="0>0|4|4|0|1|0|1|0|0|0" />
+        <i3dMapping id="windrowerBelt" node="0>0|4|4|0|1|0|2" />
+        <i3dMapping id="tines" node="0>0|4|4|0|1|0|3" />
+        <i3dMapping id="wheelWindrowerLeftVisual" node="0>0|4|4|0|1|0|4" />
+        <i3dMapping id="wheelWindrowerRightVisual" node="0>0|4|4|0|1|0|5" />
+        <i3dMapping id="windowerEffectLeftNode" node="0>0|4|4|0|1|1|0" />
+        <i3dMapping id="windowerEffectRightNode" node="0>0|4|4|0|1|1|1" />
+        <i3dMapping id="smokeEmitterWindrower" node="0>0|4|4|0|1|1|2" />
+        <i3dMapping id="dynamicPlayerRoot" node="0>0|5|0" />
+        <i3dMapping id="player" node="0>0|5|0|0" />
+        <i3dMapping id="playerNode" node="0>0|5|0|0|0" />
+        <i3dMapping id="skeleton" node="0>0|5|0|0|0|0" />
+        <i3dMapping id="raycast01" node="0>0|5|0|0|1" />
+        <i3dMapping id="raycast02" node="0>0|5|0|0|2" />
+        <i3dMapping id="playerCollision01" node="0>0|5|0|0|3" />
+        <i3dMapping id="playerCollision02" node="0>0|5|0|0|3|0" />
+        <i3dMapping id="staticPlayerRoot" node="0>0|5|1" />
+        <i3dMapping id="playerSkin" node="0>0|5|1|0" />
+        <i3dMapping id="playerLeftFootTarget" node="0>0|5|1|1" />
+        <i3dMapping id="playerRightFootTarget" node="0>0|5|1|2" />
+        <i3dMapping id="workAreaStartMower" node="0>0|6|0|0" />
+        <i3dMapping id="workAreaWidthMower" node="0>0|6|0|1" />
+        <i3dMapping id="workAreaHeightMower" node="0>0|6|0|2" />
+        <i3dMapping id="dropAreaStartMower" node="0>0|6|0|3" />
+        <i3dMapping id="dropAreaWidthMower" node="0>0|6|0|4" />
+        <i3dMapping id="dropAreaHeightMower" node="0>0|6|0|5" />
+        <i3dMapping id="workAreaStartWindrower" node="0>0|6|1|0" />
+        <i3dMapping id="workAreaWidthWindrower" node="0>0|6|1|1" />
+        <i3dMapping id="workAreaHeightWindrower" node="0>0|6|1|2" />
+        <i3dMapping id="dropAreaStartWindrowerLeft" node="0>0|6|1|3|0" />
+        <i3dMapping id="dropAreaWidthWindrowerLeft" node="0>0|6|1|3|1" />
+        <i3dMapping id="dropAreaHeightWindrowerLeft" node="0>0|6|1|3|2" />
+        <i3dMapping id="dropAreaStartWindrowerRight" node="0>0|6|1|4|0" />
+        <i3dMapping id="dropAreaWidthWindrowerRight" node="0>0|6|1|4|1" />
+        <i3dMapping id="dropAreaHeightWindrowerRight" node="0>0|6|1|4|2" />
+        <i3dMapping id="aiMarkerLeftMower" node="0>0|7|0|0" />
+        <i3dMapping id="aiMarkerRightMower" node="0>0|7|0|1" />
+        <i3dMapping id="aiMarkerBackMower" node="0>0|7|0|2" />
+        <i3dMapping id="aiCollisionNodeMower" node="0>0|7|0|3" />
+        <i3dMapping id="aiMarkerLeftWindrowerLeft" node="0>0|7|1|0" />
+        <i3dMapping id="aiMarkerRightWindrowerLeft" node="0>0|7|1|1" />
+        <i3dMapping id="aiMarkerLeftWindrowerRight" node="0>0|7|1|2" />
+        <i3dMapping id="aiMarkerRightWindrowerRight" node="0>0|7|1|3" />
+        <i3dMapping id="aiMarkerBackWindrower" node="0>0|7|1|4" />
+        <i3dMapping id="aiCollisionNodeWindrower" node="0>0|7|1|5" />
+        <i3dMapping id="exactFillRootNodeFuel" node="0>0|8|0" />
+        <i3dMapping id="motorMower29EFIGrid" node="0>0|9|3" />
+        <i3dMapping id="componentJointAttachment" node="0>0|10" />
+        <i3dMapping id="hoses" node="0>1|0" />
+        <i3dMapping id="hosesWindrower" node="0>1|1" />
+        <i3dMapping id="hosesMower" node="0>1|2" />
+        <i3dMapping id="motorMower29EFI_attachment_component2" node="1>" />
+        <i3dMapping id="wheelMowerLeftTrans" node="1>0|0" />
+        <i3dMapping id="wheelMowerLeft" node="1>0|0|0" />
+        <i3dMapping id="wheelMowerRightTrans" node="1>1|0" />
+        <i3dMapping id="wheelMowerRight" node="1>1|0|0" />
+        <i3dMapping id="wheelWindrowerLeftTrans" node="1>2|0" />
+        <i3dMapping id="wheelWindrowerLeft" node="1>2|0|0" />
+        <i3dMapping id="wheelWindrowerRightTrans" node="1>3|0" />
+        <i3dMapping id="wheelWindrowerRight" node="1>3|0|0" />
+        <i3dMapping id="groundReferenceNode" node="1>4|0" />
+        <i3dMapping id="wheelMowerFrontReprPhys" node="1>5|0" />
+        <i3dMapping id="wheelMowerFrontDriveNodePhys" node="1>5|0|0|0" />
+        <i3dMapping id="attachmentAlignmentRef" node="1>6" />
+        <i3dMapping id="mowerColPart01" node="1>7|0" />
+        <i3dMapping id="mowerColPart02" node="1>7|1" />
+        <i3dMapping id="mowerColPart03" node="1>7|2" />
+        <i3dMapping id="mowerColPart04" node="1>7|3" />
+        <i3dMapping id="mowerColPart05" node="1>7|4" />
+        <i3dMapping id="windrowerColPart01" node="1>7|5" />
+        <i3dMapping id="windrowerColPart02" node="1>7|6" />
+        <i3dMapping id="windrowerColPart03" node="1>7|7" />
+    </i3dMappings>
+</vehicle>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="spikes.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/flat_normal.png"/>
+    <File fileId="13" filename="$data/shared/detailLibrary/metallic/clear_diffuse.png"/>
+    <File fileId="12" filename="$data/shared/detailLibrary/metallic/rough_specular.png"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png"/>
+    <File fileId="5" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png"/>
+    <File fileId="15" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png"/>
+    <File fileId="14" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png"/>
+    <File fileId="1" filename="$data/shared/white_diffuse.png"/>
+    <File fileId="16" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFIDecals_diffuse.png"/>
+    <File fileId="17" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFIDecals_normal.png"/>
+    <File fileId="2" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFI_normal.png"/>
+    <File fileId="3" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFI_vmask.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="motorMower29EFI_BRIELMAIER_BLUE1_mat" materialId="39" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="14"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0.747 0.23 0.038"/>
+    </Material>
+    <Material name="motorMower29EFI_BRIELMAIER_SILVER1_mat" materialId="33" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="13"/>
+      <CustomParameter name="colorScale" value="0.1 0.1 0.1"/>
+    </Material>
+    <Material name="motorMower29EFI_metalPainted_mat" materialId="6" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="14"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0.04 0.04 0.04"/>
+    </Material>
+    <Material name="motorMower29EFI_silverScratched_mat" materialId="26" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="5"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="7"/>
+      <CustomParameter name="colorScale" value="0.05 0.05 0.05"/>
+    </Material>
+    <Material name="motorMower29EFI_silverScratched_mat1" materialId="46" customShaderId="4" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="16"/>
+      <Normalmap fileId="17"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="5"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="7"/>
+      <CustomParameter name="colorScale" value="0.2 0.2 0.2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="spikes.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="spikes" nodeId="15">
+      <Shape name="shapeLeft" shapeId="1" clipDistance="300" nodeId="16" castsShadows="true" receiveShadows="true" materialIds="26,33,6,39">
+        <Shape name="screw_decals" translation="-0.017006 0 0" shapeId="2" clipDistance="30" nodeId="17" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="46"/>
+      </Shape>
+      <Shape name="shapeRight" shapeId="3" clipDistance="300" nodeId="18" castsShadows="true" receiveShadows="true" materialIds="39,33,26,6">
+        <Shape name="screw_decals" translation="0.016966 0 0" shapeId="4" clipDistance="30" nodeId="19" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="46"/>
+      </Shape>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

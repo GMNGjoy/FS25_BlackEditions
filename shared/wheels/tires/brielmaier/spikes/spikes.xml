@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<wheel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../shared/xml/schema/wheel.xsd">
+    <default>
+        <physics radius="0.36" width="0.53" mass="0.054" tireType="metalSpikes" frictionScale="1.60" maxLongStiffness="8" maxLatStiffness="100" maxLatStiffnessLoad="2" />
+        <tire filename="shared/wheels/tires/brielmaier/spikes/spikes.i3d" nodeLeft="0|0" nodeRight="0|1" maxDeformation="0.0" tireTrackAtlasIndex="4"/>
+    </default>
+</wheel>

@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="motorMower29EFI.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="26" filename="$data/shaders/glowShader.xml"/>
+    <File fileId="5" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="36" filename="$data/shared/clearGlass_diffuse.png"/>
+    <File fileId="24" filename="$data/shared/default_normal.png"/>
+    <File fileId="15" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_diffuse.png"/>
+    <File fileId="14" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_normal.png"/>
+    <File fileId="13" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_specular.png"/>
+    <File fileId="28" filename="$data/shared/detailLibrary/calibrated/grainSmall_specular.png"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/flat_normal.png"/>
+    <File fileId="22" filename="$data/shared/detailLibrary/metallic/clear_diffuse.png"/>
+    <File fileId="41" filename="$data/shared/detailLibrary/metallic/metalGalvanized_diffuse.dds"/>
+    <File fileId="21" filename="$data/shared/detailLibrary/metallic/rough_specular.png"/>
+    <File fileId="30" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png"/>
+    <File fileId="29" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png"/>
+    <File fileId="50" filename="$data/shared/detailLibrary/nonMetallic/fabric/fabric3_diffuse.png"/>
+    <File fileId="49" filename="$data/shared/detailLibrary/nonMetallic/fabric/fabric3_normal.png"/>
+    <File fileId="48" filename="$data/shared/detailLibrary/nonMetallic/fabric/fabric3_specular.png"/>
+    <File fileId="42" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPaintedOld_diffuse.dds"/>
+    <File fileId="8" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png"/>
+    <File fileId="20" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_diffuse.png"/>
+    <File fileId="19" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_specular.png"/>
+    <File fileId="18" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubberBlack_diffuse.png"/>
+    <File fileId="17" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_normal.png"/>
+    <File fileId="16" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_specular.png"/>
+    <File fileId="2" filename="$data/shared/white_diffuse.png"/>
+    <File fileId="37" filename="$data/shared/window_specular.png"/>
+    <File fileId="38" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFIAlpha_diffuse.png"/>
+    <File fileId="39" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFIAlpha_normal.png"/>
+    <File fileId="40" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFIAlpha_vmask.png"/>
+    <File fileId="34" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFIConveyor_normal.png"/>
+    <File fileId="35" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFIConveyor_vmask.png"/>
+    <File fileId="31" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFICutter_diffuse.png"/>
+    <File fileId="32" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFICutter_normal.png"/>
+    <File fileId="33" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFICutter_vmask.png"/>
+    <File fileId="23" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFIDecals_diffuse.png"/>
+    <File fileId="27" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFIDecals_normal.png"/>
+    <File fileId="43" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFIGrid_diffuse.png"/>
+    <File fileId="44" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFIGrid_normal.png"/>
+    <File fileId="45" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFIGrid_vmask.png"/>
+    <File fileId="46" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFIHoses_normal.png"/>
+    <File fileId="47" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFIHoses_vmask.png"/>
+    <File fileId="3" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFI_normal.png"/>
+    <File fileId="4" filename="$data/vehicles/brielmaier/motorMower29EFI/motorMower29EFI_vmask.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="clearGlass_metalPainted_mat" materialId="406" alphaBlending="true" customShaderId="5">
+      <Texture fileId="36"/>
+      <Normalmap fileId="24"/>
+      <Glossmap fileId="37"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.2 0.2 0.2"/>
+      <CustomParameter name="alphaBlendingClipThreshold" value="0"/>
+    </Material>
+    <Material name="clearGlass_metalPainted_mat" materialId="5" alphaBlending="true" customShaderId="5">
+      <Texture fileId="36"/>
+      <Normalmap fileId="24"/>
+      <Glossmap fileId="37"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="alphaBlendingClipThreshold" value="0"/>
+    </Material>
+    <Material name="lambert1" materialId="6" diffuseColor="0.501961 0.501961 0.501961 1">
+    </Material>
+    <Material name="motorMower29EFI_BRIELMAIER_BLUE1_mat" materialId="8" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0.1 0.1 0.1"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="motorMower29EFI_BRIELMAIER_BLUE1_mat" materialId="9" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0.747 0.23 0.038"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="motorMower29EFI_BRIELMAIER_GREY1_mat" materialId="10" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0.04 0.04 0.04"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="motorMower29EFI_BRIELMAIER_SILVER1_mat" materialId="11" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0 0 0"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="motorMower29EFI_metalPaintedBlack_mat" materialId="13" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+    </Material>
+    <Material name="motorMower29EFI_metalPaintedGray_mat" materialId="14" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.285 0.285 0.285"/>
+    </Material>
+    <Material name="motorMower29EFI_plasticPainted_01_mat" materialId="15" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="19"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="20"/>
+      <CustomParameter name="colorScale" value="0.5647 0.3324 0.0908"/>
+    </Material>
+    <Material name="motorMower29EFI_plasticPainted_02_mat" materialId="16" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="19"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="20"/>
+      <CustomParameter name="colorScale" value="0.0075 0.2051 0.3613"/>
+    </Material>
+    <Material name="motorMower29EFI_plasticPainted_03_mat" materialId="376" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="19"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="20"/>
+      <CustomParameter name="colorScale" value="0.251 0.0773614 0.0127814"/>
+    </Material>
+    <Material name="motorMower29EFI_plasticPaintedBlack_mat" materialId="18" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="19"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="20"/>
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+    </Material>
+    <Material name="motorMower29EFI_plasticPaintedShinyGray_mat" materialId="19" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="19"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="20"/>
+      <CustomParameter name="colorScale" value="0.15 0.15 0.15"/>
+      <CustomParameter name="smoothnessScale" value="1.52"/>
+    </Material>
+    <Material name="motorMower29EFI_rubberBlackHoses_mat" materialId="20" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="16"/>
+      <Custommap name="detailNormal" fileId="17"/>
+      <Custommap name="detailDiffuse" fileId="18"/>
+      <CustomParameter name="colorScale" value="0.01 0.01 0.01"/>
+      <CustomParameter name="porosity" value="0.5"/>
+    </Material>
+    <Material name="motorMower29EFI_silverRough_mat" materialId="21" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="21"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="22"/>
+      <CustomParameter name="colorScale" value="0.1 0.1 0.1"/>
+    </Material>
+    <Material name="motorMower29EFI_silverRough_mat" materialId="372" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="21"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="22"/>
+      <CustomParameter name="colorScale" value="0.15 0.15 0.15"/>
+    </Material>
+    <Material name="motorMower29EFI_silverRough_mat" materialId="22" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="21"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="22"/>
+      <CustomParameter name="colorScale" value="0.7379 0.7454 0.7529"/>
+    </Material>
+    <Material name="motorMower29EFI_SIP_RED2_mat" materialId="23" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0.2 0.2 0.2"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="motorMower29EFIAlpha_metalPaintedBlack_mat" materialId="25" customShaderId="5" customShaderVariation="vmaskUV2">
+      <Texture fileId="38"/>
+      <Normalmap fileId="39"/>
+      <Glossmap fileId="40"/>
+      <Custommap name="detailSpecular" fileId="41"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+    </Material>
+    <Material name="motorMower29EFIAlpha_silverScratched_mat" materialId="26" customShaderId="5" customShaderVariation="vmaskUV2">
+      <Texture fileId="38"/>
+      <Normalmap fileId="39"/>
+      <Glossmap fileId="40"/>
+      <Custommap name="detailSpecular" fileId="42"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="30"/>
+      <CustomParameter name="colorScale" value="0.1 0.1 0.1"/>
+    </Material>
+    <Material name="motorMower29EFIConveyor_plasticPaintedShinyGray_mat" materialId="379" customShaderId="5" customShaderVariation="meshScroll">
+      <Texture fileId="2"/>
+      <Normalmap fileId="34"/>
+      <Glossmap fileId="35"/>
+      <Custommap name="detailSpecular" fileId="19"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="20"/>
+      <CustomParameter name="colorScale" value="0.251 0.077 0.013"/>
+      <CustomParameter name="smoothnessScale" value="1.52"/>
+      <CustomParameter name="lengthAndRadius" value="2.099 0.14 0 0"/>
+    </Material>
+    <Material name="motorMower29EFICutter_metalPainted_mat" materialId="28" customShaderId="5" customShaderVariation="uvTransform">
+      <Texture fileId="31"/>
+      <Normalmap fileId="32"/>
+      <Glossmap fileId="33"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.0242 0.0242 0.0242"/>
+    </Material>
+    <Material name="motorMower29EFICutter_metalPaintedGray_mat" materialId="29" customShaderId="5" customShaderVariation="uvTransform">
+      <Texture fileId="31"/>
+      <Normalmap fileId="32"/>
+      <Glossmap fileId="33"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.285 0.285 0.285"/>
+    </Material>
+    <Material name="motorMower29EFIDecals_mat" materialId="30" specularColor="0.501961 1 0.501961" customShaderId="26" customShaderVariation="staticLight">
+      <Texture fileId="23"/>
+      <Normalmap fileId="24"/>
+    </Material>
+    <Material name="motorMower29EFIDecals_metalPainted_mat" materialId="394" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="23"/>
+      <Normalmap fileId="27"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="28"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="22"/>
+      <CustomParameter name="colorScale" value="0 0 0"/>
+    </Material>
+    <Material name="motorMower29EFIDecals_metalPainted_mat" materialId="409" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="23"/>
+      <Normalmap fileId="27"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="28"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="22"/>
+      <CustomParameter name="colorScale" value="0.1 0.1 0.1"/>
+    </Material>
+    <Material name="motorMower29EFIDecals_metalPainted_mat" materialId="31" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="23"/>
+      <Normalmap fileId="27"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="28"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="22"/>
+    </Material>
+    <Material name="motorMower29EFIDecals_silverScratched_mat" materialId="375" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="23"/>
+      <Normalmap fileId="27"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="29"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="30"/>
+      <CustomParameter name="colorScale" value="0.2 0.2 0.2"/>
+    </Material>
+    <Material name="motorMower29EFIDecals_silverScratched_mat" materialId="32" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="23"/>
+      <Normalmap fileId="27"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="29"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="30"/>
+    </Material>
+    <Material name="motorMower29EFIGrid_metalPainted_mat" materialId="33" customShaderId="5" customShaderVariation="vmaskUV2">
+      <Texture fileId="43"/>
+      <Normalmap fileId="44"/>
+      <Glossmap fileId="45"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.1 0.1 0.1"/>
+    </Material>
+    <Material name="motorMower29EFIHoses_fabric3_mat" materialId="34" customShaderId="5" customShaderVariation="vmaskUV2">
+      <Texture fileId="2"/>
+      <Normalmap fileId="46"/>
+      <Glossmap fileId="47"/>
+      <Custommap name="detailSpecular" fileId="48"/>
+      <Custommap name="detailNormal" fileId="49"/>
+      <Custommap name="detailDiffuse" fileId="50"/>
+      <CustomParameter name="colorScale" value="0.0212 0.0212 0.0212"/>
+      <CustomParameter name="porosity" value="1"/>
+    </Material>
+    <Material name="motorMower29EFIHoses_rubberBlackHoses_mat" materialId="35" customShaderId="5" customShaderVariation="vmaskUV2">
+      <Texture fileId="2"/>
+      <Normalmap fileId="46"/>
+      <Glossmap fileId="47"/>
+      <Custommap name="detailSpecular" fileId="16"/>
+      <Custommap name="detailNormal" fileId="17"/>
+      <Custommap name="detailDiffuse" fileId="18"/>
+      <CustomParameter name="colorScale" value="0.01 0.01 0.01"/>
+      <CustomParameter name="porosity" value="0.5"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="motorMower29EFI.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="motorMower29EFI_main_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="106" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6">
+      <Shape name="motorMower29EFI_vis" rotation="9e-06 0 0" shapeId="2" clipDistance="300" nodeId="107" castsShadows="true" receiveShadows="true" skinBindNodeIds="107 121 123 125 146 147 157 161 163 165 166 167 170" materialIds="13,8,20,23,15,19,11,21,10,18,14,16">
+        <TransformGroup name="wheels" nodeId="108">
+          <TransformGroup name="wheelFrontLeft" translation="0.725321 0.371746 0.50966" rotation="-9e-06 0 0" nodeId="109"/>
+          <TransformGroup name="wheelFrontRight" translation="-0.72532 0.371746 0.50966" rotation="-9e-06 0 0" nodeId="110"/>
+          <TransformGroup name="steeringCenterNode" translation="-0.548453 0 0" rotation="-9e-06 0 0" nodeId="111"/>
+        </TransformGroup>
+        <TransformGroup name="exitPoint" translation="0.002279 0 -1.61764" rotation="-9e-06 0 0" nodeId="112"/>
+        <TransformGroup name="exhaustParticle" translation="0.377408 0.77249 0.495181" rotation="-5e-06 -8e-06 -60" nodeId="113"/>
+        <TransformGroup name="cameras" rotation="-9e-06 0 0" nodeId="114">
+          <TransformGroup name="outdoorCameraTarget" translation="0 0.8 0.4" rotation="-24 180 0" nodeId="115">
+            <Camera name="outdoorCamera" translation="0.808909 2.76506 -3.69026" rotation="141.163 1.34222 179.407" nodeId="116" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
+          </TransformGroup>
+          <TransformGroup name="cameraRaycastNode1" translation="0 0.3741 1.30842" nodeId="117"/>
+          <TransformGroup name="cameraRaycastNode2" translation="0 0.906102 -0.020595" nodeId="118"/>
+          <Shape name="shadowFocusBox" translation="0 1.07071 -1.41746" shapeId="3" clipDistance="150" nodeId="119" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        </TransformGroup>
+        <TransformGroup name="movingParts" nodeId="120">
+          <TransformGroup name="steeringArm01" translation="0.009385 0.616116 0.008237" clipDistance="300" nodeId="121">
+            <TransformGroup name="steeringArm02Rot" translation="0.000115 0.184667 -0.13816" rotation="53.1977 -0.047826 0" nodeId="122">
+              <TransformGroup name="steeringArm02" clipDistance="300" nodeId="123">
+                <TransformGroup name="steeringBaseRot" translation="-0.009758 -0.010977 -0.501422" rotation="-53.1977 0.02865 -0.038295" nodeId="124">
+                  <TransformGroup name="steeringBase" clipDistance="300" nodeId="125">
+                    <TransformGroup name="lights" nodeId="126">
+                      <TransformGroup name="sharedLights" translation="0 -1.1957 0.4391" nodeId="127">
+                        <TransformGroup name="hellaWorkingLightRound_01_01" translation="0.238721 1.29616 -0.558544" rotation="67.9425 45.0751 -0.77177" nodeId="128"/>
+                        <TransformGroup name="hellaWorkingLightRound_01_02" translation="-0.218214 1.29775 -0.557316" rotation="67.7098 -44.8013 1.94786" nodeId="129"/>
+                      </TransformGroup>
+                      <TransformGroup name="workLights" translation="0 -1.1957 0.4391" rotation="-9e-06 0 0" nodeId="130">
+                        <Light name="workLightFrontLow" translation="0 1.30377 -0.180294" rotation="-10 180 0" clipDistance="75" nodeId="131" type="spot" color="0.85 0.85 1" emitDiffuse="true" emitSpecular="true" range="20" coneAngle="130" dropOff="2"/>
+                        <Light name="workLightFrontHigh" translation="-0.278153 1.32701 -0.497906" rotation="-15 150 0" clipDistance="75" nodeId="132" type="spot" color="0.85 0.85 1" emitDiffuse="true" emitSpecular="true" range="25" coneAngle="90" dropOff="2">
+                          <Light name="workLightFrontHigh2" translation="-0.498645 -0.075658 0.279582" rotation="13.1868 56.7741 24.1461" clipDistance="75" nodeId="133" type="spot" color="0.85 0.85 1" emitDiffuse="true" emitSpecular="true" range="25" coneAngle="90" dropOff="2"/>
+                        </Light>
+                      </TransformGroup>
+                    </TransformGroup>
+                    <TransformGroup name="characterTargets" nodeId="134">
+                      <TransformGroup name="playerLeftHandTargetHandRot" translation="0.380088 0.091022 -0.406076" rotation="8.95584 -44.4092 -24.7335" nodeId="135">
+                        <TransformGroup name="playerLeftHandTargetHand" nodeId="136"/>
+                      </TransformGroup>
+                      <TransformGroup name="playerRightHandTargetHandRot" translation="-0.353712 0.086388 -0.401322" rotation="13.6006 45.2167 18.3639" nodeId="137">
+                        <TransformGroup name="playerRightHandTargetHand" nodeId="138"/>
+                      </TransformGroup>
+                      <TransformGroup name="playerLeftHandTarget" translation="0.380088 0.091022 -0.406076" rotation="8.95584 -44.4092 -24.7335" nodeId="139"/>
+                      <TransformGroup name="playerRightHandTarget" translation="-0.353712 0.086388 -0.401322" rotation="13.6006 45.2167 18.3639" nodeId="140"/>
+                    </TransformGroup>
+                    <TransformGroup name="indoorCameraAnim" nodeId="141">
+                      <Camera name="indoorCamera" translation="0 0.814226 -0.712695" rotation="-21.2139 180 0" nodeId="142" fov="60" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
+                      <TransformGroup name="nicknameRenderingNode" translation="0 0.817614 -0.689988" nodeId="143"/>
+                    </TransformGroup>
+                    <TransformGroup name="dashboards" nodeId="144">
+                      <TransformGroup name="keyIgnitionPart01Rot" translation="0.096251 0.046885 -0.224283" rotation="150 0 180" nodeId="145">
+                        <TransformGroup name="keyIgnitionPart01" clipDistance="300" nodeId="146">
+                          <TransformGroup name="keyIgnitionPart02" translation="-7e-05 5.4e-05 0.002816" rotation="0 2e-06 0" clipDistance="300" nodeId="147"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <Shape name="iconsDefaultLightUp_decals" translation="-0.017065 0.060899 -0.216564" shapeId="4" clipDistance="30" nodeId="148" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="30"/>
+                      <Shape name="iconForward_decal" translation="0.027714 0.064199 -0.215071" rotation="90 59.8102 90" shapeId="5" clipDistance="30" nodeId="149" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="30"/>
+                      <Shape name="iconBackwards_decal" translation="0.027714 0.06044 -0.217858" rotation="89.9999 59.8102 90" shapeId="6" clipDistance="30" nodeId="150" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="30"/>
+                      <Shape name="iconGear_decal" translation="0.015707 0.063626 -0.2164" rotation="90 59.8113 90" shapeId="7" clipDistance="30" nodeId="151" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="30"/>
+                      <Shape name="display_decal" translation="0.010902 0.06215 -0.216193" rotation="90 59.8113 90" shapeId="8" clipDistance="30" nodeId="152" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="30"/>
+                    </TransformGroup>
+                    <Shape name="motorMower29EFI_decals" translation="0.009637 0.074434 -0.17779" shapeId="9" clipDistance="30" nodeId="153" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="409"/>
+                    <Shape name="screw_decals" translation="0.001526 0.051809 -0.157438" shapeId="10" clipDistance="30" nodeId="154" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="409"/>
+                    <Shape name="colPart" translation="0.014408 0.064018 -0.207001" rotation="-90 0 0" shapeId="11" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="155" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+                    <TransformGroup name="steeringBaseJoint" rotation="-9e-06 0 0" nodeId="156"/>
+                  </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="steeringBaseHandle" translation="-0.066976 -0.01767 -0.457273" rotation="-53.1977 0.02865 -0.038295" clipDistance="300" nodeId="157">
+                  <Shape name="screw_decals" translation="-6.4e-05 0.03903 -0.020889" shapeId="12" clipDistance="30" nodeId="158" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                </TransformGroup>
+                <Shape name="screw_decals" translation="-0.000112 0.038361 -0.264536" rotation="-53.1977 0.02865 -0.038295" shapeId="13" clipDistance="30" nodeId="159" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="32"/>
+                <Shape name="colPart" translation="-0.009544 0.017587 -0.111736" rotation="-90.3024 0.02865 -0.038295" shapeId="14" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="160" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="steeringArm02Handle" translation="-0.036149 0.439597 -0.328881" clipDistance="300" nodeId="161"/>
+            <Shape name="screw_decals" translation="-1e-05 0.017839 -0.030571" shapeId="15" clipDistance="30" nodeId="162" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+            <TransformGroup name="supportArm" translation="-0.009385 -1.6e-05 -3.7e-05" clipDistance="300" nodeId="163"/>
+            <TransformGroup name="steeringArm01Joint" rotation="-9e-06 0 0" nodeId="164"/>
+          </TransformGroup>
+          <TransformGroup name="steeringArm01Handle" translation="-0.065 0.616117 0.008258" clipDistance="300" nodeId="165"/>
+          <TransformGroup name="supportArmHandle" translation="0.120854 0.61687 0.032225" clipDistance="300" nodeId="166"/>
+          <TransformGroup name="footSteps" translation="0.026027 0.378814 0.097854" clipDistance="300" nodeId="167">
+            <Shape name="screw_decals" translation="0 0.005179 0.038647" shapeId="16" clipDistance="30" nodeId="168" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+          </TransformGroup>
+          <TransformGroup name="attachmentAlignmentRefFrame" translation="0.02 0.399696 0.802079" rotation="0 -90 0" nodeId="169">
+            <TransformGroup name="attachmentAlignment" clipDistance="300" nodeId="170">
+              <Shape name="mowerFrame" translation="0.062223 -0.051304 -0.050594" rotation="-0.250166 90 0" shapeId="17" clipDistance="300" nodeId="171" castsShadows="true" receiveShadows="true" skinBindNodeIds="171 178 180 183 189 191 194 200 202 204 206 208 210 212 214 216 218 220 222 223 224 225 226 227 228 229 230 231 233 270" materialIds="13,11,9,376,18,22">
+                <TransformGroup name="movingParts" nodeId="172">
+                  <TransformGroup name="cutterBarTopMotorRotNodeRot" translation="1.62441 -0.150419 0.869332" rotation="3.2 0 0" nodeId="173">
+                    <TransformGroup name="cutterBarTopMotorRotNode" nodeId="174">
+                      <TransformGroup name="cutterBarTopMotorArmRef" translation="0.000601 -0.016688 0.0069" rotation="4.49258 89.9998 0" nodeId="175"/>
+                      <TransformGroup name="cutterBarBottomMotorArmRef" translation="-0.001899 0.016233 -0.044041" rotation="77.1413 89.7498 90" nodeId="176"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                  <TransformGroup name="cutterBarTopMotorArm01RefFrame" translation="1.59261 0.020441 0.885796" rotation="160.027 -86.7998 -90" nodeId="177">
+                    <TransformGroup name="cutterBarTopMotorArm01" clipDistance="300" nodeId="178">
+                      <TransformGroup name="cutterBarTopMotorArm02RefFrame" translation="0 0 0.192051" rotation="74.5197 180 0" nodeId="179">
+                        <TransformGroup name="cutterBarTopMotorArm02" clipDistance="300" nodeId="180">
+                          <Shape name="screw_decals" translation="0.000512 -0.001377 0.060204" rotation="-92.95 -85.5074 90" shapeId="18" clipDistance="30" nodeId="181" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="cutterBarTopRot" translation="0.003009 -0.089984 0.235927" rotation="-93.2002 19.9729 -90" nodeId="182">
+                        <TransformGroup name="cutterBarTop" clipDistance="300" nodeId="183">
+                          <TransformGroup name="cutterBarTopArm01Ref" translation="-0.268152 -0.011591 -0.000804" rotation="2.29016 0 0" nodeId="184"/>
+                          <Shape name="cutterBarTop_decal" translation="-2.22818 -0.028736 0.003684" shapeId="19" clipDistance="300" nodeId="185" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="29,28"/>
+                          <Shape name="screw_decals" translation="-2.33307 -0.010989 -0.024697" shapeId="20" clipDistance="30" nodeId="186" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <Shape name="screw_decals" translation="0.042912 -0.104622 0.197888" shapeId="21" clipDistance="30" nodeId="187" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                  <TransformGroup name="cutterBarBottomMotorArm01RefFrame" translation="1.59261 0.026759 0.835823" rotation="160.037 -86.5498 -90" nodeId="188">
+                    <TransformGroup name="cutterBarBottomMotorArm01" clipDistance="300" nodeId="189">
+                      <TransformGroup name="cutterBarBottomMotorArm02RefFrame" translation="0 0 0.192145" rotation="57.1786 180 0" nodeId="190">
+                        <TransformGroup name="cutterBarBottomMotorArm02" clipDistance="300" nodeId="191">
+                          <Shape name="screw_decals" translation="-0.006058 -0.006673 0.060442" shapeId="22" clipDistance="30" nodeId="192" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="cutterBarBottomRot" translation="0.006485 -0.091138 0.239237" rotation="-93.4502 19.9627 -90" nodeId="193">
+                        <TransformGroup name="cutterBarBottom" clipDistance="300" nodeId="194">
+                          <TransformGroup name="cutterBarBottomArm01Ref" translation="-0.478185 -0.015223 0.047761" rotation="2.29016 0 0" nodeId="195"/>
+                          <Shape name="cutterBarBottom_decal" translation="-2.19319 -0.035763 0.050811" rotation="0.250157 0 0" shapeId="23" clipDistance="300" nodeId="196" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="28"/>
+                          <Shape name="screw_decals" translation="-2.24907 -0.036578 0.019613" rotation="0.250157 0 0" shapeId="24" clipDistance="30" nodeId="197" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <Shape name="screw_decals" translation="-0.038062 -0.046522 0.218355" shapeId="25" clipDistance="30" nodeId="198" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                    </TransformGroup>
+                  </TransformGroup>
+                  <TransformGroup name="cutterBarArms" nodeId="199">
+                    <TransformGroup name="cutterBarTopArm01" translation="1.32844 -0.236954 0.712795" rotation="2.29016 0 0" clipDistance="300" nodeId="200">
+                      <Shape name="screw_decals" translation="-3.3e-05 0.025099 0.028014" shapeId="26" clipDistance="30" nodeId="201" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                    </TransformGroup>
+                    <TransformGroup name="cutterBarTopArm02" translation="0.90844 -0.236954 0.712795" rotation="2.29016 0 0" clipDistance="300" nodeId="202">
+                      <Shape name="screw_decals" translation="-3.3e-05 0.013574 0.076121" shapeId="27" clipDistance="30" nodeId="203" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                    </TransformGroup>
+                    <TransformGroup name="cutterBarTopArm03" translation="0.488454 -0.236954 0.712795" rotation="2.29016 0 0" clipDistance="300" nodeId="204">
+                      <Shape name="screw_decals" translation="-4.7e-05 0.013677 0.076118" shapeId="28" clipDistance="30" nodeId="205" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                    </TransformGroup>
+                    <TransformGroup name="cutterBarTopArm04" translation="0.068454 -0.236954 0.712795" rotation="2.29016 0 0" clipDistance="300" nodeId="206">
+                      <Shape name="screw_decals" translation="-4.7e-05 0.014551 0.076092" shapeId="29" clipDistance="30" nodeId="207" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                    </TransformGroup>
+                    <TransformGroup name="cutterBarTopArm05" translation="-0.351546 -0.236954 0.712795" rotation="2.29016 0 0" clipDistance="300" nodeId="208">
+                      <Shape name="screw_decals" translation="-3.4e-05 0.004314 0.161558" shapeId="30" clipDistance="30" nodeId="209" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                    </TransformGroup>
+                    <TransformGroup name="cutterBarTopArm06" translation="-0.771545 -0.236954 0.712795" rotation="2.29016 0 0" clipDistance="300" nodeId="210">
+                      <Shape name="screw_decals" translation="-4.7e-05 0.014432 0.076091" shapeId="31" clipDistance="30" nodeId="211" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                    </TransformGroup>
+                    <TransformGroup name="cutterBarTopArm07" translation="-1.19155 -0.236954 0.712795" rotation="2.29016 0 0" clipDistance="300" nodeId="212">
+                      <Shape name="screw_decals8" translation="-4.7e-05 0.014432 0.076091" shapeId="32" clipDistance="30" nodeId="213" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                    </TransformGroup>
+                    <TransformGroup name="cutterBarTopArm08" translation="-1.61154 -0.236954 0.712795" rotation="2.29016 0 0" clipDistance="300" nodeId="214">
+                      <Shape name="screw_decals" translation="-4.7e-05 0.014432 0.076091" shapeId="33" clipDistance="30" nodeId="215" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                    </TransformGroup>
+                    <TransformGroup name="cutterBarTopArm09" translation="-2.03154 -0.236954 0.712795" rotation="2.29016 0 0" clipDistance="300" nodeId="216">
+                      <Shape name="screw_decals" translation="-4.8e-05 0.014432 0.076091" shapeId="34" clipDistance="30" nodeId="217" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                    </TransformGroup>
+                    <TransformGroup name="cutterBarTopArm10" translation="-2.45154 -0.236954 0.712795" rotation="2.29016 0 0" clipDistance="300" nodeId="218">
+                      <Shape name="screw_decals" translation="-4.7e-05 0.025161 0.028011" shapeId="35" clipDistance="30" nodeId="219" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                    </TransformGroup>
+                    <TransformGroup name="cutterBarTopArm11" translation="-2.59159 -0.236954 0.712795" rotation="2.29016 0 0" clipDistance="300" nodeId="220">
+                      <Shape name="screw_decals" translation="-1e-06 0.025103 0.028013" shapeId="36" clipDistance="30" nodeId="221" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                    </TransformGroup>
+                    <TransformGroup name="cutterBarBottomArm01" translation="1.11841 -0.237893 0.712758" rotation="2.29016 0 0" clipDistance="300" nodeId="222"/>
+                    <TransformGroup name="cutterBarBottomArm02" translation="0.698407 -0.237893 0.712758" rotation="2.29016 0 0" clipDistance="300" nodeId="223"/>
+                    <TransformGroup name="cutterBarBottomArm03" translation="0.278421 -0.237893 0.712758" rotation="2.29016 0 0" clipDistance="300" nodeId="224"/>
+                    <TransformGroup name="cutterBarBottomArm04" translation="-0.141579 -0.237893 0.712758" rotation="2.29016 0 0" clipDistance="300" nodeId="225"/>
+                    <TransformGroup name="cutterBarBottomArm05" translation="-0.561578 -0.237893 0.712757" rotation="2.29016 0 0" clipDistance="300" nodeId="226"/>
+                    <TransformGroup name="cutterBarBottomArm06" translation="-0.981578 -0.237893 0.712757" rotation="2.29016 0 0" clipDistance="300" nodeId="227"/>
+                    <TransformGroup name="cutterBarBottomArm07" translation="-1.40158 -0.237893 0.712757" rotation="2.29016 0 0" clipDistance="300" nodeId="228"/>
+                    <TransformGroup name="cutterBarBottomArm08" translation="-1.82158 -0.237893 0.712757" rotation="2.29016 0 0" clipDistance="300" nodeId="229"/>
+                    <TransformGroup name="cutterBarBottomArm09" translation="-2.24158 -0.237893 0.712757" rotation="2.29016 0 0" clipDistance="300" nodeId="230"/>
+                    <TransformGroup name="cutterBarBottomArm10" translation="-2.66159 -0.237893 0.712757" rotation="2.29016 0 0" clipDistance="300" nodeId="231"/>
+                  </TransformGroup>
+                  <TransformGroup name="mowerAxleRot" translation="1.53951 0.228038 1.51111" rotation="9.61491 -0.000206 -3.8e-05" nodeId="232">
+                    <TransformGroup name="mowerAxle" clipDistance="300" nodeId="233"/>
+                  </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="effects" nodeId="234">
+                  <TransformGroup name="mowerEffectNode" translation="-0.595594 -0.236985 0.655497" rotation="0.250157 0 0" nodeId="235"/>
+                  <Shape name="smokeEmitterMower" translation="-0.604755 -0.320822 0.814577" rotation="0.250157 0 0" shapeId="37" clipDistance="300" nodeId="236" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+                </TransformGroup>
+                <TransformGroup name="visuals" nodeId="237">
+                  <Shape name="motorMower29EFI_decals" translation="-0.615887 0.192224 0.278177" rotation="0.250157 0 0" shapeId="38" clipDistance="30" nodeId="238" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+                  <Shape name="screw_decals" translation="-0.591278 -0.013853 0.801993" rotation="0.250157 0 0" shapeId="39" clipDistance="30" nodeId="239" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="375"/>
+                </TransformGroup>
+                <TransformGroup name="mowerFrameJoint" nodeId="240"/>
+              </Shape>
+              <Shape name="windrowerFrame" translation="0.584207 0.404187 0.020908" rotation="-9e-06 90 0" shapeId="40" clipDistance="300" nodeId="241" castsShadows="true" receiveShadows="true" skinBindNodeIds="241 246 251 254 255 257 269" materialIds="18,13,11,20,372,8,9">
+                <TransformGroup name="movingParts" nodeId="242">
+                  <TransformGroup name="flapLeftRotNodeRot" translation="1.069 0.313367 -0.461693" rotation="-11.7223 -0.001917 0.000405" nodeId="243">
+                    <TransformGroup name="flapLeftRotNode" nodeId="244">
+                      <TransformGroup name="flapLeftRot" translation="0 -0.315644 0" nodeId="245">
+                        <TransformGroup name="flapLeft" clipDistance="300" nodeId="246">
+                          <Shape name="screw_decals" translation="-0.00566 -0.03114 0.165915" rotation="11.7223 0.001959 -7e-06" shapeId="41" clipDistance="30" nodeId="247" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="394"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                    </TransformGroup>
+                  </TransformGroup>
+                  <TransformGroup name="flapRightRotNodeRot" translation="-1.069 0.325659 -0.464244" rotation="-11.7223 0.001431 -0.000297" nodeId="248">
+                    <TransformGroup name="flapRightRotNode" nodeId="249">
+                      <TransformGroup name="flapRightRot" translation="0 -0.328198 0" nodeId="250">
+                        <TransformGroup name="flapRight" clipDistance="300" nodeId="251">
+                          <Shape name="screw_decals9" translation="0.000838 -0.048931 0.251658" rotation="11.7223 -0.001461 0" shapeId="42" clipDistance="30" nodeId="252" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="394,375"/>
+                        </TransformGroup>
+                      </TransformGroup>
+                    </TransformGroup>
+                  </TransformGroup>
+                  <Shape name="windrowerBelt" translation="1.055 -0.445547 0.020541" rotation="90.0009 -75.7223 -90.0003" shapeId="43" clipDistance="300" nodeId="253" castsShadows="true" receiveShadows="true" materialIds="379"/>
+                  <TransformGroup name="tines" translation="4e-05 -0.567802 0.39592" clipDistance="300" nodeId="254"/>
+                  <TransformGroup name="wheelWindrowerLeftVisual" translation="0.7 -0.671055 0.077921" clipDistance="300" nodeId="255">
+                    <Shape name="screw_decals" translation="-8.8e-05 1e-06 1.5e-05" shapeId="44" clipDistance="30" nodeId="256" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="32"/>
+                  </TransformGroup>
+                  <TransformGroup name="wheelWindrowerRightVisual" translation="-0.7 -0.671055 0.07792" clipDistance="300" nodeId="257">
+                    <Shape name="screw_decals" translation="3.7e-05 1e-06 1.5e-05" shapeId="45" clipDistance="30" nodeId="258" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="32"/>
+                  </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="effects" translation="0.000908 -0.748651 0.030497" nodeId="259">
+                  <TransformGroup name="windowerEffectLeftNode" translation="0.389912 0.150211 0.316738" nodeId="260"/>
+                  <TransformGroup name="windowerEffectRightNode" translation="-0.39 0.150211 0.316738" nodeId="261"/>
+                  <Shape name="smokeEmitterWindrower" translation="0 -0.107057 0.266095" shapeId="46" clipDistance="300" nodeId="262" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+                </TransformGroup>
+                <TransformGroup name="visuals" nodeId="263">
+                  <Shape name="motorMower29EFI_decals" translation="-0.53309 0.108338 -0.382857" shapeId="47" clipDistance="30" nodeId="264" castsShadows="false" receiveShadows="true" materialIds="394"/>
+                  <Shape name="motorMower29EFIGlass" translation="1.3e-05 0.018512 -0.359101" shapeId="48" clipDistance="300" nodeId="265" castsShadows="true" receiveShadows="true" materialIds="406"/>
+                  <Shape name="screw_decals" translation="0 -0.194054 -0.108194" shapeId="49" clipDistance="30" nodeId="266" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31,32"/>
+                </TransformGroup>
+                <TransformGroup name="windrowerFrameJoint" nodeId="267"/>
+              </Shape>
+              <Shape name="screw_decals" translation="0.053762 0.095337 0.073186" rotation="0 90 0" shapeId="50" clipDistance="30" nodeId="268" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="32"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="windrowerConnectors" translation="0.011475 0.779621 0.811963" rotation="-9e-06 0 -2e-06" clipDistance="300" nodeId="269"/>
+          <TransformGroup name="mowerConnectors" translation="-0.004209 0.777636 0.807149" rotation="-0.250166 0 0" clipDistance="300" nodeId="270"/>
+        </TransformGroup>
+        <TransformGroup name="characterTargets" nodeId="271">
+          <TransformGroup name="dynamicPlayerRoot" translation="0 -0.005052 -1.21853" rotation="-9e-06 0 0" nodeId="272">
+            <TransformGroup name="player" nodeId="273">
+              <TransformGroup name="playerNode" nodeId="274">
+                <TransformGroup name="skeleton" translation="0 -0.01 0" nodeId="275"/>
+              </TransformGroup>
+              <TransformGroup name="raycast01" translation="0 1.3 0" rotation="-10 0 0" nodeId="276"/>
+              <TransformGroup name="raycast02" translation="0 1.3 0" rotation="10 0 0" nodeId="277"/>
+              <Shape name="playerCollision01" translation="0 0.556511 0.885955" shapeId="51" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="278" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6">
+                <Shape name="playerCollision02" shapeId="51" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="279" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+              </Shape>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="staticPlayerRoot" nodeId="280">
+            <TransformGroup name="playerSkin" translation="0 1.24305 -0.091225" rotation="-9e-06 0 0" nodeId="281"/>
+            <TransformGroup name="playerLeftFootTarget" translation="0.237515 0.390659 -0.145088" rotation="-2.01629 1.19076 -0.137849" nodeId="282"/>
+            <TransformGroup name="playerRightFootTarget" translation="-0.166506 0.391611 -0.148267" rotation="-1.93499 -4.09987 0.156656" nodeId="283"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="workAreas" nodeId="284">
+          <TransformGroup name="mower" nodeId="285">
+            <TransformGroup name="workAreaStartMower" translation="1.65 0 1.76934" nodeId="286"/>
+            <TransformGroup name="workAreaWidthMower" translation="-2.7 0 1.76934" nodeId="287"/>
+            <TransformGroup name="workAreaHeightMower" translation="1.65 0 0.769343" rotation="-9e-06 0 0" nodeId="288"/>
+            <TransformGroup name="dropAreaStartMower" translation="1.64429 0 1.68508" nodeId="289"/>
+            <TransformGroup name="dropAreaWidthMower" translation="-2.696 0 1.68508" rotation="-9e-06 0 0" nodeId="290"/>
+            <TransformGroup name="dropAreaHeightMower" translation="1.64429 0 1.10039" rotation="-9e-06 0 0" nodeId="291"/>
+          </TransformGroup>
+          <TransformGroup name="windrower" nodeId="292">
+            <TransformGroup name="workAreaStartWindrower" translation="1.065 0 1.76934" nodeId="293"/>
+            <TransformGroup name="workAreaWidthWindrower" translation="-1.065 0 1.76934" nodeId="294"/>
+            <TransformGroup name="workAreaHeightWindrower" translation="1.065 0 1.10325" rotation="-9e-06 0 0" nodeId="295"/>
+            <TransformGroup name="dropAreaLeft" nodeId="296">
+              <TransformGroup name="dropAreaStartWindrowerLeft" translation="2.15 0 1.76165" nodeId="297"/>
+              <TransformGroup name="dropAreaWidthWindrowerLeft" translation="1.15 0 1.76165" rotation="-9e-06 0 0" nodeId="298"/>
+              <TransformGroup name="dropAreaHeightWindrowerLeft" translation="2.15 0 0.761647" rotation="-9e-06 0 0" nodeId="299"/>
+            </TransformGroup>
+            <TransformGroup name="dropAreaRight" nodeId="300">
+              <TransformGroup name="dropAreaStartWindrowerRight" translation="-1.15 0 1.76165" nodeId="301"/>
+              <TransformGroup name="dropAreaWidthWindrowerRight" translation="-2.15 0 1.76165" rotation="-9e-06 0 0" nodeId="302"/>
+              <TransformGroup name="dropAreaHeightWindrowerRight" translation="-1.15 0 0.761647" rotation="-9e-06 0 0" nodeId="303"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="ai" nodeId="304">
+          <TransformGroup name="mower" nodeId="305">
+            <TransformGroup name="aiMarkerLeftMower" translation="1.65 0 1.76934" nodeId="306"/>
+            <TransformGroup name="aiMarkerRightMower" translation="-2.7 0 1.76934" nodeId="307"/>
+            <TransformGroup name="aiMarkerBackMower" translation="0 0 0.769343" rotation="-9e-06 0 0" nodeId="308"/>
+            <TransformGroup name="aiCollisionNodeMower" translation="-0.42156 0 2.0912" nodeId="309"/>
+          </TransformGroup>
+          <TransformGroup name="windrower" nodeId="310">
+            <TransformGroup name="aiMarkerLeftWindrowerLeft" translation="1.65 0 1.76934" nodeId="311"/>
+            <TransformGroup name="aiMarkerRightWindrowerLeft" translation="-1.065 0 1.76934" nodeId="312"/>
+            <TransformGroup name="aiMarkerLeftWindrowerRight" translation="1.065 0 1.76934" nodeId="313"/>
+            <TransformGroup name="aiMarkerRightWindrowerRight" translation="-1.65 0 1.76934" nodeId="314"/>
+            <TransformGroup name="aiMarkerBackWindrower" translation="1.065 0 1.10325" rotation="-9e-06 0 0" nodeId="315"/>
+            <TransformGroup name="aiCollisionNodeWindrower" translation="0 0 1.89758" nodeId="316"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="fillUnit" nodeId="317">
+          <Shape name="exactFillRootNodeFuel" translation="-0.238305 0.603863 0.546595" rotation="-9e-06 0 0" shapeId="52" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="318" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        </TransformGroup>
+        <TransformGroup name="visuals" nodeId="319">
+          <Shape name="motorMower29EFI_decals" translation="0.044152 0.91876 -0.024827" shapeId="53" clipDistance="30" nodeId="320" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="31"/>
+          <Shape name="motorMower29EFIGlass" translation="-0.16202 0.4683 0.167453" shapeId="54" clipDistance="80" nodeId="321" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="motorMower29EFIAlpha" translation="0.008771 0.693157 0.41844" shapeId="55" clipDistance="300" nodeId="322" castsShadows="true" receiveShadows="true" materialIds="25,26"/>
+          <Shape name="motorMower29EFIGrid" translation="-0.064376 0.692692 0.584386" shapeId="56" clipDistance="300" nodeId="323" castsShadows="true" receiveShadows="true" materialIds="33"/>
+          <Shape name="screw_decals" translation="0 0.797713 0.056311" shapeId="57" clipDistance="30" nodeId="324" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="32,31"/>
+        </TransformGroup>
+        <TransformGroup name="componentJointAttachment" translation="0.02 0.43974 0.888661" rotation="-9e-06 0 0" nodeId="325"/>
+        <TransformGroup name="rootJoint" rotation="-9e-06 0 0" nodeId="326"/>
+      </Shape>
+      <TransformGroup name="skinnedMeshes" nodeId="327">
+        <Shape name="hoses" translation="-0.004537 0.934525 -0.067638" rotation="9e-06 0 0" shapeId="58" clipDistance="140" nodeId="328" castsShadows="true" receiveShadows="true" skinBindNodeIds="326 164 156" materialIds="34,35"/>
+        <Shape name="hosesWindrower" translation="0.427214 0.538956 0.997621" rotation="0 0 -2e-06" shapeId="59" clipDistance="300" nodeId="329" castsShadows="true" receiveShadows="true" skinBindNodeIds="326 267" materialIds="35"/>
+        <Shape name="hosesMower" translation="1.0822 0.421491 1.14791" shapeId="60" clipDistance="300" nodeId="330" castsShadows="true" receiveShadows="true" skinBindNodeIds="326 240" materialIds="35"/>
+      </TransformGroup>
+    </Shape>
+    <Shape name="motorMower29EFI_attachment_component2" translation="0 0.493243 0.982417" shapeId="61" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="331" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6">
+      <TransformGroup name="wheelMowerLeftTransRot" translation="1.6771 -0.290219 0.646354" nodeId="332">
+        <TransformGroup name="wheelMowerLeftTrans" nodeId="333">
+          <TransformGroup name="wheelMowerLeft" nodeId="334"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="wheelMowerRightTransRot" translation="-2.6771 -0.290219 0.646354" nodeId="335">
+        <TransformGroup name="wheelMowerRightTrans" nodeId="336">
+          <TransformGroup name="wheelMowerRight" nodeId="337"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="wheelWindrowerLeftRot" translation="0.699092 -0.277447 0.479284" nodeId="338">
+        <TransformGroup name="wheelWindrowerLeftTrans" nodeId="339">
+          <TransformGroup name="wheelWindrowerLeft" nodeId="340"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="wheelWindrowerRightRot" translation="-0.700908 -0.277447 0.479284" nodeId="341">
+        <TransformGroup name="wheelWindrowerRightTrans" nodeId="342">
+          <TransformGroup name="wheelWindrowerRight" nodeId="343"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="groundReferenceNodeRot" translation="0 -0.493243 0.730097" nodeId="344">
+        <TransformGroup name="groundReferenceNode" nodeId="345"/>
+      </TransformGroup>
+      <TransformGroup name="wheelMowerFrontReprPhysRot" translation="1.6101 0.089781 1.39199" rotation="9.36475 -0.000206 -3.7e-05" nodeId="346">
+        <TransformGroup name="wheelMowerFrontReprPhys" nodeId="347">
+          <TransformGroup name="wheelMowerFrontDriveNodePhysRot" translation="-0.004558 -0.327098 -0.16032" rotation="-9.36475 0.000209 3e-06" nodeId="348">
+            <TransformGroup name="wheelMowerFrontDriveNodePhys" nodeId="349"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="attachmentAlignmentRef" translation="-9.98 -0.093548 -0.180336" rotation="0 -90 0" nodeId="350"/>
+      <TransformGroup name="collisions" translation="0.070594 -0.144852 -0.118115" rotation="-0.250157 0 0" nodeId="351">
+        <Shape name="mowerColPart01" translation="-0.559699 -0.201912 0.759197" rotation="5.49122 0 0" shapeId="62" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="352" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        <Shape name="mowerColPart02" translation="-0.559699 0.210339 0.118237" rotation="17.8443 0 0" shapeId="63" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="353" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        <Shape name="mowerColPart03" translation="1.56417 0.182762 0.54234" rotation="0.250157 0 0" shapeId="64" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="354" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        <Shape name="mowerColPart04" translation="-2.77672 -0.002955 0.688965" rotation="0.250157 0 0" shapeId="65" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="355" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        <Shape name="mowerColPart05" translation="1.53951 0.066877 1.19029" rotation="9.61491 -0.000206 -3.8e-05" shapeId="66" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="356" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        <Shape name="windrowerColPart01" translation="-0.070594 0.462638 0.136677" rotation="-15.6512 0 0" shapeId="67" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="357" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        <Shape name="windrowerColPart02" translation="-0.070594 0.922182 0.06324" rotation="10.5706 0 0" shapeId="68" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="358" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        <Shape name="windrowerColPart03" translation="-0.070594 -0.03173 0.559336" rotation="-76.0521 0 0" shapeId="69" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="359" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="156">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="164">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="240">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="267">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="326">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

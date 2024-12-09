@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="selfPropelledMower" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <parentFile xmlFilename="$data/vehicles/krone/bigM450/bigM450.xml">
+        <attributes>
+            <set path="vehicle.storeData.name" value="BiG M 450 BLACK"/>
+            <set path="vehicle.storeData.price" value="468001"/>
+            <set path="vehicle.data.filename" value="vehicles/krone/bigM450/bigM450.i3d" />
+        
+            <!-- make sure it never misses -->
+            <set path="vehicle.groundReferenceNodes.groundReferenceNode(0)#threshold" value="1.5"/>
+            <set path="vehicle.groundReferenceNodes.groundReferenceNode(1)#threshold" value="1.5"/>
+            <set path="vehicle.groundReferenceNodes.groundReferenceNode(2)#threshold" value="1.5"/>
+
+            <!-- allow backwards pickup -->
+            <set path="vehicle.workAreas.workArea(0)#disableBackwards" value="false" />
+            <set path="vehicle.workAreas.workArea(1)#disableBackwards" value="false" />
+            <set path="vehicle.workAreas.workArea(2)#disableBackwards" value="false" />
+
+            <!-- add a material for the sticker -->
+            <!-- <set path="vehicle.baseMaterial.material(0).shaderParameter(3)#name" value="colorMat2"/>
+            <set path="vehicle.baseMaterial.material(0).shaderParameter(3)#value" value="KRONE_BLACK2"/>
+            <set path="vehicle.baseMaterial.material(3)#name" value="bigPack1290HDPVCDecals_mat7"/>
+            <set path="vehicle.baseMaterial.material(3)#baseNode" value="0>0|9|9"/>
+            <set path="vehicle.baseMaterial.material(3).shaderParameter(0)#name" value="colorMat0"/>
+            <set path="vehicle.baseMaterial.material(3).shaderParameter(0)#value" value="KRONE_GREEN1"/> -->
+
+            <!-- base material configuration -->
+            <!-- <set path="vehicle.baseMaterialConfigurations#price" value="0"/>
+            <set path="vehicle.baseMaterialConfigurations#useDefaultColors" value="true"/>
+            <set path="vehicle.baseMaterialConfigurations.baseMaterialConfiguration(0)#name" value="%s %s"/>
+            <set path="vehicle.baseMaterialConfigurations.baseMaterialConfiguration(0)#params" value="$l10n_brand_krone|$l10n_ui_colorGreen"/>
+            <set path="vehicle.baseMaterialConfigurations.baseMaterialConfiguration(0)#color" value="KRONE_GREEN1"/>
+            <set path="vehicle.baseMaterialConfigurations.baseMaterialConfiguration(1)#name" value="%s %s"/>
+            <set path="vehicle.baseMaterialConfigurations.baseMaterialConfiguration(1)#params" value="$l10n_brand_krone|$l10n_ui_colorYellow"/>
+            <set path="vehicle.baseMaterialConfigurations.baseMaterialConfiguration(1)#color" value="KRONE_YELLOW1"/>
+            <set path="vehicle.baseMaterialConfigurations.baseMaterialConfiguration(2)#name" value="%s %s"/>
+            <set path="vehicle.baseMaterialConfigurations.baseMaterialConfiguration(2)#params" value="$l10n_brand_krone|$l10n_ui_colorBlack"/>
+            <set path="vehicle.baseMaterialConfigurations.baseMaterialConfiguration(2)#color" value="KRONE_BLACK2"/>
+            <set path="vehicle.baseMaterialConfigurations.material(0)#materialSlotName" value="KRONE_GREEN1_mat"/> -->
+
+            <!-- design material configuration -->
+            <!-- <set path="vehicle.designMaterialConfigurations#title" value="Detail Color"/>
+            <set path="vehicle.designMaterialConfigurations#price" value="0"/>
+            <set path="vehicle.designMaterialConfigurations#useDefaultColors" value="true"/>
+            <set path="vehicle.designMaterialConfigurations.designMaterialConfiguration(0)#name" value="%s %s"/>
+            <set path="vehicle.designMaterialConfigurations.designMaterialConfiguration(0)#params" value="$l10n_brand_krone|$l10n_ui_colorYellow"/>
+            <set path="vehicle.designMaterialConfigurations.designMaterialConfiguration(0)#color" value="KRONE_YELLOW1"/>
+            <set path="vehicle.designMaterialConfigurations.designMaterialConfiguration(1)#name" value="%s %s"/>
+            <set path="vehicle.designMaterialConfigurations.designMaterialConfiguration(1)#params" value="$l10n_brand_krone|$l10n_ui_colorGreen"/>
+            <set path="vehicle.designMaterialConfigurations.designMaterialConfiguration(1)#color" value="KRONE_GREEN1"/>
+            <set path="vehicle.designMaterialConfigurations.designMaterialConfiguration(2)#name" value="%s %s"/>
+            <set path="vehicle.designMaterialConfigurations.designMaterialConfiguration(2)#params" value="$l10n_brand_krone|$l10n_ui_colorBlack"/>
+            <set path="vehicle.designMaterialConfigurations.designMaterialConfiguration(2)#color" value="KRONE_BLACK2"/>
+            <set path="vehicle.designMaterialConfigurations.material(0)#name" value="bigPack1290HDPVC_B_mat"/>
+            <set path="vehicle.designMaterialConfigurations.material(0)#shaderParameter" value="colorMat3"/>
+            <set path="vehicle.designMaterialConfigurations.material(1)#name" value="bigPack1290HDPVC_A_mat"/>
+            <set path="vehicle.designMaterialConfigurations.material(1)#shaderParameter" value="colorMat3"/>
+            <set path="vehicle.designMaterialConfigurations.material(2)#name" value="bigPack1290HDPVCDecals_mat"/>
+            <set path="vehicle.designMaterialConfigurations.material(2)#shaderParameter" value="colorMat0"/> -->
+
+
+            <!-- design material configuration: stickers -->
+            <!-- <set path="vehicle.designMaterial2Configurations#title" value="Tertiary Color"/>
+            <set path="vehicle.designMaterial2Configurations#price" value="0"/>
+            <set path="vehicle.designMaterial2Configurations#useDefaultColors" value="true"/>
+            <set path="vehicle.designMaterial2Configurations.designMaterial2Configuration(0)#name" value="%s %s"/>
+            <set path="vehicle.designMaterial2Configurations.designMaterial2Configuration(0)#params" value="$l10n_brand_krone|$l10n_ui_colorBlack"/>
+            <set path="vehicle.designMaterial2Configurations.designMaterial2Configuration(0)#color" value="KRONE_BLACK2"/>
+            <set path="vehicle.designMaterial2Configurations.designMaterial2Configuration(1)#name" value="%s %s"/>
+            <set path="vehicle.designMaterial2Configurations.designMaterial2Configuration(1)#params" value="$l10n_brand_krone|$l10n_ui_colorGreen"/>
+            <set path="vehicle.designMaterial2Configurations.designMaterial2Configuration(1)#color" value="KRONE_GREEN1"/>
+            <set path="vehicle.designMaterial2Configurations.designMaterial2Configuration(2)#name" value="%s %s"/>
+            <set path="vehicle.designMaterial2Configurations.designMaterial2Configuration(2)#params" value="$l10n_brand_krone|$l10n_ui_colorYellow"/>
+            <set path="vehicle.designMaterial2Configurations.designMaterial2Configuration(2)#color" value="KRONE_YELLOW1"/>
+            <set path="vehicle.designMaterial2Configurations.material(0)#name" value="bigPack1290HDPVC_B_mat"/>
+            <set path="vehicle.designMaterial2Configurations.material(0)#shaderParameter" value="colorMat1"/>
+            <set path="vehicle.designMaterial2Configurations.material(1)#name" value="bigPack1290HDPVC_B_mat"/>
+            <set path="vehicle.designMaterial2Configurations.material(1)#shaderParameter" value="colorMat2"/> -->
+
+            <!-- design material configuration: tines -->
+            <!-- <set path="vehicle.designMaterial3Configurations#title" value="Logo Color"/>
+            <set path="vehicle.designMaterial3Configurations#price" value="0"/>
+            <set path="vehicle.designMaterial3Configurations#useDefaultColors" value="true"/>
+            <set path="vehicle.designMaterial3Configurations.designMaterial3Configuration(0)#name" value="%s %s"/>
+            <set path="vehicle.designMaterial3Configurations.designMaterial3Configuration(0)#params" value="$l10n_brand_krone|$l10n_ui_colorGreen"/>
+            <set path="vehicle.designMaterial3Configurations.designMaterial3Configuration(0)#color" value="KRONE_GREEN1"/>
+            <set path="vehicle.designMaterial3Configurations.designMaterial3Configuration(1)#name" value="%s %s"/>
+            <set path="vehicle.designMaterial3Configurations.designMaterial3Configuration(1)#params" value="$l10n_brand_krone|$l10n_ui_colorYellow"/>
+            <set path="vehicle.designMaterial3Configurations.designMaterial3Configuration(1)#color" value="KRONE_YELLOW1"/>
+            <set path="vehicle.designMaterial3Configurations.designMaterial3Configuration(2)#name" value="%s %s"/>
+            <set path="vehicle.designMaterial3Configurations.designMaterial3Configuration(2)#params" value="$l10n_brand_krone|$l10n_ui_colorBlack"/>
+            <set path="vehicle.designMaterial3Configurations.designMaterial3Configuration(2)#color" value="KRONE_BLACK2"/>
+            <set path="vehicle.designMaterial3Configurations.material(0)#name" value="bigPack1290HDPVCDecals_mat7"/>
+            <set path="vehicle.designMaterial3Configurations.material(0)#shaderParameter" value="colorMat0"/> -->
+
+            <!-- rim configuration -->
+            <set path="vehicle.rimColorConfigurations#useDefaultColors" value="true"/>
+            <set path="vehicle.rimColorConfigurations#price" value="0"/>
+            <set path="vehicle.rimColorConfigurations.rimColorConfiguration(0)#name" value="%s %s"/>
+            <set path="vehicle.rimColorConfigurations.rimColorConfiguration(0)#params" value="$l10n_brand_krone|$l10n_ui_colorBlack"/>
+            <set path="vehicle.rimColorConfigurations.rimColorConfiguration(0)#color" value="KRONE_BLACK2"/>
+            <set path="vehicle.rimColorConfigurations.rimColorConfiguration(1)#name" value="%s %s"/>
+            <set path="vehicle.rimColorConfigurations.rimColorConfiguration(1)#params" value="$l10n_brand_krone|$l10n_ui_colorGreen"/>
+            <set path="vehicle.rimColorConfigurations.rimColorConfiguration(1)#color" value="KRONE_GREEN1"/>
+            <set path="vehicle.rimColorConfigurations.rimColorConfiguration(2)#name" value="%s %s"/>
+            <set path="vehicle.rimColorConfigurations.rimColorConfiguration(2)#params" value="$l10n_brand_krone|$l10n_ui_colorYellow"/>
+            <set path="vehicle.rimColorConfigurations.rimColorConfiguration(2)#color" value="KRONE_YELLOW1"/>
+         </attributes>
+    </parentFile>
+
+    <!-- ONLY FOR ICON GENERATION -->
+    <storeData>
+        <name>KRONE BiG M 450 BLACK</name>
+        <image>icons/store_bigM450.png</image>
+        <brand>KRONE</brand>
+        <category>mowers</category>
+    </storeData>
+</vehicle>

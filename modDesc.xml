@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<modDesc descVersion="93">
+    <author>GMNGjoy</author>
+    <version>0.0.5.0</version>
+    <title>
+        <en>BLACK Editions</en>
+    </title>
+    <description>
+        <en><![CDATA[
+- Brielmaier 29 EFI BLACK
+- PFANZELT Pm Trac III BLACK
+- PFANZELT P13 4272 BLACK
+- PFANZELT FELIX BLACK
+- Iseki Series TJW BLACK
+]]></en>
+    </description>
+    <iconFilename>icon_blackEditions.dds</iconFilename>
+    <multiplayer supported="true"/>
+    <l10n filenamePrefix="languages/l10n"/>
+    <storeItems>
+        <storeItem xmlFilename="vehicles/brielmaier/motorMower29EFI/motorMower29EFI.xml"/>
+        <storeItem xmlFilename="vehicles/pfanzelt/pmTraclll/pmTraclll.xml"/>
+        <storeItem xmlFilename="vehicles/pfanzelt/rwgP13/rwgP13.xml"/>
+        <storeItem xmlFilename="vehicles/pfanzelt/felix/felix.xml"/>
+        <storeItem xmlFilename="vehicles/iseki/seriesTJW/seriesTJW.xml"/>
+    </storeItems>
+    <materialTemplates>
+        <template name="GMNG_HELLABLACK" title="$l10n_color_hellaBlack" colorScale="0.000 0.000 0.000" parentTemplate="calibratedMatPaint"/>
+        <template name="GMNG_HELLAOLDBLACK" title="$l10n_color_hellaOldBlack" colorScale="0.000 0.000 0.000" parentTemplate="metalPaintedOld"/>
+    </materialTemplates>
+</modDesc>

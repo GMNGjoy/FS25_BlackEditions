@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <translationContributors>
+        <translationContributor>Farmsim Tim</translationContributor>
+    </translationContributors>
+    <texts>
+        <text name="storeItem_batwing" text="BatWing MM8000" />
+
+        <text name="workMode_Mower" text="Mähwerk" />
+        <text name="workMode_Swather" text="Schwader" />
+        <text name="workMode_BrushHog" text="Buschhacker" />
+        <text name="workMode_Mulcher" text="Mulcher" />
+        <text name="workMode_StumpGrinder" text="Stubbenfräse" />
+        <text name="workMode_Destroyer" text="Zerstörer" />
+
+        <text name="color_hellaBlack" text="So Richtig Schwarz" />
+        <text name="color_hellaOldBlack" text="Vintage Schwarz" />
+    </texts>
+</l10n>
