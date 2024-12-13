@@ -1,19 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <modDesc descVersion="93">
     <author>GMNGjoy</author>
-    <version>0.0.5.0</version>
+    <version>0.0.6.0</version>
     <title>
         <en>BLACK Editions</en>
     </title>
     <description>
-        <en><![CDATA[
+        <en>
 Black Edition Vehicles:
 - Brielmaier 29 EFI BLACK
 - PFANZELT Pm Trac III BLACK
 - PFANZELT P13 4272 BLACK
 - PFANZELT FELIX BLACK
 - Iseki Series TJW BLACK
-]]></en>
+- Lizard Dragon BLACK
+
+The LIST:
+- Add front weight + from JD 3650 to Iseki
+- Add 3 point from Zetor Forterra HSX to Iseki
+- Dalbo Powerchain 800
+- Kelsa 144ND
+- Tajfun EGV 65 AHK SG
+- TGA 560
+- Great Plains Solid Stand 1500
+- Lemkin Solitair 12
+- Vaderstad Rexius 1230
+- Brandt LandRoller 591a
+- Dalbo MaxiRoll 630 Greenline
+- Samasz Z2 840 H
+- Krone Swadro TS 970
+- Anderson MergePro 915
+- Farmtech EDK 650
+- Farmtech DDK 2400
+- Krampe BigBody 750 S
+- Krampe Half Pipe HP 20
+- Krampe RamBody AS 750+
+- All of the Annaburger stuff
+- Steyr Absolut CVT
+
+</en>
     </description>
     <iconFilename>icon_blackEditions.dds</iconFilename>
     <multiplayer supported="true"/>
@@ -24,6 +49,7 @@ Black Edition Vehicles:
         <storeItem xmlFilename="vehicles/pfanzelt/rwgP13/rwgP13.xml"/>
         <storeItem xmlFilename="vehicles/pfanzelt/felix/felix.xml"/>
         <storeItem xmlFilename="vehicles/iseki/seriesTJW/seriesTJW.xml"/>
+        <storeItem xmlFilename="vehicles/lizard/multiPurposeTruck/multiPurposeTruck.xml"/>
     </storeItems>
     <materialTemplates>
         <template name="GMNG_HELLABLACK" title="$l10n_color_hellaBlack" colorScale="0.000 0.000 0.000" parentTemplate="calibratedMatPaint"/>

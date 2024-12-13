@@ -1625,7 +1625,6 @@
         <material materialSlotName="shieldFrontDecal_mat"/>
         <material materialSlotName="shieldBackDecal_mat"/>
         <material materialSlotName="logoDecalEngineConfig_mat"/>
-        
     </designColor6Configurations>
 
     <designColor7Configurations useDefaultColors="true" price="0" title="Grid Color" defaultColorIndex="8">
