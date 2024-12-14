@@ -118,6 +118,16 @@
     <wheels>
         <wheelConfigurations tireCategories="TRACTOR">
             <tireCombination brand="MITAS" names="AC65"/>
+            <tireCombination brand="MITAS" names="SFT"/>
+            <tireCombination brand="BKT" names="agrimaxVFlecto"/>
+            <tireCombination brand="CONTINENTAL" names="tractorMaster"/>
+            <tireCombination brand="MICHELIN" names="multibib"/>
+            <tireCombination brand="NOKIAN" names="groundKing"/>
+            <tireCombination brand="NOKIAN" names="tractorKing"/>
+            <tireCombination brand="NOKIAN" names="TRI2"/>
+            <tireCombination brand="TRELLEBORG" names="TM800"/>
+            <tireCombination brand="VREDESTEIN" names="traxion65"/>
+
             <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" saveId="DEFAULT">
                 <wheels autoRotateBackSpeed="2.1">
                     <wheel dimensions="540_65R28" isLeft="true" hasTireTracks="true" hasParticles="true">

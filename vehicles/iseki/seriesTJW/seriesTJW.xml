@@ -269,6 +269,7 @@
         <attacherJoint node="trailerAttacherJointFront" jointType="trailer" lowerRotLimit="25 60 50" allowsJointLimitMovement="false" comboTime="0">
             <schema position="1 0" rotation="0" invertX="true" />
         </attacherJoint>
+
     </attacherJoints>
 
     <connectionHoses>

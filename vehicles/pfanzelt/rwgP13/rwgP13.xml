@@ -103,6 +103,27 @@
                     </wheel>
                 </wheels>
             </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="VREDESTEIN" saveId="VREDESTEIN_DEFAULT">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/flotationTrac/480_45R17.xml" isLeft="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.7" repr="wheelFrontLeft"  forcePointRatio="0.25" initialCompression="10" suspTravel="0.1" spring="160" damper="80" yOffset="0.03"/>
+                        <wheelChock parkingNode="wheelChock01" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d" />
+                        <wheelChock parkingNode="wheelChock02" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d" isInverted="true" />
+                        <wheelChock parkingNode="wheelChock03" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d" />
+                        <wheelChock parkingNode="wheelChock04" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d" isInverted="true" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/flotationTrac/480_45R17.xml" isLeft="false" >
+                        <physics tipOcclusionAreaGroupId="2" restLoad="1.7" repr="wheelFrontRight" forcePointRatio="0.25" initialCompression="10" suspTravel="0.1" spring="160" damper="80" yOffset="0.03"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/flotationTrac/480_45R17.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.7" repr="wheelBackLeft"   forcePointRatio="0.25" initialCompression="10" suspTravel="0.1" spring="160" damper="80" yOffset="0.03"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/vredestein/flotationTrac/480_45R17.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="2" restLoad="1.7" repr="wheelBackRight"  forcePointRatio="0.25" initialCompression="10" suspTravel="0.1" spring="160" damper="80" yOffset="0.03"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
         </wheelConfigurations>
 
         <hubMaterial useBaseColor="true" materialTemplateName="RIM_DEFAULT"/>
@@ -609,9 +630,9 @@
         <baseColorConfiguration materialTemplateName="PFANZELT_GREY2"/>
         <baseColorConfiguration materialTemplateName="PFANZELT_SILVER1"/>
 
-        <material materialSlotName="mainFrame_mat" />
-        <material materialSlotName="mainFrame_lod_mat" />
-        <material materialSlotName="drawbarBody_mat" />
+        <material materialSlotName="mainFrame_mat" materialTemplateUseColorOnly="true" />
+        <material materialSlotName="mainFrame_lod_mat" materialTemplateUseColorOnly="true" />
+        <material materialSlotName="drawbarBody_mat" materialTemplateUseColorOnly="true" />
     </baseColorConfigurations>
    
     <designColorConfigurations useDefaultColors="true" price="0" title="Secondary Color">
@@ -626,7 +647,7 @@
         <material materialSlotName="drawbarDetail_mat"/>
     </designColorConfigurations>
 
-    <designColor2Configurations useDefaultColors="true" price="0" title="Log Grab Color">
+    <designColor2Configurations useDefaultColors="true" price="0" title="Crane Arm Color">
         <designColor2Configuration materialTemplateName="GMNG_HELLABLACK" />
         <designColor2Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
         <designColor2Configuration materialTemplateName="PFANZELT_TURQOISE1" isDefault="true" />
@@ -636,25 +657,25 @@
         <material materialSlotName="armBody_mat"/>
     </designColor2Configurations>
 
-    <designColor3Configurations useDefaultColors="true" price="0" title="Log Grab Base">
+    <designColor3Configurations useDefaultColors="true" price="0" title="Crane Base COlor">
         <designColor3Configuration materialTemplateName="GMNG_HELLABLACK" />
         <designColor3Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
         <designColor3Configuration materialTemplateName="PFANZELT_TURQOISE1" />
-        <designColor3Configuration materialTemplateName="PFANZELT_GREY1"/>
+        <designColor3Configuration materialTemplateName="PFANZELT_GREY1" isDefault="true"/>
         <designColor3Configuration materialTemplateName="PFANZELT_GREY2"/>
-        <designColor3Configuration materialTemplateName="PFANZELT_SILVER1" isDefault="true"/>
-        <material materialSlotName="armBase_mat"/>
-        <material materialSlotName="ptoNew_mat"/>
+        <designColor3Configuration materialTemplateName="PFANZELT_SILVER1" />
+        <material materialSlotName="armBase_mat" materialTemplateUseColorOnly="true"/>
+        <material materialSlotName="ptoNew_mat" materialTemplateUseColorOnly="true"/>
     </designColor3Configurations>
 
-    <designColor4Configurations useDefaultColors="true" price="0" title="Log Grab Platform" defaultColorIndex="0">
+    <designColor4Configurations useDefaultColors="true" price="0" title="Crane Platform Color" defaultColorIndex="1">
         <designColor4Configuration materialTemplateName="GMNG_HELLABLACK" />
         <designColor4Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
         <designColor4Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor4Configuration materialTemplateName="PFANZELT_GREY1" />
         <designColor4Configuration materialTemplateName="PFANZELT_GREY2"/>
         <designColor4Configuration materialTemplateName="PFANZELT_SILVER1" />
-        <material materialSlotName="logGrabPlatform_mat"/>
+        <material materialSlotName="logGrabPlatform_mat" materialTemplateUseColorOnly="true"/>
     </designColor4Configurations>
 
     <rimColorConfigurations useDefaultColors="true" price="0">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <modDesc descVersion="93">
     <author>GMNGjoy</author>
-    <version>0.0.6.0</version>
+    <version>0.0.7.0</version>
     <title>
         <en>BLACK Editions</en>
     </title>
@@ -14,12 +14,11 @@ Black Edition Vehicles:
 - PFANZELT FELIX BLACK
 - Iseki Series TJW BLACK
 - Lizard Dragon BLACK
+- Kesla 144ND BLACK
 
 The LIST:
-- Add front weight + from JD 3650 to Iseki
-- Add 3 point from Zetor Forterra HSX to Iseki
 - Dalbo Powerchain 800
-- Kelsa 144ND
+
 - Tajfun EGV 65 AHK SG
 - TGA 560
 - Great Plains Solid Stand 1500
@@ -44,12 +43,13 @@ The LIST:
     <multiplayer supported="true"/>
     <l10n filenamePrefix="languages/l10n"/>
     <storeItems>
-        <storeItem xmlFilename="vehicles/brielmaier/motorMower29EFI/motorMower29EFI.xml"/>
-        <storeItem xmlFilename="vehicles/pfanzelt/pmTraclll/pmTraclll.xml"/>
-        <storeItem xmlFilename="vehicles/pfanzelt/rwgP13/rwgP13.xml"/>
-        <storeItem xmlFilename="vehicles/pfanzelt/felix/felix.xml"/>
         <storeItem xmlFilename="vehicles/iseki/seriesTJW/seriesTJW.xml"/>
         <storeItem xmlFilename="vehicles/lizard/multiPurposeTruck/multiPurposeTruck.xml"/>
+        <storeItem xmlFilename="vehicles/brielmaier/motorMower29EFI/motorMower29EFI.xml"/>
+        <storeItem xmlFilename="vehicles/pfanzelt/pmTraclll/pmTraclll.xml"/>
+        <storeItem xmlFilename="vehicles/pfanzelt/felix/felix.xml"/>
+        <storeItem xmlFilename="vehicles/pfanzelt/rwgP13/rwgP13.xml"/>
+        <storeItem xmlFilename="vehicles/kesla/nd144/nd144.xml"/>
     </storeItems>
     <materialTemplates>
         <template name="GMNG_HELLABLACK" title="$l10n_color_hellaBlack" colorScale="0.000 0.000 0.000" parentTemplate="calibratedMatPaint"/>
