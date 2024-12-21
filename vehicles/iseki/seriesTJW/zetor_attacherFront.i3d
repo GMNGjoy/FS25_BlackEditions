@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="zetor_attacherFront.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+  </Files>
+
+
+  <Materials>
+  </Materials>
+
+
+  <Shapes>
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="GroupName" translation="0 0.596435 1.28336" nodeId="563">
+      <TransformGroup name="attacherJointFrontRot" translation="0 -0.121279 0.330419" rotation="-25.0162 -0 0" nodeId="393">
+        <TransformGroup name="attacherJointFrontRot2" translation="0 0 0.782257" rotation="25.016 0 0" nodeId="394">
+          <TransformGroup name="attacherJointFront" rotation="0 -90 0" nodeId="395"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="attacherJointFrontArmBottom" translation="0 -0.121279 0.330419" rotation="-25.0162 -0 0" nodeId="396">
+        <TransformGroup name="bottomLinkFront" clipDistance="300" nodeId="397">
+          <TransformGroup name="referencePointFrontBottom" translation="0 0 0.782257" nodeId="398"/>
+          <TransformGroup name="bottomLinkFrontLeftPartRot" translation="0.246737 -0.048898 0.269876" rotation="129.701 59.593 127.329" nodeId="399">
+            <TransformGroup name="bottomLinkFrontLeftPart_lod" lodDistance="0 50" nodeId="400">
+              <TransformGroup name="bottomLinkFrontLeftPart_lod0" clipDistance="300" nodeId="401"/>
+              <TransformGroup name="bottomLinkFrontLeftPart_lod1" translation="-1e-06 0 0" clipDistance="300" nodeId="402"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="bottomLinkFrontRightPartRot" translation="-0.246738 -0.048898 0.269876" rotation="50.299 59.5931 52.6713" nodeId="403">
+            <TransformGroup name="bottomLinkFrontRightPart_lod" lodDistance="0 50" nodeId="404">
+              <TransformGroup name="bottomLinkFrontRightPart_lod0" clipDistance="300" nodeId="405"/>
+              <TransformGroup name="bottomLinkFrontRightPart_lod1" translation="-1e-06 0 0" clipDistance="300" nodeId="406"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="frontArmHydraulicRef" translation="0 -0.030698 0.165623" rotation="109.529 -8.2e-05 -3.8e-05" nodeId="407"/>
+          <TransformGroup name="bottomLinkFront_lod" translation="0 0 1e-06" clipDistance="300" nodeId="408"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="attacherJointFrontArmTop" translation="0 0.378994 0.542525" rotation="-40 -0 0" nodeId="409"/>
+      <TransformGroup name="sideMountLinkage" translation="0 -0.136435 -1.20336" nodeId="410"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

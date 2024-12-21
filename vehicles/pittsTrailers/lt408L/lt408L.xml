@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="transportTrailer"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>LT40-8L BLACK</name>
+        <specs>
+            <combination filterCategory="trucks"/>
+            <combination xmlFilename="$data/vehicles/krampe/dolly10L/dolly10L.xml"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_forestryTransport</function>
+            <function>$l10n_function_semiTrailer</function>
+        </functions>
+        <image>$data/vehicles/pittsTrailers/lt408L/store_lt408L.png</image>
+        <price>26000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>PITTSTRAILERS</brand>
+        <category>woodTransport trailersSemi</category>
+        <shopTranslationOffset>0 -0.05 0</shopTranslationOffset>
+        <shopRotationOffset>-0.92 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>931840</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>231936</indexBufferMemoryUsage>
+        <textureMemoryUsage>393216</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_trailer</typeDesc>
+        <filename>vehicles/pittsTrailers/lt408L/lt408L.i3d</filename>
+        <size width="2.75" length="13.1" height="3.95"/>
+        <components>
+            <component centerOfMass="0 0.7 0" solverIterationCount="30" mass="3355"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
+        <mapHotspot type="TRAILER"/>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="CONTINENTAL" saveId="CONTINENTAL_DEFAULT">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/315_80R22_5.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.7" repr="wheelFrontLeft"  forcePointRatio="0.2" initialCompression="12" suspTravel="0.08" spring="45" damper="100" xOffset="-0.11" frictionScale="2.2" yOffset="-0.004"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/315_80R22_5.xml" configId="dualConnector" isLeft="true" offset="0.09"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/315_80R22_5.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.7" repr="wheelFrontRight" forcePointRatio="0.2" initialCompression="12" suspTravel="0.08" spring="45" damper="100" xOffset="-0.11" frictionScale="2.2" yOffset="-0.004"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/315_80R22_5.xml" configId="dualConnector" isLeft="false" offset="0.09"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/315_80R22_5.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.7" repr="wheelBackLeft"   forcePointRatio="0.2" initialCompression="12" suspTravel="0.08" spring="45" damper="100" xOffset="-0.11" frictionScale="2.2"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/315_80R22_5.xml" configId="dualConnector" isLeft="true" offset="0.09"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/315_80R22_5.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.7" repr="wheelBackRight"  forcePointRatio="0.2" initialCompression="12" suspTravel="0.08" spring="45" damper="100" xOffset="-0.11" frictionScale="2.2"/>
+                        <additionalWheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/315_80R22_5.xml" configId="dualConnector" isLeft="false" offset="0.05"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="BKT" saveId="BKT_DEFAULT">
+                <wheels>
+                    <wheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R20.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.7" repr="wheelFrontLeft"  forcePointRatio="0.2" initialCompression="12" suspTravel="0.08" spring="45" damper="100" xOffset="-0.11" frictionScale="2.2" yOffset="-0.004"/>
+                        <additionalWheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R20.xml" configId="dualConnector" isLeft="true" offset="0.00"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R20.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.7" repr="wheelFrontRight" forcePointRatio="0.2" initialCompression="12" suspTravel="0.08" spring="45" damper="100" xOffset="-0.11" frictionScale="2.2" yOffset="-0.004"/>
+                        <additionalWheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R20.xml" configId="dualConnector" isLeft="false" offset="0.00"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R20.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.7" repr="wheelBackLeft"   forcePointRatio="0.2" initialCompression="12" suspTravel="0.08" spring="45" damper="100" xOffset="-0.11" frictionScale="2.2"/>
+                        <additionalWheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R20.xml" configId="dualConnector" isLeft="true" offset="0.00"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R20.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.7" repr="wheelBackRight"  forcePointRatio="0.2" initialCompression="12" suspTravel="0.08" spring="45" damper="100" xOffset="-0.11" frictionScale="2.2"/>
+                        <additionalWheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R20.xml" configId="dualConnector" isLeft="false" offset="0.00"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="BKT" saveId="BKT_DEFAULT2">
+                <wheels>
+                    <wheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R24.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.7" repr="wheelFrontLeft"  forcePointRatio="0.2" initialCompression="12" suspTravel="0.08" spring="45" damper="100" xOffset="-0.11" frictionScale="2.2" yOffset="-0.004"/>
+                        <additionalWheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R24.xml" configId="dualConnector" isLeft="true" offset="0.00"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R24.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.7" repr="wheelFrontRight" forcePointRatio="0.2" initialCompression="12" suspTravel="0.08" spring="45" damper="100" xOffset="-0.11" frictionScale="2.2" yOffset="-0.004"/>
+                        <additionalWheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R24.xml" configId="dualConnector" isLeft="false" offset="0.00"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R24.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.7" repr="wheelBackLeft"   forcePointRatio="0.2" initialCompression="12" suspTravel="0.08" spring="45" damper="100" xOffset="-0.11" frictionScale="2.2"/>
+                        <additionalWheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R24.xml" configId="dualConnector" isLeft="true" offset="0.00"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R24.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="0" restLoad="0.7" repr="wheelBackRight"  forcePointRatio="0.2" initialCompression="12" suspTravel="0.08" spring="45" damper="100" xOffset="-0.11" frictionScale="2.2"/>
+                        <additionalWheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R24.xml" configId="dualConnector" isLeft="false" offset="0.00"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+    </wheels>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJointSemi" jointType="semitrailer" attacherHeight="1.20"/>
+        </inputAttacherJoints>
+        <support animationName="moveSupport"/>
+        <brakeForce force="0.7"/>
+    </attachable>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="electric"        node="electric_socket"        length="1.4" diameter="0.008" minCenterPointOffset="0 -0.2 0.2" maxCenterPointOffset="0 0.2 2" straighteningFactor="0.2" isTwoPointHose="false" outgoingAdapter="DEFAULT" socket="electric"/>
+        <hose inputAttacherJointIndices="1" type="airDoubleRed"    node="airDoubleRed_socket"    length="1.4" diameter="0.015" minCenterPointOffset="0 -0.2 0.2" maxCenterPointOffset="0 0.2 2" straighteningFactor="0.2" isTwoPointHose="false" outgoingAdapter="DEFAULT" socket="air_red"/>
+        <hose inputAttacherJointIndices="1" type="airDoubleYellow" node="airDoubleYellow_socket" length="1.4" diameter="0.015" minCenterPointOffset="0 -0.2 0.2" maxCenterPointOffset="0 0.2 2" straighteningFactor="0.2" isTwoPointHose="false" outgoingAdapter="DEFAULT" socket="air_yellow"/>
+    </connectionHoses>
+
+    <licensePlates>
+        <licensePlate node="licensePlateBack" preferedType="SQUARISH" position="BACK" placementArea="0.11 0.18 0.21 0.21">
+            <objectChange node="plateNumberLight03" visibilityActive="true" visibilityInactive="false"/>
+        </licensePlate>
+    </licensePlates>
+
+    <lights>
+        <sharedLight linkNode="rearLight51_01" filename="$data/shared/assets/lights/lizard/rearLight51.xml">
+            <function name="TURN_LIGHT_LEFT" uvSlotIndex="1" />
+            <function name="BACK_BRAKE_LIGHT" uvSlotIndex="1" />
+        </sharedLight>
+        <sharedLight linkNode="rearLight51_02" filename="$data/shared/assets/lights/lizard/rearLight51.xml">
+            <function name="TURN_LIGHT_LEFT" uvSlotIndex="1" />
+            <function name="BACK_BRAKE_LIGHT" uvSlotIndex="1" />
+        </sharedLight>
+        <sharedLight linkNode="rearLight51_03" filename="$data/shared/assets/lights/lizard/rearLight51.xml">
+            <function name="TURN_LIGHT_LEFT" uvSlotIndex="1" />
+            <function name="BACK_BRAKE_LIGHT" uvSlotIndex="1" />
+        </sharedLight>
+        <sharedLight linkNode="rearLight51_04" filename="$data/shared/assets/lights/lizard/rearLight51.xml">
+            <function name="TURN_LIGHT_RIGHT" uvSlotIndex="1" />
+            <function name="BACK_BRAKE_LIGHT" uvSlotIndex="1" />
+        </sharedLight>
+        <sharedLight linkNode="rearLight51_05" filename="$data/shared/assets/lights/lizard/rearLight51.xml">
+            <function name="TURN_LIGHT_RIGHT" uvSlotIndex="1" />
+            <function name="BACK_BRAKE_LIGHT" uvSlotIndex="1" />
+        </sharedLight>
+        <sharedLight linkNode="rearLight51_06" filename="$data/shared/assets/lights/lizard/rearLight51.xml">
+            <function name="TURN_LIGHT_RIGHT" uvSlotIndex="1" />
+            <function name="BACK_BRAKE_LIGHT" uvSlotIndex="1" />
+        </sharedLight>
+        <sharedLight linkNode="sideMarker21Red_01"   filename="$data/shared/assets/lights/lizard/sideMarker21Red.xml" />
+        <sharedLight linkNode="sideMarker21Red_02"   filename="$data/shared/assets/lights/lizard/sideMarker21Red.xml" />
+        <sharedLight linkNode="sideMarker21Red_03"   filename="$data/shared/assets/lights/lizard/sideMarker21Red.xml" />
+        <sharedLight linkNode="sideMarker21Red_04"   filename="$data/shared/assets/lights/lizard/sideMarker21Red.xml" />
+        <sharedLight linkNode="sideMarker21Red_05"   filename="$data/shared/assets/lights/lizard/sideMarker21Red.xml" />
+        <sharedLight linkNode="sideMarker21Red_06"   filename="$data/shared/assets/lights/lizard/sideMarker21Red.xml" />
+        <sharedLight linkNode="sideMarker21Red_07"   filename="$data/shared/assets/lights/lizard/sideMarker21Red.xml" />
+        <sharedLight linkNode="rearLight26Orange_01" filename="$data/shared/assets/lights/lizard/rearLight26Orange.xml" />
+        <sharedLight linkNode="rearLight26Orange_02" filename="$data/shared/assets/lights/lizard/rearLight26Orange.xml" />
+        <sharedLight linkNode="plateNumberLight03"   filename="$data/shared/assets/lights/lizard/plateNumberLight03.xml" />
+
+        <realLights>
+            <high>
+                <light node="backLightsHigh" lightTypes="0"/>
+                <light node="licensePlateLightHigh" lightTypes="0"/>
+                <turnLightLeft node="turnLightLeft"/>
+                <turnLightRight node="turnLightRight"/>
+                <brakeLight node="backLightsHigh"/>
+            </high>
+        </realLights>
+    </lights>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="supportBolt_folded" startTime="0.0" endTime="0.1" visibility="true"/>
+            <part node="supportBolt_unfolded" startTime="0.0" endTime="1.0" visibility="false"/>
+            <part node="supportBolt_folded" startTime="0.1" endTime="1.1" visibility="false"/>
+            <part node="supportBolt_unfolded" startTime="1.0" endTime="1.1" visibility="true"/>
+
+            <part node="supportArm" startTime="0.0" endTime="0.001" animationClip="supportAnimSource" clipStartTime="0" clipEndTime="4250" direction="1"/>
+            <part node="supportArm" startTime="0.001" endTime="1.0" animationClip="supportAnimSource" clipStartTime="4250" clipEndTime="0" direction="1"/>
+
+            <part node="supportArm" startTime="0.3" endTime="1.3" startRot="60.5 0 0" endRot="0 0 0" direction="-1"/>
+            <part node="supportArmHandle" startTime="0.1" endTime="0.9" startRot="727.6 0 0" endRot="0 0 0"/>
+
+            <part node="supportArmHandleGear" startTime="0.0" endTime="0.3" startRot="-4.5 0 0" endRot="-260 0 0" direction="-1"/>
+            <part node="supportArmHandleGear" startTime="1.3" endTime="1.6" startRot="-260 0 0" endRot="0 0 0" direction="-1"/>
+
+            <sound template="hingeMedium"           startTime="1.5" direction="-1" volumeScale="2" pitchScale="0.6" linkNode="supportArm"/>
+            <sound template="hingeMedium02"         startTime="0.1" direction="1" volumeScale="2" pitchScale="0.8" linkNode="supportArm"/>
+            <sound template="hingeImp"              startTime="0.5" direction="-1" volumeScale="0.5" pitchScale="0.8" linkNode="supportArm"/>
+            <sound template="trailerCloseImpact_01" startTime="0.3" direction="-1" volumeScale="1.2" pitchScale="0.6" linkNode="supportArm"/>
+            <sound template="metalImpHigh01"        startTime="1" direction="1" volumeScale="1.2" pitchScale="0.6" linkNode="supportArm"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingParts>
+            <movingPart node="tensionBeltSupportBase" referencePoint="tensionBeltSupportHookRef" referenceFrame="tensionBeltSupportHookRef" isActiveDirty="true" maxUpdateDistance="50">
+                <translatingPart node="tensionBeltSupportHook" />
+                <dependentPart node="tensionBeltSupport" />
+            </movingPart>
+            <movingPart node="tensionBeltSupport" referencePoint="tensionBeltSupportRef" referenceFrame="tensionBeltSupportRef" scaleZ="true"/>
+        </movingParts>
+    </cylindered>
+
+    <tensionBelts>
+        <tensionBeltsConfigurations>
+            <tensionBeltsConfiguration>
+                <tensionBelts linkNode="tensionBelts" jointNode="lt408L_main_component1" maxEdgeLength="0.1" geometryBias="0.01" ratchetPosition="0.2" defaultOffset="-0.5" defaultOffsetSide="0.1" defaultHeight="5" interactionRadius="2" totalInteractionRadius="9" activationTrigger="beltActivationTrigger" tensionBeltType="us02">
+                    <tensionBelt startNode="startPoint01" endNode="startPoint01End">
+                        <intersectionNode node="tensionBelt01Intersection01"/>
+                        <intersectionNode node="tensionBelt01Intersection02"/>
+                        <objectChange node="tensionBelt01_detached" visibilityActive="false" visibilityInactive="true"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint02" endNode="startPoint02End">
+                        <intersectionNode node="tensionBelt02Intersection01"/>
+                        <intersectionNode node="tensionBelt02Intersection02"/>
+                        <objectChange node="tensionBelt02_detached" visibilityActive="false" visibilityInactive="true"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint03" endNode="startPoint03End">
+                        <intersectionNode node="tensionBelt03Intersection01"/>
+                        <intersectionNode node="tensionBelt03Intersection02"/>
+                        <objectChange node="tensionBelt03_detached" visibilityActive="false" visibilityInactive="true"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint04" endNode="startPoint04End">
+                        <intersectionNode node="tensionBelt04Intersection01"/>
+                        <intersectionNode node="tensionBelt04Intersection02"/>
+                        <objectChange node="tensionBelt04_detached" visibilityActive="false" visibilityInactive="true"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint05" endNode="startPoint05End">
+                        <intersectionNode node="tensionBelt05Intersection01"/>
+                        <intersectionNode node="tensionBelt05Intersection02"/>
+                        <objectChange node="tensionBelt05_detached" visibilityActive="false" visibilityInactive="true"/>
+                    </tensionBelt>
+                    <tensionBelt startNode="startPoint06" endNode="startPoint06End">
+                        <intersectionNode node="tensionBelt06Intersection01"/>
+                        <intersectionNode node="tensionBelt06Intersection02"/>
+                        <objectChange node="tensionBelt06_detached" visibilityActive="false" visibilityInactive="true"/>
+                    </tensionBelt>
+                    <sounds>
+                        <addBelt template="beltOpen" supportsReverb="false"/>
+                        <removeBelt template="beltClose" supportsReverb="false"/>
+                    </sounds>
+                </tensionBelts>
+            </tensionBeltsConfiguration>
+        </tensionBeltsConfigurations>
+    </tensionBelts>
+
+    <ai>
+        <agentAttachment jointNode="attacherJointSemi" rotCenterWheelIndices="1 2 3 4" width="2.75" height="3.8" length="13.2" lengthOffset="4.3"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-1.45" maxX="1.45" minZ="-6.6" maxZ="3.4" yOffset="0.6"/>
+        <bendingNode minX="-1.3" maxX="1.3" minZ="3.4" maxZ="6.6" yOffset="1.15"/>
+    </foliageBending>
+
+    <designConfigurations title="$l10n_configuration_mudflaps" isYesNoOption="true">
+        <designConfiguration name="$l10n_configuration_valueNo"/>
+        <designConfiguration name="$l10n_configuration_valueYes" price="200" isDefault="true">
+            <objectChange node="mudflaps" visibilityActive="true" visibilityInactive="false"/>
+        </designConfiguration>
+    </designConfigurations>
+
+    <design3Configurations title="$l10n_configuration_frontGuard" isYesNoOption="true">
+        <design3Configuration name="$l10n_configuration_valueNo" price="0" />
+        <design3Configuration name="$l10n_configuration_valueYes" price="3000" isDefault="true">
+            <objectChange node="frontWall" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="colPart05" compoundChildActive="true" compoundChildInactive="false" />
+        </design3Configuration>
+    </design3Configurations>
+
+
+    <baseColorConfigurations useDefaultColors="true" price="0" title="Frame Color">
+        <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
+        <baseColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <material materialSlotName="lt408L_mainFrame_mat" materialTemplateUseColorOnly="true" />
+    </baseColorConfigurations>
+
+    <designColorConfigurations useDefaultColors="true" price="0" title="Mud Flap Color" defaultColorIndex="1">
+        <designColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
+        <designColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <material materialSlotName="lt408L_mudflaps_color_mat"/>
+    </designColorConfigurations>
+
+    <designColor2Configurations useDefaultColors="true" price="0" title="Reflector Color One" defaultColorIndex="2">
+        <designColor2Configuration materialTemplateName="GMNG_HELLABLACK" />
+        <designColor2Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <material materialSlotName="lt408L_reflectorColor1_mat"/>
+    </designColor2Configurations>
+
+    <designColor3Configurations useDefaultColors="true" price="0" title="Reflector Color Two" defaultColorIndex="13">
+        <designColor3Configuration materialTemplateName="GMNG_HELLABLACK" />
+        <designColor3Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <material materialSlotName="lt408L_reflectorColor2_mat"/>
+    </designColor3Configurations>
+
+    <rimColorConfigurations useDefaultColors="true" price="0">
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME" price="1000"/>
+        <rimColorConfiguration materialTemplateName="RIM_DEFAULT"/>
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_WHITE" isDefault="true"/>
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_BLACK"/>
+    </rimColorConfigurations>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="lt408L_main_component1" node="0>" />
+        <i3dMapping id="lt408L_vis" node="0>0" />
+        <i3dMapping id="wheelFrontLeft" node="0>0|0|0" />
+        <i3dMapping id="wheelFrontRight" node="0>0|0|1" />
+        <i3dMapping id="wheelBackLeft" node="0>0|0|2" />
+        <i3dMapping id="wheelBackRight" node="0>0|0|3" />
+        <i3dMapping id="attacherJointSemi" node="0>0|1|0" />
+        <i3dMapping id="electric_socket" node="0>0|1|1|0" />
+        <i3dMapping id="airDoubleYellow_socket" node="0>0|1|1|1" />
+        <i3dMapping id="airDoubleRed_socket" node="0>0|1|1|2" />
+        <i3dMapping id="supportArm" node="0>0|1|2|0" />
+        <i3dMapping id="tensionBeltSupportHookRef" node="0>0|1|2|0|0" />
+        <i3dMapping id="supportArmHandle" node="0>0|1|2|1" />
+        <i3dMapping id="supportArmHandleGear" node="0>0|1|2|2" />
+        <i3dMapping id="supportBolt_unfolded" node="0>0|1|2|3" />
+        <i3dMapping id="supportBolt_folded" node="0>0|1|2|4" />
+        <i3dMapping id="tensionBeltSupportBase" node="0>0|1|2|5" />
+        <i3dMapping id="tensionBeltSupportHook" node="0>0|1|2|5|0" />
+        <i3dMapping id="tensionBeltSupportRef" node="0>0|1|2|5|0|0" />
+        <i3dMapping id="tensionBeltSupport" node="0>0|1|2|5|1" />
+        <i3dMapping id="rearLight51_01" node="0>0|2|0|0" />
+        <i3dMapping id="rearLight51_02" node="0>0|2|0|1" />
+        <i3dMapping id="rearLight51_03" node="0>0|2|0|2" />
+        <i3dMapping id="rearLight51_04" node="0>0|2|0|3" />
+        <i3dMapping id="rearLight51_05" node="0>0|2|0|4" />
+        <i3dMapping id="rearLight51_06" node="0>0|2|0|5" />
+        <i3dMapping id="sideMarker21Red_01" node="0>0|2|0|6" />
+        <i3dMapping id="sideMarker21Red_02" node="0>0|2|0|7" />
+        <i3dMapping id="sideMarker21Red_03" node="0>0|2|0|8" />
+        <i3dMapping id="sideMarker21Red_04" node="0>0|2|0|9" />
+        <i3dMapping id="sideMarker21Red_05" node="0>0|2|0|10" />
+        <i3dMapping id="sideMarker21Red_06" node="0>0|2|0|11" />
+        <i3dMapping id="sideMarker21Red_07" node="0>0|2|0|12" />
+        <i3dMapping id="rearLight26Orange_01" node="0>0|2|0|13" />
+        <i3dMapping id="rearLight26Orange_02" node="0>0|2|0|14" />
+        <i3dMapping id="plateNumberLight03" node="0>0|2|0|15" />
+        <i3dMapping id="backLightsHigh" node="0>0|2|1|0" />
+        <i3dMapping id="licensePlateLightHigh" node="0>0|2|1|1" />
+        <i3dMapping id="turnLightLeft" node="0>0|2|2|0" />
+        <i3dMapping id="turnLightRight" node="0>0|2|2|1" />
+        <i3dMapping id="tensionBelts" node="0>0|3" />
+        <i3dMapping id="beltActivationTrigger" node="0>0|3|0" />
+        <i3dMapping id="startPoint01" node="0>0|3|1" />
+        <i3dMapping id="tensionBelt01Intersection01" node="0>0|3|1|0" />
+        <i3dMapping id="tensionBelt01Intersection02" node="0>0|3|1|1" />
+        <i3dMapping id="startPoint01End" node="0>0|3|1|2" />
+        <i3dMapping id="startPoint02" node="0>0|3|2" />
+        <i3dMapping id="tensionBelt02Intersection01" node="0>0|3|2|0" />
+        <i3dMapping id="tensionBelt02Intersection02" node="0>0|3|2|1" />
+        <i3dMapping id="startPoint02End" node="0>0|3|2|2" />
+        <i3dMapping id="startPoint03" node="0>0|3|3" />
+        <i3dMapping id="tensionBelt03Intersection01" node="0>0|3|3|0" />
+        <i3dMapping id="tensionBelt03Intersection02" node="0>0|3|3|1" />
+        <i3dMapping id="startPoint03End" node="0>0|3|3|2" />
+        <i3dMapping id="startPoint04" node="0>0|3|4" />
+        <i3dMapping id="tensionBelt04Intersection01" node="0>0|3|4|0" />
+        <i3dMapping id="tensionBelt04Intersection02" node="0>0|3|4|1" />
+        <i3dMapping id="startPoint04End" node="0>0|3|4|2" />
+        <i3dMapping id="tensionBelt01_detached" node="0>0|3|5" />
+        <i3dMapping id="tensionBelt02_detached" node="0>0|3|6" />
+        <i3dMapping id="tensionBelt03_detached" node="0>0|3|7" />
+        <i3dMapping id="tensionBelt04_detached" node="0>0|3|8" />
+        
+        <i3dMapping id="startPoint05" node="0>0|3|9" />
+        <i3dMapping id="tensionBelt05Intersection01" node="0>0|3|9|0" />
+        <i3dMapping id="tensionBelt05Intersection02" node="0>0|3|9|1" />
+        <i3dMapping id="startPoint05End" node="0>0|3|9|2" />
+        <i3dMapping id="tensionBelt05_detached" node="0>0|3|9|3" />
+
+        <i3dMapping id="startPoint06" node="0>0|3|10" />
+        <i3dMapping id="tensionBelt06Intersection01" node="0>0|3|10|0" />
+        <i3dMapping id="tensionBelt06Intersection02" node="0>0|3|10|1" />
+        <i3dMapping id="startPoint06End" node="0>0|3|10|2" />
+        <i3dMapping id="tensionBelt06_detached" node="0>0|3|10|3" />
+
+        <i3dMapping id="mudflaps" node="0>0|4|0" />
+        <i3dMapping id="frontWall" node="0>0|4|1" />
+        <i3dMapping id="colPart05" node="0>0|4|1|0" />
+        <i3dMapping id="licensePlateBack" node="0>0|5|0" />
+    </i3dMappings>
+</vehicle>

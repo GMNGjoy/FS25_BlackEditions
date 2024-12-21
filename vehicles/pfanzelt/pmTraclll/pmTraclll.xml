@@ -54,7 +54,7 @@
             </componentConfiguration>
 
             <!-- Tractor -->
-            <componentConfiguration name="1" numComponents="2">
+            <componentConfiguration name="2" numComponents="2">
                 <component centerOfMass="0 0.4 -1.202" solverIterationCount="30" mass="6050" />
                 <component centerOfMass="0 0 0"        solverIterationCount="10" mass="5005" />
                 <joint component1="1" component2="2" node="componentJoint"          rotLimit="0 0 8"   transLimit="0 0 0" rotLimitSpring="0 0 4000" rotLimitDamping="0 0 75" maxRotDriveForce="0 0 17" rotDriveRotation="0 0 0" rotDriveSpring="0 0 17" rotDriveDamping="0 0 17" breakable="false" />
@@ -96,6 +96,26 @@
             <configuration name="logGrab"       index="1"/>
             <configuration name="winch"         index="2"/>
         </configurationSet>
+        <configurationSet name="$l10n_configuration_winchBlade">
+            <configuration name="component"     index="2"/>
+            <configuration name="vehicleType"   index="3"/>
+            <configuration name="attacherJoint" index="5"/>
+            <configuration name="folding"       index="1"/>
+            <configuration name="animation"     index="2"/>
+            <configuration name="cylindered"    index="3"/>
+            <configuration name="logGrab"       index="2"/>
+            <configuration name="winch"         index="1"/>
+        </configurationSet>
+        <configurationSet name="$l10n_configuration_winch">
+            <configuration name="component"     index="2"/>
+            <configuration name="vehicleType"   index="3"/>
+            <configuration name="attacherJoint" index="6"/>
+            <configuration name="folding"       index="1"/>
+            <configuration name="animation"     index="2"/>
+            <configuration name="cylindered"    index="3"/>
+            <configuration name="logGrab"       index="2"/>
+            <configuration name="winch"         index="1"/>
+        </configurationSet>
         <configurationSet name="$l10n_configuration_valueDefault">
             <configuration name="component"     index="2"/>
             <configuration name="vehicleType"   index="2"/>
@@ -112,6 +132,8 @@
         <vehicleTypeConfiguration isSelectable="false" vehicleType="tractorForestry">
         </vehicleTypeConfiguration>
         <vehicleTypeConfiguration isSelectable="false" vehicleType="tractorReverseDriving">
+        </vehicleTypeConfiguration>
+        <vehicleTypeConfiguration isSelectable="false" vehicleType="tractorReverseWinch">
         </vehicleTypeConfiguration>
     </vehicleTypeConfigurations>
 
@@ -190,7 +212,7 @@
     <attacherJoints comboDuration="2">
         <attacherJointConfigurations>
             <!-- crane + winch + shields -->
-            <attacherJointConfiguration name="1" connectionHoseConfigId="1" powerTakeOffConfigId="1" price="10000">
+            <attacherJointConfiguration name="1" connectionHoseConfigId="1" powerTakeOffConfigId="1" price="5000">
                 <objectChange node="config_winch"           visibilityActive="true"/>
                 <objectChange node="config_crane"           visibilityActive="true"/>
                 <objectChange node="config_craneHoses"      visibilityActive="true"/>
@@ -225,7 +247,7 @@
             </attacherJointConfiguration>
 
             <!-- crane + winch -->
-            <attacherJointConfiguration name="2" connectionHoseConfigId="2" powerTakeOffConfigId="2" price="5000" vehicleIcon="$data/vehicles/pfanzelt/pmTraclll/store_pmTraclll_crane.png">
+            <attacherJointConfiguration name="2" connectionHoseConfigId="2" powerTakeOffConfigId="2" vehicleIcon="$data/vehicles/pfanzelt/pmTraclll/store_pmTraclll_crane.png">
                 <objectChange node="config_winch"                      visibilityActive="true"/>
                 <objectChange node="config_crane"                      visibilityActive="true"/>
                 <objectChange node="config_craneHoses"                 visibilityActive="true"/>
@@ -375,12 +397,120 @@
                     <visuals nodes="trailerAttacherBackLow" hide="trailerAttacherBack"/>
                 </attacherJoint>
             </attacherJointConfiguration>
+
+            <!-- winch & blade -->
+            <attacherJointConfiguration name="5" connectionHoseConfigId="2" powerTakeOffConfigId="5" price="5000" vehicleIcon="$data/vehicles/pfanzelt/pmTraclll/store_pmTraclll.png">
+                <objectChange node="config_winch"              visibilityActive="true"/>
+                <objectChange node="config_crane"              visibilityActive="false"/>
+                <objectChange node="config_craneHoses"         visibilityActive="false"/>
+                <objectChange node="shieldBackBody"            visibilityActive="true"/>
+                <objectChange node="upperLink"                 visibilityActive="false"/>
+                <objectChange node="trailerAttachmentFront"    visibilityActive="false" />
+                <objectChange node="pmTrac_main_component1"    massActive="3040" centerOfMassActive="0 0.8 -1.202"/>
+                <objectChange node="pmTrac_axis_component2"    massActive="2000" centerOfMassActive="0 0 0"/>
+                <objectChange node="colPartShieldBack01"    compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colPartShieldBack02"    compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colPartShieldBack03"    compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colPartShieldBack04"    compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colPartShieldBack05"    compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colPartShieldBack06"    compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colPartShieldBack07"    compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colPartShieldBack08"    compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colPartShieldBack09"    compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colPartShieldBack10"    compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colPartShieldBack11"    compoundChildActive="true" compoundChildInactive="false"/>
+                <size length="4.9" height="3.45" lengthOffset="0.1"/>
+
+                <attacherJoint node="attacherJointFront" lowerRotationOffset="1.21" upperRotationOffset="1.21" moveTime="2.5" comboTime="0">
+                    <distanceToGround lower="0.32" upper="1.11" />
+                    <rotationNode node="attacherJointFrontRot" lowerRotation="23.4 0 0" upperRotation="-20 0 0" />
+                    <rotationNode2 node="attacherJointFrontRot2" />
+                    <bottomArm rotationNode="attacherJointFrontArmBottom" translationNode="attacherJointFrontArmBottomTrans" referenceNode="referencePointFrontBottom" zScale="1" startRotation="-21.147 0 0" categoryRange="2"/>
+                    <topArm baseNode="attacherJointFrontArmTop" filename="$data/shared/assets/upperLinks/walterscheidSO_65_660.xml" zScale="1" materialTemplateName="PFANZELT_SILVER1" secondPartUseMainColor="true" useBrandDecal="true" toggleVisibility="true"/>
+                    <schema position="1 0" rotation="0" invertX="true" />
+                    <objectChange node="lowerLinkFront" rotationActive="0 0 0" rotationInactive="-55 0 0" />
+                </attacherJoint>
+
+                <attacherJoint node="trailerAttacherJointFront" jointType="trailer" lowerRotLimit="25 70 50" allowsJointLimitMovement="false" comboTime="0">
+                    <schema position="1 0" rotation="0" invertX="true" />
+                    <objectChange node="lowerLinkFront"         visibilityActive="false" visibilityInactive="true" />
+                    <objectChange node="trailerAttachmentFront" visibilityActive="true"  visibilityInactive="false"/>
+                </attacherJoint>
+
+                 <attacherJoint node="trailerAttacherJointBackShield" jointType="trailer" lowerRotLimit="25 75 50" allowsJointLimitMovement="false" comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                    <objectChange node="shieldBackAttacher" rotationActive="0 180 0" rotationInactive="0 0 0"/>
+                </attacherJoint>
+                <aiAgent length="6.6" height="4.35" lengthOffset="1.9"/>
+            </attacherJointConfiguration>
+
+            <!-- winch only -->
+            <attacherJointConfiguration name="6" connectionHoseConfigId="3" powerTakeOffConfigId="4" vehicleIcon="$data/vehicles/pfanzelt/pmTraclll/store_pmTraclll.png">
+                <objectChange node="trailers"                  visibilityActive="true"  visibilityInactive="false"/>
+                <objectChange node="config_winch"              visibilityActive="true"/>
+                <objectChange node="config_crane"              visibilityActive="false"/>
+                <objectChange node="config_craneHoses"         visibilityActive="false"/>
+                <objectChange node="shieldBackBody"            visibilityActive="false"/>
+                <objectChange node="upperLink"                 visibilityActive="false"/>
+                <objectChange node="trailerAttachmentFront"    visibilityActive="false" />
+                <objectChange node="pmTrac_main_component1"    massActive="3040" centerOfMassActive="0 0.8 -1.202"/>
+                <objectChange node="pmTrac_axis_component2"    massActive="2000" centerOfMassActive="0 0 0"/>
+                <size length="4.9" height="3.45" lengthOffset="0.1"/>
+
+                <attacherJoint node="attacherJointFront" lowerRotationOffset="1.21" upperRotationOffset="1.21" moveTime="2.5" comboTime="0">
+                    <distanceToGround lower="0.32" upper="1.11" />
+                    <rotationNode node="attacherJointFrontRot" lowerRotation="23.4 0 0" upperRotation="-20 0 0" />
+                    <rotationNode2 node="attacherJointFrontRot2" />
+                    <bottomArm rotationNode="attacherJointFrontArmBottom" translationNode="attacherJointFrontArmBottomTrans" referenceNode="referencePointFrontBottom" zScale="1" startRotation="-21.147 0 0" categoryRange="2"/>
+                    <topArm baseNode="attacherJointFrontArmTop" filename="$data/shared/assets/upperLinks/walterscheidSO_65_660.xml" zScale="1" materialTemplateName="PFANZELT_SILVER1" secondPartUseMainColor="true" useBrandDecal="true" toggleVisibility="true"/>
+                    <schema position="1 0" rotation="0" invertX="true" />
+                    <objectChange node="lowerLinkFront" rotationActive="0 0 0" rotationInactive="-55 0 0" />
+                </attacherJoint>
+
+                <attacherJoint node="trailerAttacherJointFront" jointType="trailer" lowerRotLimit="25 70 50" allowsJointLimitMovement="false" comboTime="0">
+                    <schema position="1 0" rotation="0" invertX="true" />
+                    <objectChange node="lowerLinkFront"         visibilityActive="false" visibilityInactive="true" />
+                    <objectChange node="trailerAttachmentFront" visibilityActive="true"  visibilityInactive="false"/>
+                </attacherJoint>
+
+                <attacherJoint node="attacherJointBack" lowerRotationOffset="-1.21" upperRotationOffset="-1.21" moveTime="2.5" comboTime="1">
+                    <distanceToGround lower="0.32" upper="1.09"/>
+                    <rotationNode node="attacherJointBackRot" upperRotation="30 0 0" lowerRotation="-23 0 0"/>
+                    <rotationNode2 node="attacherJointBackRot2"/>
+                    <bottomArm rotationNode="attacherJointBackArmBottom" translationNode="attacherJointBackArmBottomTrans" referenceNode="referencePointBackBottom" zScale="-1" startRotation="0 0 0" categoryRange="1 4" defaultCategory="2">
+                        <armLeft  node="attacherJointBackArmBottomLeft"  referenceNode="attacherJointBackArmBottomLeftRef"/>
+                        <armRight node="attacherJointBackArmBottomRight" referenceNode="attacherJointBackArmBottomRightRef"/>
+                    </bottomArm>
+                    <topArm baseNode="attacherJointBackArmTop" filename="$data/shared/assets/upperLinks/walterscheidSO_65_660.xml" zScale="-1" materialTemplateName="PFANZELT_SILVER1" useBrandDecal="false" toggleVisibility="true"/>
+                    <schema position="1 0" rotation="0" invertX="false"/>
+                    <visuals hide="trailerAttacherBack trailerAttacherBackLow"/>
+                </attacherJoint>
+
+                <attacherJoint node="trailerAttacherJointBack" jointType="trailer" lowerRotLimit="25 60 50" allowsJointLimitMovement="false" comboTime="1">
+                    <distanceToGround lower="0.62" upper="1.06" />
+                    <transNode node="trailerAttacherBack" minY="0.58" maxY="1.02" height="0.25">
+                        <dependentBottomArm node="attacherJointBackArmBottom" rotation="-21 0 0"/>
+                    </transNode>
+                    <schema position="1 0" rotation="0" invertX="false" />
+                    <visuals nodes="trailerAttacherBack" hide="trailerAttacherBackLow"/>
+                </attacherJoint>
+
+                <attacherJoint node="trailerAttacherJointBackLow" jointType="trailerLow" lowerRotLimit="25 60 50" lowerTransLimit="0 0 0" allowsJointLimitMovement="false" comboTime="1">
+                    <distanceToGround lower="0.62" upper="1.02" />
+                    <transNode node="trailerAttacherBackLow" minY="0.584" maxY="0.984">
+                        <dependentBottomArm node="attacherJointBackArmBottom" rotation="30 0 0"/>
+                    </transNode>
+                    <schema position="1 0" rotation="0" invertX="false" />
+                    <visuals nodes="trailerAttacherBackLow" hide="trailerAttacherBack"/>
+                </attacherJoint>
+            </attacherJointConfiguration>
         </attacherJointConfigurations>
     </attacherJoints>
 
     <connectionHoses>
         <connectionHoseConfigurations>
             <connectionHoseConfiguration />
+            <!-- front PTO-->
             <connectionHoseConfiguration>
                 <target attacherJointIndices="1 2 3" type="hydraulicIn"     node="hydraulicIn01"   socket="hydraulic02" socketMaterialTemplateName="SHARED_RED1"/>
                 <target attacherJointIndices="1 2 3" type="hydraulicOut"    node="hydraulicOut01"  socket="hydraulic02" socketMaterialTemplateName="SHARED_RED1"/>
@@ -392,6 +522,7 @@
                 <target attacherJointIndices="1 2 3" type="airDoubleRed"    node="airRed"          socket="air_red"/>
                 <target attacherJointIndices="1 2 3" type="airDoubleYellow" node="airYellow"       socket="air_yellow"/>
             </connectionHoseConfiguration>
+            <!-- front and rear PTO-->
             <connectionHoseConfiguration>
                 <target attacherJointIndices="1 2"   type="hydraulicIn"     node="hydraulicIn04"  socket="hydraulic02"/>
                 <target attacherJointIndices="1 2"   type="hydraulicOut"    node="hydraulicOut04" socket="hydraulic02"/>
@@ -458,6 +589,10 @@
             <powerTakeOffConfiguration>
                 <output outputNode="ptoFront" attacherJointIndices="1 2"/>
                 <output outputNode="ptoBack"  attacherJointIndices="3 4 5"/>
+            </powerTakeOffConfiguration>
+
+             <powerTakeOffConfiguration>
+                <output outputNode="ptoFront" attacherJointIndices="1 2"/>
             </powerTakeOffConfiguration>
         </powerTakeOffConfigurations>
     </powerTakeOffs>
@@ -1459,7 +1594,7 @@
 
     <winch controlGroupIndex="2">
         <winchConfigurations>
-            <winchConfiguration name="1">
+            <winchConfiguration name="1" price="5000">
                 <rope node="winch01Rope" triggerNode="winchTrigger01" maxTreeMass="25.0" maxNumTrees="8" minLength="0.5" maxLength="60" maxSubLength="2">
                     <mainRope  diameter="0.012" uvScale="4" />
                     <setupRope diameter="0.012" uvScale="4" emissiveColor="0 2 0 1" />

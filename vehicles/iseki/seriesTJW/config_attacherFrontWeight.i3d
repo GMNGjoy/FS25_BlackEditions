@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="config_attacherFrontWeight.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/calibrated/castIron_normal.png"/>
+    <File fileId="5" filename="$data/shared/detailLibrary/calibrated/castIron_specular.png"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/metallic/clear_diffuse.png"/>
+    <File fileId="1" filename="$data/shared/white_diffuse.png"/>
+    <File fileId="2" filename="$data/vehicles/caseIH/magnumT4B/magnumT4BWeight_normal.png"/>
+    <File fileId="3" filename="$data/vehicles/caseIH/magnumT4B/magnumT4BWeight_vmask.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="magnumT4BWeight_calibratedCastIron_CASEIH_BLACK_mat" materialId="60" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="5"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="7"/>
+      <CustomParameter name="colorScale" value="0.0077 0.01 0.0149"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="config_attacherFrontWeight.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="config_attacherFront02" translation="0 0 0.501053" visibility="false" nodeId="644">
+      <Shape name="weightExtension01" translation="0.006661 0.416615 2.38451" shapeId="1" clipDistance="300" nodeId="645" castsShadows="true" receiveShadows="true" materialIds="60"/>
+      <Shape name="weightExtension02" translation="0.005413 0.416615 2.38451" shapeId="2" clipDistance="300" nodeId="646" castsShadows="true" receiveShadows="true" materialIds="60"/>
+      <Shape name="weightExtension03" translation="0.005112 0.416615 2.38451" shapeId="3" clipDistance="300" nodeId="647" castsShadows="true" receiveShadows="true" materialIds="60"/>
+      <TransformGroup name="lod11" lodDistance="0 50" nodeId="648">
+        <Shape name="config_attacherFront02_lod0" shapeId="4" clipDistance="300" nodeId="649" castsShadows="true" receiveShadows="true" materialIds="60"/>
+        <Shape name="config_attacherFront02_lod1" shapeId="5" clipDistance="300" nodeId="650" castsShadows="true" receiveShadows="true" materialIds="60"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

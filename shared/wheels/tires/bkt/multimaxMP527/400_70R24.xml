@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<wheel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../shared/xml/schema/wheel.xsd">
+    <metadata brand="BKT" name="MULTIMAX MP 527" category="TELEHANDLER" />
+    <default>
+        <physics radius="0.582" visualOffset="0.005" width="0.4" mass="0.14" tireType="offRoad" frictionScale="1.60" maxLongStiffness="10" maxLatStiffness="120" maxLatStiffnessLoad="2" />
+        <tire filename="$data/shared/wheels/tires/bkt/multimaxMP527/400_70R24.i3d" nodeLeft="0|0" nodeRight="0|0" maxDeformation="0.0554" tireTrackAtlasIndex="29" hasMudMesh="true" />
+        <outerRim filename="$data/shared/wheels/rims/rim001.i3d" node="1|0" widthAndDiam="10.5 24" />
+        <!-- <innerRim filename="$data/shared/wheels/rims/rim001.i3d" nodeLeft="2|0" nodeRight="2|1" widthAndDiam="10.5 24" /> -->
+        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" nodeLeft="0|0" nodeRight="0|1" offset="0.07" widthAndDiam="10.5 24" />
+    </default>
+    <configurations>
+        <configuration id="dual">
+            <innerRim filename="-" />
+        </configuration>
+        <configuration id="dualConnector">
+            <innerRim nodeLeft="5|0" nodeRight="5|1" offset="-0.18" widthAndDiam="10.5 24" />
+        </configuration>
+    </configurations>
+</wheel>

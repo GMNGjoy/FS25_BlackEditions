@@ -9,7 +9,10 @@
 
         <text name="configuration_valueExtension2x" text="Extension Double" /> 
         <text name="configuration_valueExtension10x" text="Extension Insane" /> 
-        <text name="configuration_valueExtension100x" text="Extension Ridonculous" /> 
+        <text name="configuration_valueExtension100x" text="Extension Ridonculous" />
+
+        <text name="configuration_winchBlade" text="Winch &amp; Blade" />
+        
 
     </texts>
 </l10n>

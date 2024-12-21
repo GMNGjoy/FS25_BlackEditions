@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<modDesc descVersion="93">
+<modDesc descVersion="94">
     <author>GMNGjoy</author>
-    <version>0.0.7.0</version>
+    <version>0.0.8.0</version>
     <title>
         <en>BLACK Editions</en>
     </title>
@@ -15,16 +15,15 @@ Black Edition Vehicles:
 - Iseki Series TJW BLACK
 - Lizard Dragon BLACK
 - Kesla 144ND BLACK
+- Vaderstad Rexius 1230 BLACK
 
 The LIST:
 - Dalbo Powerchain 800
-
 - Tajfun EGV 65 AHK SG
 - TGA 560
 - Great Plains Solid Stand 1500
 - Lemkin Solitair 12
-- Vaderstad Rexius 1230
-- Brandt LandRoller 591a
+- Brandt LandRoller 591a (roller 27.7m)
 - Dalbo MaxiRoll 630 Greenline
 - Samasz Z2 840 H
 - Krone Swadro TS 970
@@ -45,12 +44,20 @@ The LIST:
     <storeItems>
         <storeItem xmlFilename="vehicles/iseki/seriesTJW/seriesTJW.xml"/>
         <storeItem xmlFilename="vehicles/lizard/multiPurposeTruck/multiPurposeTruck.xml"/>
+        <storeItem xmlFilename="vehicles/international/transtarII/transtarIIEagle.xml"/>
         <storeItem xmlFilename="vehicles/brielmaier/motorMower29EFI/motorMower29EFI.xml"/>
         <storeItem xmlFilename="vehicles/pfanzelt/pmTraclll/pmTraclll.xml"/>
         <storeItem xmlFilename="vehicles/pfanzelt/felix/felix.xml"/>
         <storeItem xmlFilename="vehicles/pfanzelt/rwgP13/rwgP13.xml"/>
         <storeItem xmlFilename="vehicles/kesla/nd144/nd144.xml"/>
+        <storeItem xmlFilename="vehicles/pittsTrailers/lt408L/lt408L.xml"/>
+        <storeItem xmlFilename="vehicles/vaderstad/rexius1230/rexius1230.xml"/>
     </storeItems>
+    <vehicleTypes>
+        <type name="tractorReverseWinch" parent="tractorReverseDriving" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="winch"/>
+        </type>
+    </vehicleTypes>
     <materialTemplates>
         <template name="GMNG_HELLABLACK" title="$l10n_color_hellaBlack" colorScale="0.000 0.000 0.000" parentTemplate="calibratedMatPaint"/>
         <template name="GMNG_HELLAOLDBLACK" title="$l10n_color_hellaOldBlack" colorScale="0.000 0.000 0.000" parentTemplate="metalPaintedOld"/>

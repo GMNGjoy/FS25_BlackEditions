@@ -11,7 +11,7 @@
         <functions>
             <function>$l10n_function_mower</function>
         </functions>
-        <image>$data/vehicles/brielmaier/motorMower29EFI/store_motorMower29EFI.png</image>
+        <image>vehicles/brielmaier/motorMower29EFI/store_motorMower29EFI.png</image>
         <price>12000</price>
         <lifetime>600</lifetime>
         <rotation>0</rotation>
@@ -33,7 +33,7 @@
         <filename>vehicles/brielmaier/motorMower29EFI/motorMower29EFI.i3d</filename>
         <sounds filename="$data/vehicles/brielmaier/motorMower29EFI/sounds/motorMower29EFI.xml" volumeFactor="0.6"/>
         <size width="4.6" length="3.45" height="1.65" lengthOffset="0.7" widthOffset="-0.52"/>
-        <speedLimit value="18" />
+        <speedLimit value="25" />
         <supportsRadio>false</supportsRadio>
         <components>
             <component centerOfMass="0 0.413 0.4" solverIterationCount="30" mass="147" />
@@ -127,7 +127,7 @@
         </dynamicallyLoadedWheels>
 
         <ackermannSteeringConfigurations>
-            <ackermannSteering rotSpeed="80" rotMax="85" rotCenterNode="steeringCenterNode"/>
+            <ackermannSteering rotSpeed="85" rotMax="85" rotCenterNode="steeringCenterNode"/>
         </ackermannSteeringConfigurations>
 
         <hubMaterial materialTemplateName="STIHL_ORANGE_1"/>
@@ -259,7 +259,7 @@
     <motorized forceSpeedHudDisplay="true">
         <consumerConfigurations>
             <consumerConfiguration>
-                <consumer fillUnitIndex="1" usage="5.2" fillType="diesel" /> <!-- usage is per hour at max load and max rpm -->
+                <consumer fillUnitIndex="1" usage="3.2" fillType="diesel" /> <!-- usage is per hour at max load and max rpm -->
             </consumerConfiguration>
         </consumerConfigurations>
 
@@ -272,8 +272,8 @@
         </differentialConfigurations>
 
         <motorConfigurations>
-            <motorConfiguration hp="75" price="0">
-                <motor torqueScale="1.1" minRpm="850" maxRpm="2200" maxForwardSpeed="18" maxBackwardSpeed="12" brakeForce="2.4" lowBrakeForceScale="0.15" dampingRateScale="0.11">
+            <motorConfiguration name="$l10n_configuration_valueDefault" hp="26" price="0">
+                <motor torqueScale="0.111" minRpm="850" maxRpm="2200" maxForwardSpeed="8" maxBackwardSpeed="6" brakeForce="0.4" lowBrakeForceScale="0.15" dampingRateScale="0.11">
                     <torque normRpm="0.45" torque="0.9"/>
                     <torque normRpm="0.5"  torque="0.97"/>
                     <torque normRpm="0.59" torque="1"/>
@@ -282,6 +282,17 @@
                     <torque normRpm="1"    torque="0.72"/>
                 </motor>
                 <transmission minForwardGearRatio="104" maxForwardGearRatio="350" minBackwardGearRatio="138" maxBackwardGearRatio="350" name="$l10n_info_transmission_automatic" />
+            </motorConfiguration>
+            <motorConfiguration name="BLACK" hp="75" price="500">
+                <motor torqueScale="0.316" minRpm="850" maxRpm="2200" maxForwardSpeed="25" maxBackwardSpeed="18" brakeForce="7" lowBrakeForceScale="0.22" dampingRateScale="0.11">
+                    <torque normRpm="0.45" torque="0.9"/>
+                    <torque normRpm="0.5"  torque="0.97"/>
+                    <torque normRpm="0.59" torque="1"/>
+                    <torque normRpm="0.72" torque="1"/>
+                    <torque normRpm="0.86" torque="0.88"/>
+                    <torque normRpm="1"    torque="0.72"/>
+                </motor>
+                <transmission minForwardGearRatio="27.09" maxForwardGearRatio="300" minBackwardGearRatio="32" maxBackwardGearRatio="300" name="$l10n_info_transmission_automatic" />
             </motorConfiguration>
         </motorConfigurations>
 

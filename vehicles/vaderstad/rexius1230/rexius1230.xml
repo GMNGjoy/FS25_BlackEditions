@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="roller" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Rexius 1230 BLACK</name>
+        <specs>
+            <neededPower>120</neededPower>
+            <workingWidth>12.3</workingWidth>
+        </specs>
+        <functions>
+            <function>$l10n_function_roller</function>
+        </functions>
+        <image>$data/vehicles/vaderstad/rexius1230/store_rexius1230.png</image>
+        <price>46500</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>VAEDERSTAD</brand>
+        <category>rollers</category>
+        <shopTranslationOffset>0 0.775 0</shopTranslationOffset>
+        <shopRotationOffset>7.141 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>2014976</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>984832</indexBufferMemoryUsage>
+        <textureMemoryUsage>393216</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_roller</typeDesc>
+        <filename>vehicles/vaderstad/rexius1230/rexius1230.i3d</filename>
+        <size width="2.6" length="9.85" lengthOffset="-0.92" height="1.95"/>
+        <speedLimit value="18"/>
+        <components>
+            <component centerOfMass="0 0.3 0" solverIterationCount="10" mass="2960" />
+            <component centerOfMass="0.3 0 0" solverIterationCount="10" mass="1250" inertiaScale="32 2 2"/>
+            <component centerOfMass="0.1 -0.5 -0.3" solverIterationCount="10" mass="750" inertiaScale="32 2 2"/>
+            <component centerOfMass="-0.3 0 0" solverIterationCount="10" mass="1250" inertiaScale="32 2 2"/>
+            <component centerOfMass="-0.1 -0.5 -0.3" solverIterationCount="10" mass="750" inertiaScale="32 2 2"/>
+
+            <joint component1="1" component2="2" node="armLeftJoint" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="2" component2="3" node="armLeftOuterJoint" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="1" component2="4" node="armRightJoint" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="4" component2="5" node="armRightOuterJoint" rotLimit="0 0 0" transLimit="0 0 0"/>
+
+            <collisionPair component1="2" component2="4" enabled="false"/>
+            <collisionPair component1="3" component2="5" enabled="false"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
+        <mapHotspot type="TOOL_TRAILED"/>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT">
+                <wheels hasSurfaceSounds="false">
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T404/400_60R15_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.6" repr="wheelLeftFront"  useReprDirection="true" forcePointRatio="0.3" initialCompression="25" suspTravel="0.1" spring="102" damper="50" frictionScale="1.0" yOffset="0.03"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T404/400_60R15_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.6" repr="wheelLeftBack"   useReprDirection="true" forcePointRatio="0.3" initialCompression="25" suspTravel="0.1" spring="102" damper="50" frictionScale="1.0" yOffset="0.03"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T404/400_60R15_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.6" repr="wheelRightFront" useReprDirection="true" forcePointRatio="0.3" initialCompression="25" suspTravel="0.1" spring="102" damper="50" frictionScale="1.0" yOffset="0.03"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T404/400_60R15_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.6" repr="wheelRightBack"  useReprDirection="true" forcePointRatio="0.3" initialCompression="25" suspTravel="0.1" spring="102" damper="50" frictionScale="1.0" yOffset="0.03"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.4" repr="armLeftOuterWheel01"  radius="0.25" width="0.70" useReprDirection="true" forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="25" damper="50" supportsWheelSink="false" brakeFactor="0" maxLatStiffness="0"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.4" repr="armLeftOuterWheel02"  radius="0.25" width="0.70" useReprDirection="true" forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="25" damper="50" supportsWheelSink="false" brakeFactor="0" maxLatStiffness="0"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.0" repr="armLeftWheel01"       radius="0.28" width="1.38" useReprDirection="true" forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="25" damper="50" supportsWheelSink="false" brakeFactor="0"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.7" repr="armLeftWheel02"       radius="0.28" width="1.72" useReprDirection="true" forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="25" damper="50" supportsWheelSink="false" brakeFactor="0"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.4" repr="armBackWheel01"       radius="0.28" width="0.20" useReprDirection="true" forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="70" damper="50" supportsWheelSink="false" brakeFactor="0.5"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.6" repr="armBackWheel02"       radius="0.28" width="0.20" useReprDirection="true" forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="70" damper="50" supportsWheelSink="false" brakeFactor="0.5"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.7" repr="armRightWheel01"      radius="0.28" width="1.72" useReprDirection="true" forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="25" damper="50" supportsWheelSink="false" brakeFactor="0"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.9" repr="armRightWheel02"      radius="0.28" width="1.38" useReprDirection="true" forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="25" damper="50" supportsWheelSink="false" brakeFactor="0"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.4" repr="armRightOuterWheel01" radius="0.25" width="0.70" useReprDirection="true" forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="25" damper="50" supportsWheelSink="false" brakeFactor="0" maxLatStiffness="0"/>
+                    </wheel>
+                    <wheel>
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.4" repr="armRightOuterWheel02" radius="0.25" width="0.70" useReprDirection="true" forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="25" damper="50" supportsWheelSink="false" brakeFactor="0" maxLatStiffness="0"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <rimMaterial materialTemplateName="VAEDERSTAD_YELLOW1"/>
+        <hubMaterial materialTemplateName="VAEDERSTAD_RED1" useBaseColor="true"/>
+
+        <hubs>
+            <hub linkNode="wheelLeftFront"  filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="true"  scale="0.25 0.25 0.25" offset="0.006"/>
+            <hub linkNode="wheelLeftBack"   filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="true"  scale="0.25 0.25 0.25" offset="0.006"/>
+            <hub linkNode="wheelRightFront" filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="false" scale="0.25 0.25 0.25" offset="0.006"/>
+            <hub linkNode="wheelRightBack"  filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="false" scale="0.25 0.25 0.25" offset="0.006"/>
+        </hubs>
+    </wheels>
+
+    <powerConsumer forceNode="rexius1230_main_component1" maxForce="16"/>
+
+    <speedRotatingParts>
+        <speedRotatingPart node="roller01" wheelNodes="armLeftOuterWheel01 armLeftOuterWheel02"/>
+        <speedRotatingPart node="roller02" wheelNodes="armLeftWheel01 armLeftWheel02"/>
+        <speedRotatingPart node="roller03" wheelNodes="armBackWheel01 armBackWheel02"/>
+        <speedRotatingPart node="roller04" wheelNodes="armRightWheel01 armRightWheel02"/>
+        <speedRotatingPart node="roller05" wheelNodes="armRightOuterWheel01 armRightOuterWheel02"/>
+    </speedRotatingParts>
+
+    <attachable>
+        <inputAttacherJointConfigurations title="$l10n_shop_configuration">
+            <inputAttacherJointConfiguration connectionHoseConfigId="1" name="$l10n_configuration_valueDefault"/>
+            <inputAttacherJointConfiguration connectionHoseConfigId="2" name="$l10n_configuration_crossBoard" price="5000">
+                <objectChange node="configuration_effectCrossboard" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="configuration_boardLeftOuter" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="configuration_boardLeft" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="configuration_boardRight" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="configuration_boardRightOuter" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="connectionHoses_config_board" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="config_board_hoses" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="colPartLeftOuter02" compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colPartLeft02" compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colPartRight02" compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colPartRightOuter02" compoundChildActive="true" compoundChildInactive="false"/>
+                <foliageBendingModifier index="2" maxZ="1.3"/>
+                <foliageBendingModifier index="3" maxZ="1.3"/>
+                <foliageBendingModifier index="4" maxZ="1.3"/>
+                <foliageBendingModifier index="5" maxZ="1.3"/>
+                <size height="2.7"/>
+            </inputAttacherJointConfiguration>
+        </inputAttacherJointConfigurations>
+
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="trailer" attacherHeight="0.62" isDefaultLowered="true" allowsLowering="false"/>
+        </inputAttacherJoints>
+        <brakeForce force="0.6"/>
+        <support animationName="moveSupport" delayedOnLoad="true"/>
+        <sounds>
+            <active file="$data/sounds/tools/cultivator/generalRattle_01.wav" innerRadius="10" outerRadius="50" volumeScale="6" isLocalSound="true" pitchScale="0.9">
+                <volume indoor="0.7" outdoor="0.9" >
+                    <modifier type="WHEEL_SUSPENSION" value="-0.08" modifiedValue="0.25"/>
+                    <modifier type="WHEEL_SUSPENSION" value="-0.04" modifiedValue="0.1"/>
+                    <modifier type="WHEEL_SUSPENSION" value="-0.02" modifiedValue="0.0"/>
+                    <modifier type="WHEEL_SUSPENSION" value="-0.01" modifiedValue="0.00"/>
+                    <modifier type="WHEEL_SUSPENSION" value="-0.00" modifiedValue="0.0"/>
+                    <modifier type="WHEEL_SUSPENSION" value="0.01" modifiedValue="0.00"/>
+                    <modifier type="WHEEL_SUSPENSION" value="0.02" modifiedValue="0.0"/>
+                    <modifier type="WHEEL_SUSPENSION" value="0.04" modifiedValue="0.1"/>
+                    <modifier type="WHEEL_SUSPENSION" value="0.08" modifiedValue="0.25"/>
+
+                    <modifier type="SPEED" value="0.0" modifiedValue="0.0"/>
+                    <modifier type="SPEED" value="2.0" modifiedValue="1.0"/>
+                    <modifier type="SPEED" value="40.0" modifiedValue="1.0"/>
+                </volume>
+                <lowpassCutoffFrequency indoor="250" outdoor="20000" />
+                <lowpassGain indoor="0.5" outdoor="1" />
+            </active>
+        </sounds>
+    </attachable>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn01" adapterNode="hydraulicIn01_detached" length="1.5" diameter="0.016" straighteningFactor="0.5">
+            <objectChange node="hydraulicIn01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut01" adapterNode="hydraulicOut01_detached" length="1.5" diameter="0.016" straighteningFactor="0.5">
+            <objectChange node="hydraulicOut01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn02" adapterNode="hydraulicIn02_detached" length="1.5" diameter="0.016" straighteningFactor="0.5">
+            <objectChange node="hydraulicIn02_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="electric"  node="electricIn01" adapterNode="electricIn01_detached" length="1.5" diameter="0.01" straighteningFactor="0.5" >
+            <objectChange node="electricIn01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+
+        <connectionHoseConfigurations>
+            <connectionHoseConfiguration/>
+            <connectionHoseConfiguration>
+                <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn03" adapterNode="hydraulicIn03_detached" length="1.5" diameter="0.016" straighteningFactor="0.5">
+                    <objectChange node="hydraulicIn03_detached" visibilityActive="false" visibilityInactive="true"/>
+                </hose>
+                <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut03" adapterNode="hydraulicOut03_detached" length="1.5" diameter="0.016" straighteningFactor="0.5">
+                    <objectChange node="hydraulicOut03_detached" visibilityActive="false" visibilityInactive="true"/>
+                </hose>
+            </connectionHoseConfiguration>
+        </connectionHoseConfigurations>
+    </connectionHoses>
+
+    <lights>
+        <sharedLight linkNode="rearLight65_left"   filename="$data/shared/assets/lights/lizard/rearLight65_left.xml" />
+        <sharedLight linkNode="rearLight65_right"  filename="$data/shared/assets/lights/lizard/rearLight65_right.xml" />
+        <sharedLight linkNode="frontLight13_left"  filename="$data/shared/assets/lights/lizard/frontLight13_left.xml" />
+        <sharedLight linkNode="frontLight13_right" filename="$data/shared/assets/lights/lizard/frontLight13_right.xml" />
+
+        <realLights>
+            <high>
+                <light node="licensePlateLightHigh" lightTypes="0" />
+                <light node="backLightsHigh" lightTypes="0" />
+                <light node="backLightsHigh2" lightTypes="0" />
+                <turnLightLeft node="turnLightLeftBack" />
+                <turnLightRight node="turnLightRightBack" />
+                <brakeLight node="backLightsHigh" />
+                <brakeLight node="backLightsHigh2" />
+            </high>
+        </realLights>
+    </lights>
+
+    <licensePlates>
+        <licensePlate node="licensePlateBack" position="BACK" preferedType="SQUARISH" placementArea="0.08 0.2 0.2 0.2">
+            <objectChange node="licensePlateBack" visibilityActive="true" visibilityInactive="false" />
+        </licensePlate>
+    </licensePlates>
+
+    <groundReferenceNodes>
+        <groundReferenceNode node="groundReferenceNode" forceFactor="1" threshold="0.2" onlyActiveWhenLowered="false"/>
+    </groundReferenceNodes>
+
+    <workAreas>
+        <workArea type="roller" functionName="processRollerArea" disableBackwards="false" requiresGroundContact="true" needsSetIsTurnedOn="false">
+            <area startNode="workArea01Start" widthNode="workArea01Width" heightNode="workArea01Height" />
+            <groundReferenceNode index="1" />
+            <folding minLimit="0" maxLimit="0.1" />
+            <onlyActiveWhenLowered value="false"/>
+        </workArea>
+        <workArea type="roller" functionName="processRollerArea" disableBackwards="false" requiresGroundContact="true" needsSetIsTurnedOn="false">
+            <area startNode="workArea02Start" widthNode="workArea02Width" heightNode="workArea02Height" />
+            <groundReferenceNode index="1" />
+            <folding minLimit="0" maxLimit="0.1" />
+            <onlyActiveWhenLowered value="false"/>
+        </workArea>
+        <workArea type="roller" functionName="processRollerArea" disableBackwards="false" requiresGroundContact="true" needsSetIsTurnedOn="false">
+            <area startNode="workArea03Start" widthNode="workArea03Width" heightNode="workArea03Height" />
+            <groundReferenceNode index="1" />
+            <folding minLimit="0" maxLimit="0.1" />
+            <onlyActiveWhenLowered value="false"/>
+        </workArea>
+    </workAreas>
+
+    <roller onlyActiveWhenLowered="false">
+        <sounds>
+            <work template="meadowRollerWork" />
+        </sounds>
+    </roller>
+
+    <workParticles>
+        <effect workAreaIndex="1">
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="rollerEffect01LinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/vaderstad/rexius1230/rollerEffect01Array.dds" numRows="20" rowLength="18" density="0.6" densityScale="0.35"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="rollerEffect02LinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/vaderstad/rexius1230/rollerEffect02Array.dds" numRows="20" rowLength="18" density="0.6" densityScale="0.35"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="rollerEffect03LinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/vaderstad/rexius1230/rollerEffect01Array.dds" numRows="20" rowLength="18" density="0.6" densityScale="0.35"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="rollerEffect04LinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/vaderstad/rexius1230/rollerEffect02Array.dds" numRows="20" rowLength="18" density="0.6" densityScale="0.35"/>
+            </effectNode>
+            <effectNode effectClass="CultivatorMotionPathEffect" effectType="CULTIVATOR" linkNode="rollerEffect05LinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/vaderstad/rexius1230/rollerEffect01Array.dds" numRows="20" rowLength="18" density="0.6" densityScale="0.35"/>
+            </effectNode>
+        </effect>
+
+        <particle>
+            <node node="dustEmitterShape" refNodeIndex="1" particleType="SOIL_SMOKE" speedThreshold="1" emitCountScale="3"/>
+            <node node="chunkEmitterShape" refNodeIndex="1" particleType="SOIL_CHUNKS" speedThreshold="1" emitCountScale="5" lifespan="0.3" worldSpace="false"/>
+        </particle>
+    </workParticles>
+
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts startMoveDirection="1" turnOnFoldMaxLimit="1">
+                    <foldingPart animationName="folding" speedScale="0.75"/>
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="supportArmBolt" startTime="0.0" endTime="0.01" startTrans="0 0 0" endTrans="0 0 0.096"/>
+            <part node="supportArm" startTime="0.0" endTime="0.25" startTrans="0 0 0" endTrans="0 -0.38 0" requiredAnimation="folding" requiredAnimationRange="0 0"/>
+            <part node="supportArm" startTime="0.0" endTime="0.25" startTrans="0 0 0" endTrans="0 -0.58 0" requiredAnimation="folding" requiredAnimationRange="1 1"/>
+            <part node="supportArmPart" startTime="0.1" endTime="0.25" startRot="0 0 0" endRot="6 0 0" requiredAnimation="folding" requiredAnimationRange="0 0"/>
+            <part node="supportArmPart" startTime="0.1" endTime="0.25" startRot="0 0 0" endRot="-7 0 0" requiredAnimation="folding" requiredAnimationRange="1 1"/>
+            <part node="supportArmBolt" startTime="0.25" endTime="0.26" startTrans="0 0 0.096" endTrans="0 0 0"/>
+
+            <sound template="slideOpen"    startTime="0.01" endTime="0.25" volumeScale="2" pitchScale="2"   linkNode="supportArm" />
+            <sound template="vibratingImp" startTime="0.01" direction="-1" volumeScale="1" pitchScale="1.6" linkNode="supportArm"/>
+        </animation>
+        <animation name="folding">
+            <part node="armBack" startTime="0" endTime="2.5" startRot="5 0 0" endRot="-95 0 0"/>
+            <part node="armLeftJoint" startTime="2.5" endTime="9" startRot="0 0 0" endRot="0 0 89.5"/>
+            <part node="armRightJoint" startTime="2.5" endTime="9" startRot="0 0 0" endRot="0 0 -89.5"/>
+            <part node="axleLeft" startTime="2.5" endTime="9" startRot="0 0 0" endRot="0 0.25 0"/>
+            <part node="axleLeft_physic" startTime="2.5" endTime="9" startRot="0 0 0" endRot="0 0.25 0"/>
+            <part node="axleRight" startTime="2.5" endTime="9" startRot="0 0 0" endRot="0 -0.25 0"/>
+            <part node="axleRight_physic" startTime="2.5" endTime="9" startRot="0 0 0" endRot="0 -0.25 0"/>
+            <part node="lockArm" startTime="9.0" endTime="9.3" startRot="0 0 30" endRot="0 0 0"/>
+            <part componentJointIndex="1" startTime="0" endTime="0.5" startRotLimit="0 0 15" endRotLimit="0 0 0"/>
+            <part componentJointIndex="2" startTime="0" endTime="0.5" startRotLimit="0 0 15" endRotLimit="0 0 0"/>
+            <part componentJointIndex="3" startTime="0" endTime="0.5" startRotLimit="0 0 15" endRotLimit="0 0 0"/>
+            <part componentJointIndex="4" startTime="0" endTime="0.5" startRotLimit="0 0 15" endRotLimit="0 0 0"/>
+
+            <part node="root1Animated_joint" startTime="0.0" endTime="2.5" startRot="139.721 -35.884 -177.475" endRot="184.856 -18.506 -177.116" />
+            <part node="root2Animated_joint" startTime="0.0" endTime="2.5" startRot="0.0 0.0 0.0" endRot="-45.737 0.0 0.0" />
+
+            <part componentIndex="1" startTime="0" endTime="2.5" startCenterOfMass="0 0.3 1" endCenterOfMass="0 0.3 0"/>
+
+            <sound template="hydraulicClose01"      startTime="0.01" endTime="2.5"  direction="1"     volumeScale="2.5" pitchScale="0.7" fadeIn="0.1" fadeOut="0.1" />
+            <sound template="hydraulicOpen06"       startTime="0.01" endTime="2.5"  direction="-1"    volumeScale="0.9" pitchScale="0.5" fadeIn="0.1" fadeOut="0.1" />
+            <sound template="hydraulicOpen02"       startTime="0.01" endTime="2.5"  direction="-1"    volumeScale="1.1" pitchScale="1.5" fadeIn="0.1" fadeOut="0.1" />
+            <sound template="hydraulicClose03"      startTime="2.5"  endTime="9"    direction="0"     volumeScale="2.5" pitchScale="0.7" fadeIn="0.1" fadeOut="0.1" />
+            <sound template="hydraulicOpen05"       startTime="2.5"  endTime="9"    direction="0"     volumeScale="1.5" pitchScale="1.7" fadeIn="0.1" fadeOut="0.1" />
+            <sound template="vibratingImp"          startTime="2.5"  direction="0"  volumeScale="1.2" pitchScale="1" />
+            <sound template="foldStartMed02"        startTime="2.5"  direction="0"  volumeScale="3.2" pitchScale="0.7" />
+            <sound template="clackVar4"             startTime="2.5"  direction="0"  volumeScale="2.2" pitchScale="0.6" />
+            <sound template="vibratingImp"          startTime="0.7"  direction="-1" volumeScale="1.2" pitchScale="1" />
+            <sound template="foldStartMed02"        startTime="0.7"  direction="-1" volumeScale="3.2" pitchScale="0.7" />
+            <sound template="metalImpHigh01"        startTime="0.7"  direction="-1" volumeScale="0.8" pitchScale="0.7" />
+            <sound template="vibratingImp"          startTime="9"    direction="1"  volumeScale="1.2" pitchScale="0.8" />
+            <sound template="foldStartMed02"        startTime="9"    direction="1"  volumeScale="3.2" pitchScale="0.7" />
+            <sound template="clackVar2"             startTime="9"    direction="1"  volumeScale="1.2" pitchScale="0.9" />
+            <sound template="trailerCloseImpact_01" startTime="9"    direction="1"  volumeScale="1.0" pitchScale="0.9" />
+            <sound template="hingeImp"              startTime="9.1"  direction="0"  volumeScale="0.7" pitchScale="0.8" />
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="axleLeft_physic" wheelNodes="wheelLeftFront wheelLeftBack"/>
+            <movingTool node="axleRight_physic" wheelNodes="wheelRightFront wheelRightBack"/>
+            <movingTool node="armBack" wheelNodes="armBackWheel01 armBackWheel02">
+                <dependentPart node="armBackHydraulic" />
+                <componentJoint index="1" />
+                <componentJoint index="3" />
+            </movingTool>
+            <movingTool node="armLeftJoint" wheelNodes="wheelLeftFront wheelLeftBack">
+                <componentJoint index="1" />
+            </movingTool>
+            <movingTool node="armRightJoint" wheelNodes="wheelRightFront wheelRightBack">
+                <componentJoint index="3" />
+            </movingTool>
+            <movingTool node="lockArm">
+                <dependentPart node="lockArmHydraulic" />
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="armLeft" referencePoint="armLeftRef" referenceFrame="armLeftRef" isActiveDirty="true" maxUpdateDistance="300" limitedAxis="1"/>
+            <movingPart node="armLeftOuter" referencePoint="armLeftOuterRef" referenceFrame="armLeftOuterRef" isActiveDirty="true" maxUpdateDistance="300" limitedAxis="1"/>
+            <movingPart node="armRight" referencePoint="armRightRef" referenceFrame="armRightRef" isActiveDirty="true" maxUpdateDistance="300" limitedAxis="1"/>
+            <movingPart node="armRightOuter" referencePoint="armRightOuterRef" referenceFrame="armRightOuterRef" isActiveDirty="true" maxUpdateDistance="300" limitedAxis="1"/>
+            <movingPart node="armBackHydraulic" referencePoint="armBackHydraulicRef" referenceFrame="armBackHydraulicRefFrame">
+                <translatingPart node="armBackHydraulicPunch" />
+            </movingPart>
+            <movingPart node="lockArmHydraulic" referencePoint="lockArmHydraulicRef" referenceFrame="lockArmHydraulicRef">
+                <translatingPart node="lockArmHydraulicPunch" />
+            </movingPart>
+        </movingParts>
+    </cylindered>
+
+    <ai>
+        <needsLowering value="true"/>
+        <areaMarkers leftNode="aiMarkerLeft" rightNode="aiMarkerRight" backNode="aiMarkerBack"/>
+        <collisionTrigger node="aiCollisionNode" width="12.8" height="1.5"/>
+        <toolReverserDirectionNode node="aiMarkerBack"/>
+        <allowTurnBackward value="false"/>
+        <turningRadiusLimitation radius="6"/>
+        <agentAttachment jointNode="attacherJoint" rotCenterNode="rotCenterNode" width="2.6" height="2.1" heightOffset="-0.5" length="9.5" lengthOffset="1.9"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-0.25" maxX="0.25" minZ="0.7" maxZ="3.55" yOffset="0.1"/>
+        <bendingNode minX="-0.565" maxX="3.7" minZ="-1.15" maxZ="0.75" yOffset="-0.45" node="bendingNodeLeft"/>
+        <bendingNode minX="0" maxX="2" minZ="-0.7" maxZ="0.15" yOffset="-0.6" node="bendingNodeLeftOuter"/>
+        <bendingNode minX="-3.7" maxX="0.565" minZ="-1.15" maxZ="0.75" yOffset="-0.45" node="bendingNodeRight"/>
+        <bendingNode minX="-2" maxX="0" minZ="-0.7" maxZ="0.15" yOffset="-0.6" node="bendingNodeRightOuter"/>
+    </foliageBending>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="6" fieldMultiplier="2"/>
+
+    <baseColorConfigurations useDefaultColors="true" price="0" title="Frame Color">
+        <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
+        <baseColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <baseColorConfiguration materialTemplateName="VAEDERSTAD_RED1" isDefault="true" />
+        <baseColorConfiguration materialTemplateName="VAEDERSTAD_YELLOW1" />
+        <material materialSlotName="mainFrame_mat" materialTemplateUseColorOnly="true" />
+    </baseColorConfigurations>
+
+    <designColorConfigurations useDefaultColors="true" price="0" title="Roller Color">
+        <designColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
+        <designColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColorConfiguration materialTemplateName="VAEDERSTAD_RED1" />
+        <designColorConfiguration materialTemplateName="VAEDERSTAD_YELLOW1" isDefault="true" />
+        <material materialSlotName="roller_mat"/>
+    </designColorConfigurations>
+
+    <rimColorConfigurations useDefaultColors="true" price="0">
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME" price="1000"/>
+        <rimColorConfiguration materialTemplateName="RIM_DEFAULT"/>
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_WHITE" />
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_BLACK"/>
+        <rimColorConfiguration materialTemplateName="VAEDERSTAD_RED1" />
+        <rimColorConfiguration materialTemplateName="VAEDERSTAD_YELLOW1" isDefault="true" />
+    </rimColorConfigurations>
+
+    <i3dMappings>
+        <i3dMapping id="rexius1230_main_component1" node="0>" />
+        <i3dMapping id="rexius1230_vis" node="0>0" />
+        <i3dMapping id="attacherJoint" node="0>0|0|0" />
+        <i3dMapping id="supportArm" node="0>0|0|1|0" />
+        <i3dMapping id="supportArmPart" node="0>0|0|1|0|0" />
+        <i3dMapping id="supportCol" node="0>0|0|1|0|0|0" />
+        <i3dMapping id="supportArmBolt" node="0>0|0|2" />
+        <i3dMapping id="hydraulicIn01" node="0>0|1|0" />
+        <i3dMapping id="hydraulicOut01" node="0>0|1|1" />
+        <i3dMapping id="hydraulicIn02" node="0>0|1|2" />
+        <i3dMapping id="electricIn01" node="0>0|1|3" />
+        <i3dMapping id="hydraulicIn01_detached" node="0>0|1|4" />
+        <i3dMapping id="hydraulicOut01_detached" node="0>0|1|5" />
+        <i3dMapping id="hydraulicIn02_detached" node="0>0|1|6" />
+        <i3dMapping id="electricIn01_detached" node="0>0|1|7" />
+        <i3dMapping id="connectionHoses_config_board" node="0>0|1|8" />
+        <i3dMapping id="hydraulicIn03" node="0>0|1|8|0" />
+        <i3dMapping id="hydraulicOut03" node="0>0|1|8|1" />
+        <i3dMapping id="hydraulicIn03_detached" node="0>0|1|8|2" />
+        <i3dMapping id="hydraulicOut03_detached" node="0>0|1|8|3" />
+        <i3dMapping id="yellowRound_01" node="0>0|2|0|0" />
+        <i3dMapping id="yellowRound_02" node="0>0|2|0|1" />
+        <i3dMapping id="frontLight13_left" node="0>0|2|0|2" />
+        <i3dMapping id="frontLight13_right" node="0>0|2|0|3" />
+        <i3dMapping id="workArea01Start" node="0>0|3|0" />
+        <i3dMapping id="workArea01Width" node="0>0|3|1" />
+        <i3dMapping id="workArea01Height" node="0>0|3|2" />
+        <i3dMapping id="workArea02Start" node="0>0|3|3" />
+        <i3dMapping id="workArea02Width" node="0>0|3|4" />
+        <i3dMapping id="workArea02Height" node="0>0|3|5" />
+        <i3dMapping id="workArea03Start" node="0>0|3|6" />
+        <i3dMapping id="workArea03Width" node="0>0|3|7" />
+        <i3dMapping id="workArea03Height" node="0>0|3|8" />
+        <i3dMapping id="dustEmitterShape" node="0>0|4|0|0" />
+        <i3dMapping id="configuration_effectCrossboard" node="0>0|4|1" />
+        <i3dMapping id="chunkEmitterShape" node="0>0|4|1|0" />
+        <i3dMapping id="armBack" node="0>0|5|0" />
+        <i3dMapping id="armLeft" node="0>0|5|0|0|0" />
+        <i3dMapping id="armLeftOuter" node="0>0|5|0|0|0|0" />
+        <i3dMapping id="roller01" node="0>0|5|0|0|0|0|0|0" />
+        <i3dMapping id="rearLight65_left" node="0>0|5|0|0|0|0|1|0|0" />
+        <i3dMapping id="redTriangle_02" node="0>0|5|0|0|0|0|1|0|1" />
+        <i3dMapping id="bigTriangle" node="0>0|5|0|0|0|0|1|0|2" />
+        <i3dMapping id="backLightsHigh" node="0>0|5|0|0|0|0|1|1|0" />
+        <i3dMapping id="turnLightLeftBack" node="0>0|5|0|0|0|0|1|2|0" />
+        <i3dMapping id="licensePlateBack" node="0>0|5|0|0|0|0|3" />
+        <i3dMapping id="licensePlateLightHigh" node="0>0|5|0|0|0|0|3|0" />
+        <i3dMapping id="licensePlateHolder" node="0>0|5|0|0|0|0|3|1" />
+        <i3dMapping id="bendingNodeLeftOuter" node="0>0|5|0|0|0|0|4" />
+        <i3dMapping id="configuration_boardLeftOuter" node="0>0|5|0|0|0|0|5" />
+        <i3dMapping id="rollerEffect01LinkNode" node="0>0|5|0|0|0|0|6" />
+        <i3dMapping id="configuration_stonePickerLeftOuter" node="0>0|5|0|0|0|0|7" />
+        <i3dMapping id="axleLeft" node="0>0|5|0|0|0|1|0" />
+        <i3dMapping id="lockArm" node="0>0|5|0|0|0|2" />
+        <i3dMapping id="lockArmHydraulic" node="0>0|5|0|0|0|2|0" />
+        <i3dMapping id="lockArmHydraulicPunch" node="0>0|5|0|0|0|2|0|0" />
+        <i3dMapping id="lockArmHydraulicRef" node="0>0|5|0|0|0|3" />
+        <i3dMapping id="roller02" node="0>0|5|0|0|0|4|0" />
+        <i3dMapping id="bendingNodeLeft" node="0>0|5|0|0|0|6" />
+        <i3dMapping id="configuration_boardLeft" node="0>0|5|0|0|0|7" />
+        <i3dMapping id="rollerEffect02LinkNode" node="0>0|5|0|0|0|8" />
+        <i3dMapping id="configuration_stonePickerLeft" node="0>0|5|0|0|0|9" />
+        <i3dMapping id="armRight" node="0>0|5|0|1|0" />
+        <i3dMapping id="armRightOuter" node="0>0|5|0|1|0|0" />
+        <i3dMapping id="roller05" node="0>0|5|0|1|0|0|0|0" />
+        <i3dMapping id="rearLight65_right" node="0>0|5|0|1|0|0|1|0|0" />
+        <i3dMapping id="redTriangle_01" node="0>0|5|0|1|0|0|1|0|1" />
+        <i3dMapping id="backLightsHigh2" node="0>0|5|0|1|0|0|1|1|0" />
+        <i3dMapping id="turnLightRightBack" node="0>0|5|0|1|0|0|1|2|0" />
+        <i3dMapping id="bendingNodeRightOuter" node="0>0|5|0|1|0|0|3" />
+        <i3dMapping id="configuration_boardRightOuter" node="0>0|5|0|1|0|0|4" />
+        <i3dMapping id="configuration_stonePickerRightOuter" node="0>0|5|0|1|0|0|5" />
+        <i3dMapping id="rollerEffect05LinkNode" node="0>0|5|0|1|0|0|6" />
+        <i3dMapping id="axleRight" node="0>0|5|0|1|0|1|0" />
+        <i3dMapping id="roller04" node="0>0|5|0|1|0|2|0" />
+        <i3dMapping id="bendingNodeRight" node="0>0|5|0|1|0|4" />
+        <i3dMapping id="configuration_boardRight" node="0>0|5|0|1|0|5" />
+        <i3dMapping id="rollerEffect04LinkNode" node="0>0|5|0|1|0|6" />
+        <i3dMapping id="configuration_stonePickerRight" node="0>0|5|0|1|0|7" />
+        <i3dMapping id="armBackHydraulicRef" node="0>0|5|0|2" />
+        <i3dMapping id="armLeftJoint" node="0>0|5|0|3" />
+        <i3dMapping id="armRightJoint" node="0>0|5|0|4" />
+        <i3dMapping id="armBackWheel01" node="0>0|5|0|5" />
+        <i3dMapping id="armBackWheel02" node="0>0|5|0|6" />
+        <i3dMapping id="roller03" node="0>0|5|0|7" />
+        <i3dMapping id="rollerEffect03LinkNode" node="0>0|5|0|9" />
+        <i3dMapping id="groundReferenceNode" node="0>0|5|0|10" />
+        <i3dMapping id="armBackHydraulicRefFrame" node="0>0|5|1" />
+        <i3dMapping id="armBackHydraulic" node="0>0|5|1|0" />
+        <i3dMapping id="armBackHydraulicPunch" node="0>0|5|1|0|0" />
+        <i3dMapping id="aiMarkerLeft" node="0>0|6|0" />
+        <i3dMapping id="aiMarkerRight" node="0>0|6|1" />
+        <i3dMapping id="aiMarkerBack" node="0>0|6|2" />
+        <i3dMapping id="aiCollisionNode" node="0>0|6|3" />
+        <i3dMapping id="rotCenterNode" node="0>0|6|4" />
+        <i3dMapping id="config_board_hoses" node="0>1|1" />
+        <i3dMapping id="root2Animated_joint" node="0>3" />
+        <i3dMapping id="root1Animated_joint" node="0>4" />
+        <i3dMapping id="armLeft_component2" node="1>" />
+        <i3dMapping id="armLeftOuterJoint" node="1>0" />
+        <i3dMapping id="armLeftRef" node="1>1" />
+        <i3dMapping id="axleLeft_physic" node="1>2" />
+        <i3dMapping id="wheelLeftFront" node="1>2|0|0" />
+        <i3dMapping id="wheelLeftBack" node="1>2|1|0" />
+        <i3dMapping id="armLeftWheel01" node="1>3" />
+        <i3dMapping id="armLeftWheel02" node="1>4" />
+        <i3dMapping id="colPartLeft01" node="1>5" />
+        <i3dMapping id="colPartLeft02" node="1>6" />
+        <i3dMapping id="armLeftOuter_component3" node="2>" />
+        <i3dMapping id="armLeftOuterRef" node="2>0" />
+        <i3dMapping id="armLeftOuterWheel01" node="2>1" />
+        <i3dMapping id="armLeftOuterWheel02" node="2>2" />
+        <i3dMapping id="colPartLeftOuter01" node="2>3" />
+        <i3dMapping id="colPartLeftOuter02" node="2>4" />
+        <i3dMapping id="armRight_component4" node="3>" />
+        <i3dMapping id="armRightOuterJoint" node="3>0" />
+        <i3dMapping id="armRightRef" node="3>1" />
+        <i3dMapping id="axleRight_physic" node="3>2" />
+        <i3dMapping id="wheelRightFront" node="3>2|0|0" />
+        <i3dMapping id="wheelRightBack" node="3>2|1|0" />
+        <i3dMapping id="armRightWheel01" node="3>3" />
+        <i3dMapping id="armRightWheel02" node="3>4" />
+        <i3dMapping id="colPartRight01" node="3>5" />
+        <i3dMapping id="colPartRight02" node="3>6" />
+        <i3dMapping id="armRightOuter_component5" node="4>" />
+        <i3dMapping id="armRightOuterRef" node="4>0" />
+        <i3dMapping id="armRightOuterWheel01" node="4>1" />
+        <i3dMapping id="armRightOuterWheel02" node="4>2" />
+        <i3dMapping id="colPartRightOuter01" node="4>3" />
+        <i3dMapping id="colPartRightOuter02" node="4>4" />
+    </i3dMappings>
+</vehicle>
