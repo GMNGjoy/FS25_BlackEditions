@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <modDesc descVersion="94">
     <author>GMNGjoy</author>
-    <version>0.0.8.0</version>
+    <version>0.0.9.0</version>
     <title>
         <en>BLACK Editions</en>
     </title>
@@ -16,6 +16,8 @@ Black Edition Vehicles:
 - Lizard Dragon BLACK
 - Kesla 144ND BLACK
 - Vaderstad Rexius 1230 BLACK
+- Dalbo MaxiRoll 630 Greenline BLACK
+- Dalbo PowerChain 800 BLACK
 
 The LIST:
 - Dalbo Powerchain 800
@@ -24,7 +26,7 @@ The LIST:
 - Great Plains Solid Stand 1500
 - Lemkin Solitair 12
 - Brandt LandRoller 591a (roller 27.7m)
-- Dalbo MaxiRoll 630 Greenline
+
 - Samasz Z2 840 H
 - Krone Swadro TS 970
 - Anderson MergePro 915
@@ -52,6 +54,8 @@ The LIST:
         <storeItem xmlFilename="vehicles/kesla/nd144/nd144.xml"/>
         <storeItem xmlFilename="vehicles/pittsTrailers/lt408L/lt408L.xml"/>
         <storeItem xmlFilename="vehicles/vaderstad/rexius1230/rexius1230.xml"/>
+        <storeItem xmlFilename="vehicles/dalbo/maxiroll630Greenline/maxiroll630Greenline.xml"/>
+        <storeItem xmlFilename="vehicles/dalbo/powerchain800/powerchain800.xml"/>
     </storeItems>
     <vehicleTypes>
         <type name="tractorReverseWinch" parent="tractorReverseDriving" filename="$dataS/scripts/vehicles/Vehicle.lua">
