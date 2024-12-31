@@ -398,7 +398,7 @@
 
     <baseColorConfigurations useDefaultColors="true" price="0" title="Frame Color">
         <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <baseColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <baseColorConfiguration materialTemplateName="VAEDERSTAD_RED1" isDefault="true" />
         <baseColorConfiguration materialTemplateName="VAEDERSTAD_YELLOW1" />
         <material materialSlotName="mainFrame_mat" materialTemplateUseColorOnly="true" />
@@ -406,7 +406,7 @@
 
     <designColorConfigurations useDefaultColors="true" price="0" title="Roller Color">
         <designColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <designColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColorConfiguration materialTemplateName="VAEDERSTAD_RED1" />
         <designColorConfiguration materialTemplateName="VAEDERSTAD_YELLOW1" isDefault="true" />
         <material materialSlotName="roller_mat"/>

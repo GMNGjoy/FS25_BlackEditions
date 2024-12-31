@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <modDesc descVersion="94">
     <author>GMNGjoy</author>
-    <version>0.0.9.0</version>
+    <version>0.0.10.0</version>
     <title>
         <en>BLACK Editions</en>
     </title>
@@ -18,6 +18,7 @@ Black Edition Vehicles:
 - Vaderstad Rexius 1230 BLACK
 - Dalbo MaxiRoll 630 Greenline BLACK
 - Dalbo PowerChain 800 BLACK
+- POETTINGER ROTOCARE V 12400 BLACK
 
 The LIST:
 - Tajfun EGV 65 AHK SG
@@ -54,14 +55,16 @@ The LIST:
         <storeItem xmlFilename="vehicles/vaderstad/rexius1230/rexius1230.xml"/>
         <storeItem xmlFilename="vehicles/dalbo/maxiroll630Greenline/maxiroll630Greenline.xml"/>
         <storeItem xmlFilename="vehicles/dalbo/powerchain800/powerchain800.xml"/>
+        <storeItem xmlFilename="vehicles/poettinger/rotocareV12400/rotocareV12400.xml"/>
     </storeItems>
-    <vehicleTypes>
-        <type name="tractorReverseWinch" parent="tractorReverseDriving" filename="$dataS/scripts/vehicles/Vehicle.lua">
-            <specialization name="winch"/>
-        </type>
-    </vehicleTypes>
     <materialTemplates>
-        <template name="GMNG_HELLABLACK" title="$l10n_color_hellaBlack" colorScale="0.000 0.000 0.000" parentTemplate="calibratedMatPaint"/>
-        <template name="GMNG_HELLAOLDBLACK" title="$l10n_color_hellaOldBlack" colorScale="0.000 0.000 0.000" parentTemplate="metalPaintedOld"/>
+        <template name="GMNG_HELLABLACK" title="$l10n_color_hellaBlack" colorScale="0 0 0" parentTemplate="calibratedPaint"/>
+        <template name="GMNG_HELLABLACK_OLD" title="$l10n_color_hellaBlack_old" colorScale="0 0 0" parentTemplate="metalPaintedOld"/>
+        <template name="GMNG_HELLABLACK_MATTE" title="$l10n_color_hellaBlack_matte" colorScale="0 0 0" parentTemplate="calibratedMatPaint"/>
+        <template name="GMNG_HELLABLACK_METALLIC" title="$l10n_color_hellaBlack_metallic" colorScale="0 0 0" parentTemplate="calibratedMetallicPaint"/>
+        <template name="GMNG_HELLABLACK_ROUGH" title="$l10n_color_hellaBlack_rough" colorScale="0 0 0" parentTemplate="metalPaintedRoughBlack"/>
+        <template name="GMNG_HELLABLACK_SCRATCHED" title="$l10n_color_hellaBlack_scratched" colorScale="0 0 0" parentTemplate="palladiumScratched"/>
+        <template name="GMNG_HELLABLACK_GALVANIZED" title="$l10n_color_hellaBlack_galvanized" colorScale="0 0 0" parentTemplate="metalGalvanized"/>
+        <template name="GMNG_HELLABLACK_PLASTIC" title="$l10n_color_hellaBlack_plastic" colorScale="0 0 0" parentTemplate="plasticPaintedBlack"/>
     </materialTemplates>
 </modDesc>

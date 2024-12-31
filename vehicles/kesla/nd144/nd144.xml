@@ -181,7 +181,7 @@
                 </wheels>
             </wheelConfiguration>
 
-            <wheelConfiguration name="RideMax FL693M" price="0" brand="BKT" saveId="BKT_DEFAULT">
+            <wheelConfiguration name="RideMax FL693M" price="0" brand="BKT" saveId="BKT_DEFAULT2">
                 <wheels>
                     <wheel filename="$data/shared/wheels/tires/bkt/ridemaxFL693M/600_50R22_5.xml" isLeft="true">
                         <physics tipOcclusionAreaGroupId="1" restLoad="1.3" repr="wheelFrontLeft"  forcePointRatio="0.35" initialCompression="12" suspTravel="0.07" spring="130" damper="50" yOffset="0.03" frictionScale="1"/>
@@ -673,7 +673,7 @@
 
     <baseColorConfigurations useDefaultColors="true" price="0" title="Frame Color" defaultColorIndex="7">
         <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <baseColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <baseColorConfiguration materialTemplateName="KESLA_YELLOW1" />
         <material materialSlotName="mainFrame_mat" />
         <material materialSlotName="hitchMount_mat" />
@@ -682,21 +682,21 @@
    
     <designColorConfigurations useDefaultColors="true" price="0" title="Crane Arm Color" defaultColorIndex="7">
         <designColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <designColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColorConfiguration materialTemplateName="KESLA_YELLOW1" />
         <material materialSlotName="craneFrame_mat" materialTemplateUseColorOnly="true" />
     </designColorConfigurations>
 
     <designColor2Configurations useDefaultColors="true" price="0" title="Crane Grab Color">
         <designColor2Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor2Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor2Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor2Configuration materialTemplateName="KESLA_YELLOW1" isDefault="true" />
         <material materialSlotName="craneGrab_mat"/>
     </designColor2Configurations>
 
     <designColor3Configurations useDefaultColors="true" price="0" title="Crane Support Color" defaultColorIndex="7">
         <designColor3Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor3Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor3Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor3Configuration materialTemplateName="KESLA_YELLOW1" />
         <material materialSlotName="craneSupportLeft_mat"/>
         <material materialSlotName="craneSupportRight_mat"/>
@@ -707,7 +707,7 @@
 
     <designColor4Configurations useDefaultColors="true" price="0" title="Sticker Color" defaultColorIndex="1">
         <designColor4Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor4Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor4Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor4Configuration materialTemplateName="KESLA_YELLOW1"  />
         <material materialSlotName="stickerFrame_mat" materialTemplateUseColorOnly="true" />
         <material materialSlotName="stickerArm_mat" materialTemplateUseColorOnly="true"/>
@@ -715,8 +715,8 @@
 
     <rimColorConfigurations useDefaultColors="true" price="0">
         <rimColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <rimColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
-        <rimColorConfiguration materialTemplateName="KELSA_YELLOW1" />
+        <rimColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
+        <rimColorConfiguration materialTemplateName="KESLA_YELLOW1" />
     </rimColorConfigurations>
 
     <i3dMappings>

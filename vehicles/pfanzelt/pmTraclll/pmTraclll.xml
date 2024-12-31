@@ -98,17 +98,17 @@
         </configurationSet>
         <configurationSet name="$l10n_configuration_winchBlade">
             <configuration name="component"     index="2"/>
-            <configuration name="vehicleType"   index="3"/>
+            <configuration name="vehicleType"   index="2"/>
             <configuration name="attacherJoint" index="5"/>
             <configuration name="folding"       index="1"/>
             <configuration name="animation"     index="2"/>
-            <configuration name="cylindered"    index="3"/>
+            <configuration name="cylindered"    index="4"/>
             <configuration name="logGrab"       index="2"/>
             <configuration name="winch"         index="1"/>
         </configurationSet>
         <configurationSet name="$l10n_configuration_winch">
             <configuration name="component"     index="2"/>
-            <configuration name="vehicleType"   index="3"/>
+            <configuration name="vehicleType"   index="2"/>
             <configuration name="attacherJoint" index="6"/>
             <configuration name="folding"       index="1"/>
             <configuration name="animation"     index="2"/>
@@ -132,8 +132,6 @@
         <vehicleTypeConfiguration isSelectable="false" vehicleType="tractorForestry">
         </vehicleTypeConfiguration>
         <vehicleTypeConfiguration isSelectable="false" vehicleType="tractorReverseDriving">
-        </vehicleTypeConfiguration>
-        <vehicleTypeConfiguration isSelectable="false" vehicleType="tractorReverseWinch">
         </vehicleTypeConfiguration>
     </vehicleTypeConfigurations>
 
@@ -1499,33 +1497,36 @@
                     <movingPart node="attacherJointBackArmBottomRightPartPunch" referencePoint="attacherJointBackArmBottomRightPartPunchRef" referenceFrame="attacherJointBackArmBottomRightPartPunchRef" />
                 </movingParts>
             </cylinderedConfiguration>
+
+            <!-- Tractor & Shield-->
+            <cylinderedConfiguration name="4">
+                <movingTools>
+                     <controlGroups>
+                        <controlGroup name="$l10n_controlGroup_blade"/>
+                    </controlGroups>
+                </movingTools>
+
+                <movingParts>
+                    <!-- shield -->
+                    <movingPart node="shieldBackBody" referencePoint="shieldPartRef" localReferencePoint="shieldPart" referenceFrame="shieldBackBodyRefFrame">
+                        <dependentPart node="shieldPart"/>
+                    </movingPart>
+                    <movingPart node="shieldPart" referencePoint="shieldPartRef" referenceFrame="shieldPartRef"/>
+                    <movingPart node="winchArm" referencePoint="winchArmPartRef" referenceFrame="winchArmRefFrame" localReferencePoint="winchArmPart">
+                        <dependentPart node="winchArmPart"/>
+                        <winch ropeIndices="1 2"/>
+                    </movingPart>
+                    <movingPart node="winchArmPart"    referencePoint="winchArmPartRef" referenceFrame="winchArmPartRef"/>
+                    <movingPart node="shieldFrontBody" referenceFrame="pmTrac_main_component1"/>
+                </movingParts>
+            </cylinderedConfiguration>
         </cylinderedConfigurations>
 
         <movingTools>
-            <movingTool node="attacherJointFrontArmBottom">
-                <dependentPart node="attacherJointFrontArmBottomHydraulic"/>
-                <dependentPart node="upperLink"/>
-            </movingTool>
-
             <movingTool node="steeringBase" updateCharacterTargetModifier="true"/>
         </movingTools>
 
         <movingParts>
-            <!-- attacherJoints -->
-            <movingPart node="attacherJointFrontArmBottomHydraulic" referencePoint="attacherJointFrontArmBottomHydraulicRef" referenceFrame="attacherJointFrontArmBottomHydraulicRef">
-                <translatingPart node="attacherJointFrontArmBottomHydraulicPunch" />
-            </movingPart>
-            <movingPart node="upperLink" referencePoint="upperLinkRef" referenceFrame="upperLinkRef">
-                <translatingPart node="upperLinkPunch" />
-            </movingPart>
-
-            <movingPart node="attacherJointBackArmMainLeftHydraulic" referencePoint="attacherJointBackArmMainLeftHydraulicRef" referenceFrame="attacherJointBackArmMainLeftHydraulicRef">
-                <translatingPart node="attacherJointBackArmMainLeftHydraulicPunch" />
-            </movingPart>
-            <movingPart node="attacherJointBackArmMainRightHydraulic" referencePoint="attacherJointBackArmMainRightHydraulicRef" referenceFrame="attacherJointBackArmMainRightHydraulicRef">
-                <translatingPart node="attacherJointBackArmMainRightHydraulicPunch" />
-            </movingPart>
-
             <!-- cabin -->
             <movingPart node="cabinDamperLeft" referencePoint="cabinDamperLeftRef" referenceFrame="cabinDamperLeftRef" isActiveDirty="true" maxUpdateDistance="20">
                 <translatingPart node="cabinDamperLeftPunch"/>
@@ -1675,7 +1676,7 @@
 
     <baseColorConfigurations useDefaultColors="true" price="0">
         <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <baseColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <baseColorConfiguration materialTemplateName="PFANZELT_TURQOISE1" isDefault="true" />
         <baseColorConfiguration materialTemplateName="PFANZELT_GREY1"/>
         <baseColorConfiguration materialTemplateName="PFANZELT_GREY2"/>
@@ -1689,7 +1690,7 @@
    
     <designColorConfigurations useDefaultColors="true" price="0" title="Crane Color">
         <designColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <designColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColorConfiguration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColorConfiguration materialTemplateName="PFANZELT_GREY1" />
         <designColorConfiguration materialTemplateName="PFANZELT_GREY2"/>
@@ -1699,7 +1700,7 @@
 
     <designColor2Configurations useDefaultColors="true" price="0" title="Frame Color" defaultColorMaterialTemplateName="calibratedMetallicPaint">
         <designColor2Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor2Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor2Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor2Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor2Configuration materialTemplateName="PFANZELT_GREY1" />
         <designColor2Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -1711,7 +1712,7 @@
 
     <designColor3Configurations useDefaultColors="true" price="0" title="Roof Color">
         <designColor3Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor3Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor3Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor3Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor3Configuration materialTemplateName="PFANZELT_GREY1"  isDefault="true" />
         <designColor3Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -1721,7 +1722,7 @@
 
     <designColor4Configurations useDefaultColors="true" price="0" title="Safety Frame Color">
         <designColor4Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor4Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor4Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor4Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor4Configuration materialTemplateName="PFANZELT_GREY1" />
         <designColor4Configuration materialTemplateName="PFANZELT_GREY2" isDefault="true" />
@@ -1738,7 +1739,7 @@
 
     <designColor5Configurations useDefaultColors="true" price="0" title="Blade Color">
         <designColor5Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor5Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor5Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor5Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor5Configuration materialTemplateName="PFANZELT_GREY1"  />
         <designColor5Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -1760,7 +1761,7 @@
 
     <designColor6Configurations useDefaultColors="true" price="0" title="Logo Color">
         <designColor6Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor6Configuration materialTemplateName="GMNG_HELLAOLDBLACK"  isDefault="true"/>
+        <designColor6Configuration materialTemplateName="GMNG_HELLABLACK_OLD"  isDefault="true"/>
         <designColor6Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor6Configuration materialTemplateName="PFANZELT_GREY1"  />
         <designColor6Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -1774,7 +1775,7 @@
 
     <designColor7Configurations useDefaultColors="true" price="0" title="Grid Color" defaultColorIndex="8">
         <designColor7Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor7Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor7Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor7Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor7Configuration materialTemplateName="PFANZELT_GREY1"  isDefault="true" />
         <designColor7Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -1784,7 +1785,7 @@
 
     <designColor8Configurations useDefaultColors="true" price="0" title="Bolt Color">
         <designColor8Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor8Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor8Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor8Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor8Configuration materialTemplateName="PFANZELT_GREY1" />
         <designColor8Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -1797,7 +1798,7 @@
 
     <designColor9Configurations useDefaultColors="true" price="0" title="Winch Color">
         <designColor9Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor9Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor9Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor9Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor9Configuration materialTemplateName="PFANZELT_GREY1" />
         <designColor9Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -1811,7 +1812,7 @@
 
     <rimColorConfigurations useDefaultColors="true" price="0">
         <rimColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <rimColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <rimColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <rimColorConfiguration materialTemplateName="PFANZELT_TURQOISE1"  />
         <rimColorConfiguration materialTemplateName="PFANZELT_GREY1"/>
         <rimColorConfiguration materialTemplateName="PFANZELT_GREY2"/>

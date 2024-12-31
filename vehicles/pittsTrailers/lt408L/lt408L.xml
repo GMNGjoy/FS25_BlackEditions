@@ -107,6 +107,15 @@
         </wheelConfigurations>
     </wheels>
 
+    <configurationSets>
+        <configurationSet name="Dual UAL Bunks">
+            <configuration name="tensionBelts" index="1"/>
+        </configurationSet>
+        <configurationSet name="Single UAL Bunk">
+            <configuration name="tensionBelts" index="1"/>
+        </configurationSet>
+    </configurationSets>
+
     <attachable>
         <inputAttacherJoints>
             <inputAttacherJoint node="attacherJointSemi" jointType="semitrailer" attacherHeight="1.20"/>
@@ -278,25 +287,25 @@
 
     <baseColorConfigurations useDefaultColors="true" price="0" title="Frame Color">
         <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <baseColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <material materialSlotName="lt408L_mainFrame_mat" materialTemplateUseColorOnly="true" />
     </baseColorConfigurations>
 
     <designColorConfigurations useDefaultColors="true" price="0" title="Mud Flap Color" defaultColorIndex="1">
         <designColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <designColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <material materialSlotName="lt408L_mudflaps_color_mat"/>
     </designColorConfigurations>
 
     <designColor2Configurations useDefaultColors="true" price="0" title="Reflector Color One" defaultColorIndex="2">
         <designColor2Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor2Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor2Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <material materialSlotName="lt408L_reflectorColor1_mat"/>
     </designColor2Configurations>
 
     <designColor3Configurations useDefaultColors="true" price="0" title="Reflector Color Two" defaultColorIndex="13">
         <designColor3Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor3Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor3Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <material materialSlotName="lt408L_reflectorColor2_mat"/>
     </designColor3Configurations>
 

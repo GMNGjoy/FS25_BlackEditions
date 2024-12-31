@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="weeder" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>ROTOCARE V 12400 BLACK</name>
+        <specs>
+            <neededPower>160</neededPower>
+            <workingWidth>12.4</workingWidth>
+            <combination filterCategory="weights" filterSpec="weight" filterSpecMin="1200" filterSpecMax="1300"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_hoe</function>
+        </functions>
+        <image>vehicles/poettinger/rotocareV12400/store_rotocareV12400.png</image>
+        <price>36001</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>POETTINGER</brand>
+        <category>weeders</category>
+        <shopHeight>4</shopHeight>
+        <shopTranslationOffset>0 0 0</shopTranslationOffset>
+        <shopRotationOffset>0.002 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>4242944</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>1351680</indexBufferMemoryUsage>
+        <textureMemoryUsage>1114112</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_weeder</typeDesc>
+        <filename>vehicles/poettinger/rotocareV12400/rotocareV12400.i3d</filename>
+        <size width="3.05" length="1.85" height="3.8" lengthOffset="0.1"/>
+        <speedLimit value="30"/>
+        <components>
+            <component centerOfMass="0 0.4 0" solverIterationCount="10" mass="1240"/>
+            <component centerOfMass="0 -0.25 0" solverIterationCount="10" mass="500"/>
+            <component centerOfMass="0 -0.25 0" solverIterationCount="10" mass="250"/>
+            <component centerOfMass="0 -0.25 0" solverIterationCount="10" mass="500"/>
+            <component centerOfMass="0 -0.25 0" solverIterationCount="10" mass="250"/>
+            <joint component1="1" component2="2" node="componentJointArmLeft01" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="2" component2="3" node="componentJointArmLeft02" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="1" component2="4" node="componentJointArmRight01" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="4" component2="5" node="componentJointArmRight02" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <collisionPair component1="1" component2="3" enabled="false"/>
+            <collisionPair component1="1" component2="5" enabled="false"/>
+            <collisionPair component1="3" component2="5" enabled="false"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
+        <mapHotspot type="TOOL"/>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT">
+                <wheels hasSurfaceSounds="false" isCareWheelConfiguration="true">
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/16x6_50R8.xml" isLeft="true">
+                        <physics restLoad="0.2" repr="wheelLeft01"  forcePointRatio="0.2" initialCompression="20" suspTravel="0.05" spring="17" damper="60" rotationDamping="0.0002" yOffset="0.02"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/16x6_50R8.xml" isLeft="false">
+                        <physics restLoad="0.2" repr="wheelRight01" forcePointRatio="0.2" initialCompression="20" suspTravel="0.05" spring="17" damper="60" rotationDamping="0.0002" yOffset="0.02"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/16x6_50R8.xml" isLeft="true">
+                        <physics restLoad="0.4" repr="wheelLeft02"  forcePointRatio="0.2" initialCompression="20" suspTravel="0.05" spring="37" damper="60" rotationDamping="0.0005" brakeFactor="0" yOffset="0.005"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/16x6_50R8.xml" isLeft="false">
+                        <physics restLoad="0.4" repr="wheelRight02" forcePointRatio="0.2" initialCompression="20" suspTravel="0.05" spring="37" damper="60" rotationDamping="0.0005" brakeFactor="0" yOffset="0.005"/>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="0.3" repr="wheelLeft03"  radius="0.18" width="0.38" forcePointRatio="0.2" mass="0.1" initialCompression="20" suspTravel="0.05" spring="18" damper="60" rotationDamping="0.0015" brakeFactor="0"/>
+                    </wheel>
+                    <wheel>
+                        <physics restLoad="0.3" repr="wheelRight03" radius="0.18" width="0.38" forcePointRatio="0.2" mass="0.1" initialCompression="20" suspTravel="0.05" spring="18" damper="60" rotationDamping="0.0015" brakeFactor="0"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <hubMaterial materialTemplateName="RIM_DEFAULT" useBaseColor="true"/>
+
+        <hubs>
+            <hub linkNode="wheelLeft01"  filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="true"  scale="0.16 0.15 0.15" offset="-0.01"/>
+            <hub linkNode="wheelRight01" filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="false" scale="0.16 0.15 0.15" offset="-0.01"/>
+            <hub linkNode="wheelLeft02"  filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="true"  scale="0.16 0.15 0.15" offset="-0.01"/>
+            <hub linkNode="wheelRight02" filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="false" scale="0.16 0.15 0.15" offset="-0.01"/>
+        </hubs>
+    </wheels>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint jointType="implement" node="attacherJoint" topReferenceNode="topReferenceNode" upperRotationOffset="-15" lowerRotationOffset="20" lowerTransLimitScale="0 1 0">
+                <distanceToGround lower="0.31" upper="0.75"/>
+                <bottomArm categories="3" ballType="1"/>
+            </inputAttacherJoint>
+        </inputAttacherJoints>
+        <brakeForce force="0.05"/>
+        <support animationName="supportAnim"/>
+    </attachable>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="electric" node="electric" length="1.2" diameter="0.008" straighteningFactor="0.5" adapterNode="electric_connector">
+           <objectChange node="electric_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="hydraulicIn01" length="1.2" diameter="0.02" straighteningFactor="0.5" adapterNode="hydraulicIn01_connector">
+           <objectChange node="hydraulicIn01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut01" length="1.2" diameter="0.02" straighteningFactor="1.5" adapterNode="hydraulicOut01_connector">
+            <objectChange node="hydraulicOut01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="hydraulicIn02" length="1.2" diameter="0.02" straighteningFactor="1.5" adapterNode="hydraulicIn02_connector">
+           <objectChange node="hydraulicIn02_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut02" length="1.2" diameter="0.02" straighteningFactor="0.5" adapterNode="hydraulicOut02_connector">
+            <objectChange node="hydraulicOut02_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <sounds>
+            <connect type="hydraulicIn" template="hydraulicHosesAttach" volumeScale="1" pitchScale="1" />
+
+            <disconnect type="hydraulicIn" template="hydraulicHosesDetach" volumeScale="1" pitchScale="1" />
+        </sounds>
+
+    </connectionHoses>
+
+    <speedRotatingParts>
+        <!-- Arm Left 02 -->
+        <speedRotatingPart shaderNode="armLeft02HoeArm01Rolls" radius="-0.268" wheelIndex="5"/>
+        <speedRotatingPart shaderNode="armLeft02HoeArm02Rolls" radius="-0.268" wheelIndex="5"/>
+        <speedRotatingPart shaderNode="armLeft02HoeArm03Rolls" radius="-0.268" wheelIndex="5"/>
+        <speedRotatingPart shaderNode="armLeft02HoeArm04Rolls" radius="-0.268" wheelIndex="5"/>
+
+        <!-- Arm Left 01 -->
+        <speedRotatingPart shaderNode="armLeft01HoeArm01Rolls" radius="-0.268" wheelIndex="3"/>
+        <speedRotatingPart shaderNode="armLeft01HoeArm02Rolls" radius="-0.268" wheelIndex="3"/>
+        <speedRotatingPart shaderNode="armLeft01HoeArm03Rolls" radius="-0.268" wheelIndex="3"/>
+        <speedRotatingPart shaderNode="armLeft01HoeArm04Rolls" radius="-0.268" wheelIndex="3"/>
+
+        <!-- Arm Center -->
+        <speedRotatingPart shaderNode="centerHoeArm01Rolls" radius="-0.268" groundReferenceNodeIndex="1"/>
+        <speedRotatingPart shaderNode="centerHoeArm02Rolls" radius="-0.268" groundReferenceNodeIndex="1"/>
+        <speedRotatingPart shaderNode="centerHoeArm03Rolls" radius="-0.268" groundReferenceNodeIndex="1"/>
+        <speedRotatingPart shaderNode="centerHoeArm04Rolls" radius="-0.268" groundReferenceNodeIndex="1"/>
+
+        <!-- Arm Right 01 -->
+        <speedRotatingPart shaderNode="armRight01HoeArm01Rolls" radius="-0.268" wheelIndex="4"/>
+        <speedRotatingPart shaderNode="armRight01HoeArm02Rolls" radius="-0.268" wheelIndex="4"/>
+        <speedRotatingPart shaderNode="armRight01HoeArm03Rolls" radius="-0.268" wheelIndex="4"/>
+        <speedRotatingPart shaderNode="armRight01HoeArm04Rolls" radius="-0.268" wheelIndex="4"/>
+
+        <!-- Arm Right 02 -->
+        <speedRotatingPart shaderNode="armRight02HoeArm01Rolls" radius="-0.268" wheelIndex="6"/>
+        <speedRotatingPart shaderNode="armRight02HoeArm02Rolls" radius="-0.268" wheelIndex="6"/>
+        <speedRotatingPart shaderNode="armRight02HoeArm03Rolls" radius="-0.268" wheelIndex="6"/>
+        <speedRotatingPart shaderNode="armRight02HoeArm04Rolls" radius="-0.268" wheelIndex="6"/>
+    </speedRotatingParts>
+
+    <powerConsumer forceNode="rotocareV12400_main_component1" maxForce="12">
+        <speedLimitModifier offset="-10" minPowerHp="0"   maxPowerHp="120"/>
+        <speedLimitModifier offset="-8"  minPowerHp="120" maxPowerHp="130"/>
+        <speedLimitModifier offset="-5"  minPowerHp="130" maxPowerHp="140"/>
+        <speedLimitModifier offset="-3"  minPowerHp="140" maxPowerHp="150"/>
+    </powerConsumer>
+
+    <lights>
+        <sharedLight linkNode="rearLight72_left" filename="$data/shared/assets/lights/lizard/rearLight72_left.xml"/>
+        <sharedLight linkNode="rearLight72_right" filename="$data/shared/assets/lights/lizard/rearLight72_right.xml"/>
+        <sharedLight linkNode="sideMarker07White_01" filename="$data/shared/assets/lights/lizard/sideMarker07White.xml"/>
+        <sharedLight linkNode="sideMarker07White_02" filename="$data/shared/assets/lights/lizard/sideMarker07White.xml"/>
+
+        <realLights>
+            <high>
+                <light node="backLightsHigh" lightTypes="0"/>
+                <brakeLight node="backLightsHigh"/>
+                <turnLightLeft node="turnLightLeftBack"/>
+                <turnLightRight node="turnLightRightBack"/>
+            </high>
+        </realLights>
+    </lights>
+
+    <groundReferenceNodes>
+        <groundReferenceNode node="groundReferenceNodeCenter" forceFactor="1" threshold="0.2" depthNode="groundReferenceNodeCenter" onlyActiveWhenLowered="false"/>
+        <groundReferenceNode node="groundReferenceNodeCenterArmLeft01" forceFactor="1" threshold="0.2" depthNode="groundReferenceNodeCenterArmLeft01" onlyActiveWhenLowered="false"/>
+        <groundReferenceNode node="groundReferenceNodeCenterArmLeft02" forceFactor="1" threshold="0.2" depthNode="groundReferenceNodeCenterArmLeft02" onlyActiveWhenLowered="false"/>
+        <groundReferenceNode node="groundReferenceNodeCenterArmRight01" forceFactor="1" threshold="0.2" depthNode="groundReferenceNodeCenterArmRight01" onlyActiveWhenLowered="false"/>
+        <groundReferenceNode node="groundReferenceNodeCenterArmRight02" forceFactor="1" threshold="0.2" depthNode="groundReferenceNodeCenterArmRight02" onlyActiveWhenLowered="false"/>
+    </groundReferenceNodes>
+
+    <workAreas>
+        <workArea type="weeder" functionName="processWeederArea" needsSetIsTurnedOn="false">
+            <area startNode="workAreaStart" widthNode="workAreaWidth" heightNode="workAreaHeight"/>
+            <groundReferenceNode index="1"/>
+            <folding minLimit="0" maxLimit="0.1"/>
+            <onlyActiveWhenLowered value="true"/>
+        </workArea>
+    </workAreas>
+
+    <turnOnVehicle aiRequiresTurnOn="false"/>
+
+    <weeder isHoe="true">
+        <sounds>
+            <work template="weeder01" volumeScale="0.9" />
+            <work template="weederWorkLoop" volumeScale="1.0" />
+        </sounds>
+
+    </weeder>
+    <workParticles>
+        <particle>
+            <node node="soilEmitterCenter" refNodeIndex="1" particleType="SOIL" worldSpace="true" adjustColor="true" emitCountScale="5" stopTime="0.01" delay="0.5"/>
+            <node node="soilEmitterArmLeft01" refNodeIndex="2" particleType="SOIL" worldSpace="true" adjustColor="true" emitCountScale="5" stopTime="0.01" delay="0.5"/>
+            <node node="soilEmitterArmLeft02" refNodeIndex="3" particleType="SOIL" worldSpace="true" adjustColor="true" emitCountScale="5" stopTime="0.01" delay="0.5" />
+            <node node="soilEmitterArmRight01" refNodeIndex="4" particleType="SOIL" worldSpace="true" adjustColor="true" emitCountScale="5" stopTime="0.01" delay="0.5"/>
+            <node node="soilEmitterArmRight02" refNodeIndex="5" particleType="SOIL" worldSpace="true" adjustColor="true" emitCountScale="5" stopTime="0.01" delay="0.5"/>
+
+            <node node="smokeEmitterCenter" refNodeIndex="1" particleType="SOIL_SMOKE" adjustColor="true" emitCountScale="2.5"/>
+            <node node="smokeEmitterArmLeft01" refNodeIndex="2" particleType="SOIL_SMOKE" adjustColor="true" emitCountScale="2.5"/>
+            <node node="smokeEmitterArmLeft02" refNodeIndex="3" particleType="SOIL_SMOKE" adjustColor="true" emitCountScale="2.5"/>
+            <node node="smokeEmitterArmRight01" refNodeIndex="4" particleType="SOIL_SMOKE" adjustColor="true" emitCountScale="2.5"/>
+            <node node="smokeEmitterArmRight02" refNodeIndex="5" particleType="SOIL_SMOKE" adjustColor="true" emitCountScale="2.5"/>
+        </particle>
+    </workParticles>
+
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts startMoveDirection="1" foldMiddleAnimTime="0.083" ignoreFoldMiddleWhileFolded="true" lowerWhileDetach="true">
+                    <foldingPart animationName="foldingAnim" speedScale="0.8"/>
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <animations>
+        <animation name="foldingAnim" soundVolumeFactor="0.3">
+            <part componentJointIndex="1" startTime="0.0" endTime="1.0" startRotMinLimit="0 0 -2" startRotMaxLimit="0 0 15" endRotMinLimit="0 0 0" endRotMaxLimit="0 0 0"/>
+            <part componentJointIndex="2" startTime="0.0" endTime="1.0" startRotMinLimit="0 0 -2" startRotMaxLimit="0 0 15" endRotMinLimit="0 0 0" endRotMaxLimit="0 0 0"/>
+            <part componentJointIndex="3" startTime="0.0" endTime="1.0" startRotMinLimit="0 0 -15" startRotMaxLimit="0 0 2" endRotMinLimit="0 0 0" endRotMaxLimit="0 0 0"/>
+            <part componentJointIndex="4" startTime="0.0" endTime="1.0" startRotMinLimit="0 0 -15" startRotMaxLimit="0 0 2" endRotMinLimit="0 0 0" endRotMaxLimit="0 0 0"/>
+
+            <part node="componentJointArmLeft02" startTime="1.0" endTime="6.5" startRot="0 0 0" endRot="0 0 180"/>
+            <part node="colArmLeft02Rolls" startTime="1.0" endTime="6.5" startTrans="0 0 0" endTrans="0 -0.110 0"/>
+            <part node="componentJointArmLeft01" startTime="7.0" endTime="10.7" startRot="0 0 0" endRot="0 0 90"/>
+            <part node="colArmLeft01Rolls" startTime="7.0" endTime="10.7" startTrans="0 0 0" endTrans="0 -0.110 0"/>
+            <part node="componentJointArmRight02" startTime="1.3" endTime="7.0" startRot="0 0 0" endRot="0 0 -180"/>
+            <part node="colArmRight02Rolls" startTime="1.3" endTime="7.0" startTrans="0 0 0" endTrans="0 -0.110 0"/>
+            <part node="componentJointArmRight01" startTime="7.3" endTime="11.0" startRot="0 0 0" endRot="0 0 -90"/>
+            <part node="colArmRight01Rolls" startTime="7.3" endTime="11.0" startTrans="0 0 0" endTrans="0 -0.110 0"/>
+
+            <part node="armLeft02RefFrame" startTime="1.0" endTime="7.0" startRot="-45 0 0" endRot="-135 0 0"/>
+            <part node="armRight02RefFrame" startTime="1.0" endTime="7.0" startRot="-45 0 0" endRot="-135 0 0"/>
+
+
+            <sound template="hydraulicOpen06"  startTime="7.3"   endTime="10.99" direction="-1"    volumeScale="3.0"  startPitchScale="0.5" endPitchScale="0.7" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicOpen05"  startTime="7.0"   endTime="10.7"  direction="-1"    volumeScale="3.0"  startPitchScale="1.5" endPitchScale="1.7" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicOpen02"  startTime="7.0"   endTime="10.99" direction="-1"    volumeScale="3.3"  startPitchScale="1.7" endPitchScale="1.9" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicClose01" startTime="7.3"   endTime="10.99" direction="1"     volumeScale="12.3" pitchScale="0.6" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicClose03" startTime="7.0"   endTime="10.7"  direction="1"     volumeScale="9.3"  pitchScale="0.8" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicOpen05"  startTime="1.0"   endTime="6.5"   direction="0"     volumeScale="4.3"  pitchScale="1.8" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicOpen05"  startTime="1.3"   endTime="7"     direction="0"     volumeScale="6.3"  pitchScale="1.5" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicOpen05"  startTime="0.01"  endTime="0.99"  direction="-1"    volumeScale="4.3"  pitchScale="1.8" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicClose01" startTime="0.01"  endTime="0.99"  direction="1"     volumeScale="7.3"  pitchScale="1.0" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="grabImp"          startTime="7.3"   direction="-1"  volumeScale="2.0" pitchScale="0.8"   linkNode="armRight01Hydraulic"/>
+            <sound template="vibratingImp"     startTime="7.3"   direction="-1"  volumeScale="2.0" pitchScale="1.2"   linkNode="armRight01Hydraulic"/>
+            <sound template="metalImpHigh06"   startTime="7.3"   direction="-1"  volumeScale="2.0" pitchScale="1.2"   linkNode="armRight01Hydraulic"/>
+            <sound template="grabImp"          startTime="7.0"   direction="-1"  volumeScale="2.0" pitchScale="0.8"   linkNode="armLeft01Hydraulic"/>
+            <sound template="vibratingImp"     startTime="7.0"   direction="-1"  volumeScale="2.0" pitchScale="0.9"   linkNode="armLeft01Hydraulic"/>
+            <sound template="metalImpHigh06"   startTime="7.0"   direction="-1"  volumeScale="1.5" pitchScale="0.9"   linkNode="armLeft01Hydraulic"/>
+            <sound template="grabImp"          startTime="1.3"   direction="-1"  volumeScale="1.5" pitchScale="0.8"   linkNode="armRight02"/>
+            <sound template="metalImpHigh06"   startTime="1.3"   direction="-1"  volumeScale="1.4" pitchScale="1.2"   linkNode="armRight02"/>
+            <sound template="grabImp"          startTime="1.1"   direction="-1"  volumeScale="2.0" pitchScale="0.8"   linkNode="armLeft02"/>
+            <sound template="metalImpHigh06"   startTime="1.1"   direction="-1"  volumeScale="2.0" pitchScale="0.9"   linkNode="armLeft02"/>
+            <sound template="grabImp"          startTime="7.1"   direction="1"   volumeScale="1.5" pitchScale="0.8"   linkNode="armRight02"/>
+            <sound template="vibratingImp"     startTime="7.1"   direction="1"   volumeScale="1.7" pitchScale="1.2"   linkNode="armRight02"/>
+            <sound template="grabImp"          startTime="6.6"   direction="1"   volumeScale="2.0" pitchScale="0.8"   linkNode="armLeft02"/>
+            <sound template="vibratingImp"     startTime="6.6"   direction="1"   volumeScale="2.0" pitchScale="0.9"   linkNode="armLeft02"/>
+            <sound template="grabImp"          startTime="10.99" direction="1"   volumeScale="2.0" pitchScale="0.8"   linkNode="armRight01Hydraulic"/>
+            <sound template="vibratingImp"     startTime="10.99" direction="1"   volumeScale="2.0" pitchScale="1.2"   linkNode="armRight01Hydraulic"/>
+            <sound template="metalImpHigh05"   startTime="10.99" direction="1"   volumeScale="2.0" pitchScale="1.2"   linkNode="armRight01Hydraulic"/>
+            <sound template="grabImp"          startTime="10.7"  direction="1"   volumeScale="2.0" pitchScale="0.8"   linkNode="armLeft01Hydraulic"/>
+            <sound template="vibratingImp"     startTime="10.7"  direction="1"   volumeScale="2.0" pitchScale="0.9"   linkNode="armLeft01Hydraulic"/>
+            <sound template="metalImpHigh04"   startTime="10.7"  direction="1"   volumeScale="2.0" pitchScale="0.9"   linkNode="armLeft01Hydraulic"/>
+
+        </animation>
+
+        <animation name="armLeft02PartAnim">
+            <part node="armLeft02PartTrans" startTime="0.0" endTime="0.056" startTrans="0.0 0.005 2.655" endTrans="0.0 0.002 2.685"/>
+            <part node="armLeft02PartTrans" startTime="0.056" endTime="0.111" startTrans="0.0 0.002 2.685" endTrans="0.0 -0.0 2.716"/>
+            <part node="armLeft02PartTrans" startTime="0.111" endTime="0.167" startTrans="0.0 -0.0 2.716" endTrans="0.0 -0.003 2.746"/>
+            <part node="armLeft02PartTrans" startTime="0.167" endTime="0.222" startTrans="0.0 -0.003 2.746" endTrans="0.0 -0.005 2.775"/>
+            <part node="armLeft02PartTrans" startTime="0.222" endTime="0.278" startTrans="0.0 -0.005 2.775" endTrans="0.0 -0.008 2.802"/>
+            <part node="armLeft02PartTrans" startTime="0.278" endTime="0.333" startTrans="0.0 -0.008 2.802" endTrans="0.0 -0.01 2.828"/>
+            <part node="armLeft02PartTrans" startTime="0.333" endTime="0.389" startTrans="0.0 -0.01 2.828" endTrans="0.0 -0.012 2.852"/>
+            <part node="armLeft02PartTrans" startTime="0.389" endTime="0.444" startTrans="0.0 -0.012 2.852" endTrans="0.0 -0.014 2.874"/>
+            <part node="armLeft02PartTrans" startTime="0.444" endTime="0.5" startTrans="0.0 -0.014 2.874" endTrans="0.0 -0.016 2.896"/>
+            <part node="armLeft02PartTrans" startTime="0.5" endTime="0.556" startTrans="0.0 -0.016 2.896" endTrans="0.0 -0.018 2.915"/>
+            <part node="armLeft02PartTrans" startTime="0.556" endTime="0.611" startTrans="0.0 -0.018 2.915" endTrans="0.0 -0.019 2.934"/>
+            <part node="armLeft02PartTrans" startTime="0.611" endTime="0.667" startTrans="0.0 -0.019 2.934" endTrans="0.0 -0.021 2.951"/>
+            <part node="armLeft02PartTrans" startTime="0.667" endTime="0.722" startTrans="0.0 -0.021 2.951" endTrans="0.0 -0.022 2.967"/>
+            <part node="armLeft02PartTrans" startTime="0.722" endTime="0.778" startTrans="0.0 -0.022 2.967" endTrans="0.0 -0.024 2.984"/>
+            <part node="armLeft02PartTrans" startTime="0.778" endTime="0.833" startTrans="0.0 -0.024 2.984" endTrans="0.0 -0.026 3.01"/>
+            <part node="armLeft02PartTrans" startTime="0.833" endTime="0.889" startTrans="0.0 -0.026 3.01" endTrans="0.0 -0.028 3.029"/>
+            <part node="armLeft02PartTrans" startTime="0.889" endTime="0.944" startTrans="0.0 -0.028 3.029" endTrans="0.0 -0.029 3.046"/>
+            <part node="armLeft02PartTrans" startTime="0.944" endTime="1.0" startTrans="0.0 -0.029 3.046" endTrans="0.0 -0.031 3.066"/>
+            <part node="armLeft02Part" startTime="0.0" endTime="0.056" startRot="-3.5 0.0 0.0" endRot="-3.0 -0.0 -0.0"/>
+            <part node="armLeft02Part" startTime="0.056" endTime="0.111" startRot="-3.0 -0.0 -0.0" endRot="-3.5 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.111" endTime="0.167" startRot="-3.5 0.0 0.0" endRot="-4.7 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.167" endTime="0.222" startRot="-4.7 0.0 0.0" endRot="-6.7 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.222" endTime="0.278" startRot="-6.7 0.0 0.0" endRot="-9.5 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.278" endTime="0.333" startRot="-9.5 0.0 0.0" endRot="-12.8 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.333" endTime="0.389" startRot="-12.8 0.0 0.0" endRot="-17.0 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.389" endTime="0.444" startRot="-17.0 0.0 0.0" endRot="-21.5 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.444" endTime="0.5" startRot="-21.5 0.0 0.0" endRot="-26.5 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.5" endTime="0.556" startRot="-26.5 0.0 0.0" endRot="-32.0 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.556" endTime="0.611" startRot="-32.0 0.0 0.0" endRot="-37.8 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.611" endTime="0.667" startRot="-37.8 0.0 0.0" endRot="-43.8 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.667" endTime="0.722" startRot="-43.8 0.0 0.0" endRot="-50.0 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.722" endTime="0.778" startRot="-50.0 0.0 0.0" endRot="-56.5 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.778" endTime="0.833" startRot="-56.5 0.0 0.0" endRot="-65.2 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.833" endTime="0.889" startRot="-65.2 0.0 0.0" endRot="-72.3 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.889" endTime="0.944" startRot="-72.3 0.0 0.0" endRot="-79.5 0.0 0.0"/>
+            <part node="armLeft02Part" startTime="0.944" endTime="1.0" startRot="-79.5 0.0 0.0" endRot="-87.25 0.0 0.0"/>
+
+        </animation>
+
+        <animation name="armRight02PartAnim">
+            <part node="armRight02PartTrans" startTime="0.0" endTime="0.056" startTrans="0.0 0.005 2.655" endTrans="0.0 0.002 2.685"/>
+            <part node="armRight02PartTrans" startTime="0.056" endTime="0.111" startTrans="0.0 0.002 2.685" endTrans="0.0 -0.0 2.716"/>
+            <part node="armRight02PartTrans" startTime="0.111" endTime="0.167" startTrans="0.0 -0.0 2.716" endTrans="0.0 -0.003 2.746"/>
+            <part node="armRight02PartTrans" startTime="0.167" endTime="0.222" startTrans="0.0 -0.003 2.746" endTrans="0.0 -0.005 2.775"/>
+            <part node="armRight02PartTrans" startTime="0.222" endTime="0.278" startTrans="0.0 -0.005 2.775" endTrans="0.0 -0.008 2.802"/>
+            <part node="armRight02PartTrans" startTime="0.278" endTime="0.333" startTrans="0.0 -0.008 2.802" endTrans="0.0 -0.01 2.828"/>
+            <part node="armRight02PartTrans" startTime="0.333" endTime="0.389" startTrans="0.0 -0.01 2.828" endTrans="0.0 -0.012 2.852"/>
+            <part node="armRight02PartTrans" startTime="0.389" endTime="0.444" startTrans="0.0 -0.012 2.852" endTrans="0.0 -0.014 2.874"/>
+            <part node="armRight02PartTrans" startTime="0.444" endTime="0.5" startTrans="0.0 -0.014 2.874" endTrans="0.0 -0.016 2.896"/>
+            <part node="armRight02PartTrans" startTime="0.5" endTime="0.556" startTrans="0.0 -0.016 2.896" endTrans="0.0 -0.018 2.915"/>
+            <part node="armRight02PartTrans" startTime="0.556" endTime="0.611" startTrans="0.0 -0.018 2.915" endTrans="0.0 -0.019 2.934"/>
+            <part node="armRight02PartTrans" startTime="0.611" endTime="0.667" startTrans="0.0 -0.019 2.934" endTrans="0.0 -0.021 2.951"/>
+            <part node="armRight02PartTrans" startTime="0.667" endTime="0.722" startTrans="0.0 -0.021 2.951" endTrans="0.0 -0.022 2.967"/>
+            <part node="armRight02PartTrans" startTime="0.722" endTime="0.778" startTrans="0.0 -0.022 2.967" endTrans="0.0 -0.024 2.984"/>
+            <part node="armRight02PartTrans" startTime="0.778" endTime="0.833" startTrans="0.0 -0.024 2.984" endTrans="0.0 -0.026 3.01"/>
+            <part node="armRight02PartTrans" startTime="0.833" endTime="0.889" startTrans="0.0 -0.026 3.01" endTrans="0.0 -0.028 3.029"/>
+            <part node="armRight02PartTrans" startTime="0.889" endTime="0.944" startTrans="0.0 -0.028 3.029" endTrans="0.0 -0.029 3.046"/>
+            <part node="armRight02PartTrans" startTime="0.944" endTime="1.0" startTrans="0.0 -0.029 3.046" endTrans="0.0 -0.031 3.066"/>
+            <part node="armRight02Part" startTime="0.0" endTime="0.056" startRot="-3.5 0.0 0.0" endRot="-3.0 -0.0 -0.0"/>
+            <part node="armRight02Part" startTime="0.056" endTime="0.111" startRot="-3.0 -0.0 -0.0" endRot="-3.5 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.111" endTime="0.167" startRot="-3.5 0.0 0.0" endRot="-4.7 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.167" endTime="0.222" startRot="-4.7 0.0 0.0" endRot="-6.7 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.222" endTime="0.278" startRot="-6.7 0.0 0.0" endRot="-9.5 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.278" endTime="0.333" startRot="-9.5 0.0 0.0" endRot="-12.8 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.333" endTime="0.389" startRot="-12.8 0.0 0.0" endRot="-17.0 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.389" endTime="0.444" startRot="-17.0 0.0 0.0" endRot="-21.5 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.444" endTime="0.5" startRot="-21.5 0.0 0.0" endRot="-26.5 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.5" endTime="0.556" startRot="-26.5 0.0 0.0" endRot="-32.0 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.556" endTime="0.611" startRot="-32.0 0.0 0.0" endRot="-37.8 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.611" endTime="0.667" startRot="-37.8 0.0 0.0" endRot="-43.8 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.667" endTime="0.722" startRot="-43.8 0.0 0.0" endRot="-50.0 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.722" endTime="0.778" startRot="-50.0 0.0 0.0" endRot="-56.5 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.778" endTime="0.833" startRot="-56.5 0.0 0.0" endRot="-65.2 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.833" endTime="0.889" startRot="-65.2 0.0 0.0" endRot="-72.3 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.889" endTime="0.944" startRot="-72.3 0.0 0.0" endRot="-79.5 0.0 0.0"/>
+            <part node="armRight02Part" startTime="0.944" endTime="1.0" startRot="-79.5 0.0 0.0" endRot="-87.25 0.0 0.0"/>
+
+        </animation>
+
+        <animation name="supportAnim">
+            <part node="supportArmBolt" startTime="0.0" endTime="0.01" startVisibility="true" endVisibility="false"/>
+            <part node="supportArm" startTime="0.0" endTime="0.7" startTrans="0 0.52 0" endTrans="0 0 0"/>
+            <part node="supportArmBolt" startTime="0.69" endTime="0.7" startVisibility="false" endVisibility="true"/>
+
+            <sound template="slideOpen"    startTime="0.01" endTime="0.69" direction="0" volumeScale="2.2" pitchScale="1.3" />
+            <sound template="vibratingImp" startTime="0.01" direction="-1" volumeScale="1.2" pitchScale="1.3" />
+            <sound template="hingeImp"     startTime="0.1"  direction="-1" volumeScale="0.8" pitchScale="1.1" />
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="wheelAdjustmentCenterLeft" foldMinLimit="0" foldMaxLimit="0.083" isConsumingPower="true" wheelNodes="wheelLeft01">
+                <controls axis="AXIS_FRONTLOADER_TOOL" invertAxis="true" mouseSpeedFactor="0.3" iconName="SPRAYER_ARM_TRANSLATE_Y"/>
+                <translation transSpeed="0.2" transAcceleration="100" transMin="0" transMax="0.347" startTrans="0" translationAxis="3"/>
+                <dependentMovingTool node="wheelAdjustmentCenterRight" speedScale="1"/>
+                <dependentMovingTool node="wheelAdjustmentLeftDummy" speedScale="1"/>
+                <dependentMovingTool node="wheelAdjustmentLeft" speedScale="1"/>
+                <dependentMovingTool node="wheelAdjustmentRightDummy" speedScale="1"/>
+                <dependentMovingTool node="wheelAdjustmentRight" speedScale="1"/>
+            </movingTool>
+
+            <movingTool node="wheelAdjustmentCenterRight" wheelNodes="wheelRight01">
+                <translation transSpeed="0.2" transAcceleration="100" transMin="0" transMax="0.347" startTrans="0" translationAxis="3"/>
+            </movingTool>
+            <movingTool node="wheelAdjustmentLeftDummy" wheelNodes="wheelLeft02">
+                <translation transSpeed="0.2" transAcceleration="100" transMin="0" transMax="0.347" startTrans="0" translationAxis="3"/>
+            </movingTool>
+            <movingTool node="wheelAdjustmentLeft">
+                <translation transSpeed="0.2" transAcceleration="100" transMin="0" transMax="0.347" startTrans="0" translationAxis="3"/>
+            </movingTool>
+            <movingTool node="wheelAdjustmentRightDummy" wheelNodes="wheelRight02">
+                <translation transSpeed="0.2" transAcceleration="100" transMin="0" transMax="0.347" startTrans="0" translationAxis="3"/>
+            </movingTool>
+            <movingTool node="wheelAdjustmentRight">
+                <translation transSpeed="0.2" transAcceleration="100" transMin="0" transMax="0.347" startTrans="0" translationAxis="3"/>
+            </movingTool>
+
+            <movingTool node="componentJointArmLeft01" wheelNodes="wheelLeft02">
+                <componentJoint index="1"/>
+            </movingTool>
+
+            <movingTool node="componentJointArmLeft02">
+                <componentJoint index="2"/>
+            </movingTool>
+
+            <movingTool node="componentJointArmRight01" wheelNodes="wheelRight02">
+                <componentJoint index="3"/>
+            </movingTool>
+
+            <movingTool node="componentJointArmRight02">
+                <componentJoint index="4"/>
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <!-- Left Arm -->
+            <movingPart node="armLeft01" referencePoint="armLeft01Ref" referenceFrame="armLeft01RefFrame" isActiveDirty="true" maxUpdateDistance="300" limitedAxis="1">
+                <dependentPart node="armLeft01Hydraulic"/>
+                <dependentPart node="armLeft02"/>
+            </movingPart>
+
+            <movingPart node="armLeft01Hydraulic" referencePoint="armLeft01HydraulicRef" referenceFrame="armLeft01HydraulicRef">
+                <translatingPart node="armLeft01HydraulicPunch"/>
+            </movingPart>
+
+            <movingPart node="armLeft02" referencePoint="armLeft02Ref" referenceFrame="armLeft02RefFrame" limitedAxis="1">
+                <dependentAnimation name="armLeft02PartAnim" rotationAxis="1" minValue="-135" maxValue="45" invert="true"/>
+                <dependentPart node="armLeft02Hydraulic"/>
+            </movingPart>
+
+            <movingPart node="armLeft02Hydraulic" referencePoint="armLeft02HydraulicRef" referenceFrame="armLeft02HydraulicRef">
+                <translatingPart node="armLeft02HydraulicPunch"/>
+            </movingPart>
+
+            <!-- Right Arm -->
+            <movingPart node="armRight01" referencePoint="armRight01Ref" referenceFrame="armRight01RefFrame" isActiveDirty="true" maxUpdateDistance="300" limitedAxis="1">
+                <dependentPart node="armRight01Hydraulic"/>
+                <dependentPart node="armRight02"/>
+            </movingPart>
+
+            <movingPart node="armRight01Hydraulic" referencePoint="armRight01HydraulicRef" referenceFrame="armRight01HydraulicRef">
+                <translatingPart node="armRight01HydraulicPunch"/>
+            </movingPart>
+
+            <movingPart node="armRight02" referencePoint="armRight02Ref" referenceFrame="armRight02RefFrame" limitedAxis="1">
+                <dependentAnimation name="armRight02PartAnim" rotationAxis="1" minValue="-135" maxValue="45" invert="true"/>
+                <dependentPart node="armRight02Hydraulic"/>
+            </movingPart>
+
+            <movingPart node="armRight02Hydraulic" referencePoint="armRight02HydraulicRef" referenceFrame="armRight02HydraulicRef">
+                <translatingPart node="armRight02HydraulicPunch"/>
+            </movingPart>
+        </movingParts>
+
+        <sounds>
+            <actionSound template="hydraulicOpen03" volumeScale="2"   pitchScale="2"   linkNode="wheelAdjustmentCenterLeft" actionNames="TOOL_MOVE_POS TOOL_MOVE_NEG" nodes="wheelAdjustmentCenterLeft" fadeIn="0.1" fadeOut="0.1"/>
+            <actionSound template="vibratingImp"    volumeScale="1.0" pitchScale="1.3" linkNode="wheelAdjustmentCenterLeft" actionNames="TOOL_MOVE_END_POS_LIMIT TOOL_MOVE_END_NEG_LIMIT" nodes="wheelAdjustmentCenterLeft"/>
+            <actionSound template="hingeImp"        volumeScale="0.5" pitchScale="1.3" linkNode="wheelAdjustmentCenterLeft" actionNames="TOOL_MOVE_END_POS_LIMIT" nodes="wheelAdjustmentCenterLeft"/>
+        </sounds>
+    </cylindered>
+
+    <randomlyMovingParts>
+        <!-- Arm Left 02 -->
+        <randomlyMovingPart node="armLeft02HoeArm01" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="3" isSpeedDependent="true"/>
+        <randomlyMovingPart node="armLeft02HoeArm02" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="3" isSpeedDependent="true"/>
+        <randomlyMovingPart node="armLeft02HoeArm03" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="3" isSpeedDependent="true"/>
+        <randomlyMovingPart node="armLeft02HoeArm04" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="3" isSpeedDependent="true"/>
+
+        <!-- Arm Left 01 -->
+        <randomlyMovingPart node="armLeft01HoeArm01" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="2" isSpeedDependent="true"/>
+        <randomlyMovingPart node="armLeft01HoeArm02" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="2" isSpeedDependent="true"/>
+        <randomlyMovingPart node="armLeft01HoeArm03" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="2" isSpeedDependent="true"/>
+        <randomlyMovingPart node="armLeft01HoeArm04" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="2" isSpeedDependent="true"/>
+
+        <!-- Arm Center -->
+        <randomlyMovingPart node="centerHoeArm01" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="1" isSpeedDependent="true"/>
+        <randomlyMovingPart node="centerHoeArm02" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="1" isSpeedDependent="true"/>
+        <randomlyMovingPart node="centerHoeArm03" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="1" isSpeedDependent="true"/>
+        <randomlyMovingPart node="centerHoeArm04" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="1" isSpeedDependent="true"/>
+
+       <!-- Arm Right 01 -->
+        <randomlyMovingPart node="armRight01HoeArm01" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="4" isSpeedDependent="true"/>
+        <randomlyMovingPart node="armRight01HoeArm02" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="4" isSpeedDependent="true"/>
+        <randomlyMovingPart node="armRight01HoeArm03" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="4" isSpeedDependent="true"/>
+        <randomlyMovingPart node="armRight01HoeArm04" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="4" isSpeedDependent="true"/>
+
+       <!-- Arm Right 02 -->
+        <randomlyMovingPart node="armRight02HoeArm01" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="5" isSpeedDependent="true"/>
+        <randomlyMovingPart node="armRight02HoeArm02" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="5" isSpeedDependent="true"/>
+        <randomlyMovingPart node="armRight02HoeArm03" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="5" isSpeedDependent="true"/>
+        <randomlyMovingPart node="armRight02HoeArm04" rotAxis="1" rotMax="1" speedScale="0.4" refNodeIndex="5" isSpeedDependent="true"/>
+    </randomlyMovingParts>
+
+    <ai>
+        <areaMarkers leftNode="aiMarkerLeft" rightNode="aiMarkerRight" backNode="aiMarkerBack"/>
+        <collisionTrigger node="aiCollisionNode" width="12.4" height="1.55"/>
+        <needsLowering value="true"/>
+        <agentAttachment width="3.05" height="3.8" length="1.8" lengthOffset="0.1"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-1.5" maxX="1.5" minZ="-0.65" maxZ="0.85" yOffset="0.3"/>
+        <bendingNode minX="-0.2" maxX="0.85" minZ="0.59" maxZ="3.068" yOffset="-0.3" node="armLeft01"/>
+        <bendingNode minX="-0.85" maxX="0.2" minZ="0.59" maxZ="3.068" yOffset="-0.3" node="armRight01"/>
+        <bendingNode minX="-0.2" maxX="0.85" minZ="0" maxZ="2.25" yOffset="-0.465" node="armLeft02"/>
+        <bendingNode minX="-0.85" maxX="0.2" minZ="0" maxZ="2.25" yOffset="-0.465" node="armRight02"/>
+    </foliageBending>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="6" fieldMultiplier="2"/>
+
+    <baseColorConfigurations useDefaultColors="true" price="0" defaultColorIndex="7">
+        <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
+        <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" isDefault="true" />
+        <material materialSlotName="mainBody_mat" />
+    </baseColorConfigurations>
+   
+    <designColorConfigurations useDefaultColors="true" price="0" title="Hardware Color" defaultColorIndex="4">
+        <designColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
+        <designColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
+        <material materialSlotName="silverScratched_mat" materialTemplateUseColorOnly="true" />
+    </designColorConfigurations>
+
+    <designColor2Configurations useDefaultColors="true" price="0" title="Logo Plate Color" defaultColorIndex="5">
+        <designColor2Configuration materialTemplateName="GMNG_HELLABLACK" />
+        <designColor2Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
+        <material materialSlotName="logoBackground_mat"/>
+    </designColor2Configurations>
+
+    <designColor3Configurations useDefaultColors="true" price="0" title="Mesh Cover Color" defaultColorIndex="4">
+        <designColor3Configuration materialTemplateName="GMNG_HELLABLACK" />
+        <designColor3Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
+        <material materialSlotName="metalGalvanized_mat"/>
+    </designColor3Configurations>
+
+    <designColor4Configurations useDefaultColors="true" price="0" title="Finger Color" defaultColorIndex="7">
+        <designColor4Configuration materialTemplateName="GMNG_HELLABLACK" />
+        <designColor4Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
+        <material materialSlotName="fingers_mat" />
+    </designColor4Configurations>
+
+    <rimColorConfigurations useDefaultColors="true" price="0" defaultColorIndex="6">
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME" price="10" />
+        <rimColorConfiguration materialTemplateName="RIM_DEFAULT"/>
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_WHITE"/>
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_BLACK"/>
+        <rimColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
+        <rimColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
+    </rimColorConfigurations>
+
+    <i3dMappings>
+        <i3dMapping id="rotocareV12400_main_component1" node="0>" />
+        <i3dMapping id="rotocareV12400_vis" node="0>0" />
+        <i3dMapping id="attacherJoint" node="0>0|0|0" />
+        <i3dMapping id="topReferenceNode" node="0>0|0|1" />
+        <i3dMapping id="supportArm" node="0>0|0|2|0|0" />
+        <i3dMapping id="supportArmBolt" node="0>0|0|2|1" />
+        <i3dMapping id="electric" node="0>0|0|3|0" />
+        <i3dMapping id="electric_detached" node="0>0|0|3|0|0" />
+        <i3dMapping id="electric_connector" node="0>0|0|3|0|0|0" />
+        <i3dMapping id="hydraulicIn01" node="0>0|0|3|1" />
+        <i3dMapping id="hydraulicIn01_detached" node="0>0|0|3|1|0" />
+        <i3dMapping id="hydraulicIn01_connector" node="0>0|0|3|1|0|0" />
+        <i3dMapping id="hydraulicOut01" node="0>0|0|3|2" />
+        <i3dMapping id="hydraulicOut01_detached" node="0>0|0|3|2|0" />
+        <i3dMapping id="hydraulicOut01_connector" node="0>0|0|3|2|0|0" />
+        <i3dMapping id="hydraulicIn02" node="0>0|0|3|3" />
+        <i3dMapping id="hydraulicIn02_detached" node="0>0|0|3|3|0" />
+        <i3dMapping id="hydraulicIn02_connector" node="0>0|0|3|3|0|0" />
+        <i3dMapping id="hydraulicOut02" node="0>0|0|3|4" />
+        <i3dMapping id="hydraulicOut02_detached" node="0>0|0|3|4|0" />
+        <i3dMapping id="hydraulicOut02_connector" node="0>0|0|3|4|0|0" />
+        <i3dMapping id="rearLight72_left" node="0>0|1|0|0" />
+        <i3dMapping id="rearLight72_right" node="0>0|1|0|1" />
+        <i3dMapping id="sideMarker07White_01" node="0>0|1|0|2" />
+        <i3dMapping id="sideMarker07White_02" node="0>0|1|0|3" />
+        <i3dMapping id="yellowRound_02_01" node="0>0|1|0|4" />
+        <i3dMapping id="yellowRound_02_02" node="0>0|1|0|5" />
+        <i3dMapping id="backLightsHigh" node="0>0|1|1|0" />
+        <i3dMapping id="turnLightLeftBack" node="0>0|1|2|0" />
+        <i3dMapping id="turnLightRightBack" node="0>0|1|2|1" />
+        <i3dMapping id="componentJointArmLeft01" node="0>0|2" />
+        <i3dMapping id="componentJointArmRight01" node="0>0|3" />
+        <i3dMapping id="groundReferenceNodeCenter" node="0>0|4" />
+        <i3dMapping id="armLeft01RefFrame" node="0>0|5|0" />
+        <i3dMapping id="armLeft01" node="0>0|5|0|0" />
+        <i3dMapping id="armLeft02RefFrame" node="0>0|5|0|0|0" />
+        <i3dMapping id="armLeft02" node="0>0|5|0|0|1|0" />
+        <i3dMapping id="armLeft02HoeArms" node="0>0|5|0|0|1|0|0" />
+        <i3dMapping id="armLeft02HoeArm01" node="0>0|5|0|0|1|0|0|0" />
+        <i3dMapping id="armLeft02HoeArm01Rolls" node="0>0|5|0|0|1|0|0|0|0" />
+        <i3dMapping id="armLeft02HoeArm02" node="0>0|5|0|0|1|0|0|1" />
+        <i3dMapping id="armLeft02HoeArm02Rolls" node="0>0|5|0|0|1|0|0|1|0" />
+        <i3dMapping id="armLeft02HoeArm03" node="0>0|5|0|0|1|0|0|2" />
+        <i3dMapping id="armLeft02HoeArm03Rolls" node="0>0|5|0|0|1|0|0|2|0" />
+        <i3dMapping id="armLeft02HoeArm04" node="0>0|5|0|0|1|0|0|3" />
+        <i3dMapping id="armLeft02HoeArm04Rolls" node="0>0|5|0|0|1|0|0|3|0" />
+        <i3dMapping id="groundReferenceNodeCenterArmLeft02" node="0>0|5|0|0|1|0|1" />
+        <i3dMapping id="soilEmitterArmLeft02" node="0>0|5|0|0|1|0|2" />
+        <i3dMapping id="smokeEmitterArmLeft02" node="0>0|5|0|0|1|0|3" />
+        <i3dMapping id="armLeft02PartTrans" node="0>0|5|0|0|2" />
+        <i3dMapping id="armLeft02Part" node="0>0|5|0|0|2|0" />
+        <i3dMapping id="armLeft02HydraulicRef" node="0>0|5|0|0|2|0|0" />
+        <i3dMapping id="armLeft02Hydraulic" node="0>0|5|0|0|3" />
+        <i3dMapping id="armLeft02HydraulicPunch" node="0>0|5|0|0|3|0" />
+        <i3dMapping id="wheelAdjustmentLeft" node="0>0|5|0|0|4|0" />
+        <i3dMapping id="armLeft01HoeArms" node="0>0|5|0|0|5" />
+        <i3dMapping id="armLeft01HoeArm01" node="0>0|5|0|0|5|0" />
+        <i3dMapping id="armLeft01HoeArm01Rolls" node="0>0|5|0|0|5|0|0" />
+        <i3dMapping id="armLeft01HoeArm02" node="0>0|5|0|0|5|1" />
+        <i3dMapping id="armLeft01HoeArm02Rolls" node="0>0|5|0|0|5|1|0" />
+        <i3dMapping id="armLeft01HoeArm03" node="0>0|5|0|0|5|2" />
+        <i3dMapping id="armLeft01HoeArm03Rolls" node="0>0|5|0|0|5|2|0" />
+        <i3dMapping id="armLeft01HoeArm04" node="0>0|5|0|0|5|3" />
+        <i3dMapping id="armLeft01HoeArm04Rolls" node="0>0|5|0|0|5|3|0" />
+        <i3dMapping id="armLeft01HydraulicRef" node="0>0|5|0|0|6" />
+        <i3dMapping id="groundReferenceNodeCenterArmLeft01" node="0>0|5|0|0|7" />
+        <i3dMapping id="soilEmitterArmLeft01" node="0>0|5|0|0|8" />
+        <i3dMapping id="smokeEmitterArmLeft01" node="0>0|5|0|0|9" />
+        <i3dMapping id="armLeft01Hydraulic" node="0>0|5|1" />
+        <i3dMapping id="armLeft01HydraulicPunch" node="0>0|5|1|0" />
+        <i3dMapping id="armRight01RefFrame" node="0>0|5|2" />
+        <i3dMapping id="armRight01" node="0>0|5|2|0" />
+        <i3dMapping id="armRight02RefFrame" node="0>0|5|2|0|0" />
+        <i3dMapping id="armRight02" node="0>0|5|2|0|1|0" />
+        <i3dMapping id="armRight02HoeArm01" node="0>0|5|2|0|1|0|0|0" />
+        <i3dMapping id="armRight02HoeArm01Rolls" node="0>0|5|2|0|1|0|0|0|0" />
+        <i3dMapping id="armRight02HoeArm02" node="0>0|5|2|0|1|0|0|1" />
+        <i3dMapping id="armRight02HoeArm02Rolls" node="0>0|5|2|0|1|0|0|1|0" />
+        <i3dMapping id="armRight02HoeArm03" node="0>0|5|2|0|1|0|0|2" />
+        <i3dMapping id="armRight02HoeArm03Rolls" node="0>0|5|2|0|1|0|0|2|0" />
+        <i3dMapping id="armRight02HoeArm04" node="0>0|5|2|0|1|0|0|3" />
+        <i3dMapping id="armRight02HoeArm04Rolls" node="0>0|5|2|0|1|0|0|3|0" />
+        <i3dMapping id="groundReferenceNodeCenterArmRight02" node="0>0|5|2|0|1|0|1" />
+        <i3dMapping id="soilEmitterArmRight02" node="0>0|5|2|0|1|0|2" />
+        <i3dMapping id="smokeEmitterArmRight02" node="0>0|5|2|0|1|0|3" />
+        <i3dMapping id="armRight02PartTrans" node="0>0|5|2|0|2" />
+        <i3dMapping id="armRight02Part" node="0>0|5|2|0|2|0" />
+        <i3dMapping id="armRight02HydraulicRef" node="0>0|5|2|0|2|0|0" />
+        <i3dMapping id="armRight02Hydraulic" node="0>0|5|2|0|3" />
+        <i3dMapping id="armRight02HydraulicPunch" node="0>0|5|2|0|3|0" />
+        <i3dMapping id="wheelAdjustmentRight" node="0>0|5|2|0|4|0" />
+        <i3dMapping id="armRight01HoeArm01" node="0>0|5|2|0|5|0" />
+        <i3dMapping id="armRight01HoeArm01Rolls" node="0>0|5|2|0|5|0|0" />
+        <i3dMapping id="armRight01HoeArm02" node="0>0|5|2|0|5|1" />
+        <i3dMapping id="armRight01HoeArm02Rolls" node="0>0|5|2|0|5|1|0" />
+        <i3dMapping id="armRight01HoeArm03" node="0>0|5|2|0|5|2" />
+        <i3dMapping id="armRight01HoeArm03Rolls" node="0>0|5|2|0|5|2|0" />
+        <i3dMapping id="armRight01HoeArm04" node="0>0|5|2|0|5|3" />
+        <i3dMapping id="armRight01HoeArm04Rolls" node="0>0|5|2|0|5|3|0" />
+        <i3dMapping id="armRight01HydraulicRef" node="0>0|5|2|0|6" />
+        <i3dMapping id="groundReferenceNodeCenterArmRight01" node="0>0|5|2|0|7" />
+        <i3dMapping id="soilEmitterArmRight01" node="0>0|5|2|0|8" />
+        <i3dMapping id="smokeEmitterArmRight01" node="0>0|5|2|0|9" />
+        <i3dMapping id="armRight01Hydraulic" node="0>0|5|3" />
+        <i3dMapping id="armRight01HydraulicPunch" node="0>0|5|3|0" />
+        <i3dMapping id="wheelAdjustmentCenterLeft" node="0>0|5|4|0" />
+        <i3dMapping id="wheelLeft01" node="0>0|5|4|0|0" />
+        <i3dMapping id="wheelAdjustmentCenterRight" node="0>0|5|5|0" />
+        <i3dMapping id="wheelRight01" node="0>0|5|5|0|0" />
+        <i3dMapping id="centerHoeArm01" node="0>0|5|6|0" />
+        <i3dMapping id="centerHoeArm01Rolls" node="0>0|5|6|0|0" />
+        <i3dMapping id="centerHoeArm02" node="0>0|5|6|1" />
+        <i3dMapping id="centerHoeArm02Rolls" node="0>0|5|6|1|0" />
+        <i3dMapping id="centerHoeArm03" node="0>0|5|6|2" />
+        <i3dMapping id="centerHoeArm03Rolls" node="0>0|5|6|2|0" />
+        <i3dMapping id="centerHoeArm04" node="0>0|5|6|3" />
+        <i3dMapping id="centerHoeArm04Rolls" node="0>0|5|6|3|0" />
+        <i3dMapping id="workAreaStart" node="0>0|6|0" />
+        <i3dMapping id="workAreaWidth" node="0>0|6|1" />
+        <i3dMapping id="workAreaHeight" node="0>0|6|2" />
+        <i3dMapping id="aiCollisionNode" node="0>0|7|0" />
+        <i3dMapping id="aiMarkerLeft" node="0>0|7|1" />
+        <i3dMapping id="aiMarkerRight" node="0>0|7|2" />
+        <i3dMapping id="aiMarkerBack" node="0>0|7|3" />
+        <i3dMapping id="soilEmitterCenter" node="0>0|8|0" />
+        <i3dMapping id="smokeEmitterCenter" node="0>0|8|1" />
+        <i3dMapping id="rotocareV12400_armLeft01_component2" node="1>" />
+        <i3dMapping id="componentJointArmLeft02" node="1>0" />
+        <i3dMapping id="wheelAdjustmentLeftDummy" node="1>1|0" />
+        <i3dMapping id="wheelLeft02" node="1>1|0|0" />
+        <i3dMapping id="armLeft01Ref" node="1>2" />
+        <i3dMapping id="colArmLeft01Rolls" node="1>3" />
+        <i3dMapping id="rotocareV12400_armLeft02_component3" node="2>" />
+        <i3dMapping id="armLeft02Ref" node="2>0" />
+        <i3dMapping id="wheelLeft03" node="2>1" />
+        <i3dMapping id="colArmLeft02Rolls" node="2>2" />
+        <i3dMapping id="rotocareV12400_armRight01_component4" node="3>" />
+        <i3dMapping id="componentJointArmRight02" node="3>0" />
+        <i3dMapping id="wheelAdjustmentRightDummy" node="3>1|0" />
+        <i3dMapping id="wheelRight02" node="3>1|0|0" />
+        <i3dMapping id="armRight01Ref" node="3>2" />
+        <i3dMapping id="colArmRight01Rolls" node="3>3" />
+        <i3dMapping id="rotocareV12400_armRight02_component5" node="4>" />
+        <i3dMapping id="armRight02Ref" node="4>0" />
+        <i3dMapping id="wheelRight03" node="4>1" />
+        <i3dMapping id="colArmRight02Rolls" node="4>2" />
+    </i3dMappings>
+</vehicle>

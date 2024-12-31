@@ -50,7 +50,7 @@
     <wheels>
         <wheelConfigurations>
             <!-- 6x4 Long Wheelbase -->
-            <wheelConfiguration name="$l10n_configuration_tandemLong" brand="CONTINENTAL" saveId="WHEELBASE_LONG" price="5000">
+            <wheelConfiguration name="$l10n_configuration_tandemLong" brand="CONTINENTAL" saveId="CONTINENTAL_WHEELBASE_LONG" price="5000">
                 <wheels autoRotateBackSpeed="2.1" differentialIndex="1">
                     <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/385_65R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="1" restLoad="2.3" repr="wheelFrontLeftRepr"  driveNode="wheelFrontLeft"  mass="0.5" forcePointRatio="0.25" initialCompression="22" suspTravel="0.07" spring="115" damper="150" yOffset="0.016" frictionScale="1.7"/>
@@ -94,7 +94,7 @@
             </wheelConfiguration>
 
             <!-- 6x4 Long Wheelbase -->
-            <wheelConfiguration name="$l10n_configuration_tandemLong" brand="BKT" saveId="WHEELBASE_LONG" price="5000">
+            <wheelConfiguration name="$l10n_configuration_tandemLong" brand="BKT" saveId="BKT_WHEELBASE_LONG" price="5000">
                 <wheels autoRotateBackSpeed="2.1" differentialIndex="1">
                     <wheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R20.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="1" restLoad="2.3" repr="wheelFrontLeftRepr"  driveNode="wheelFrontLeft"  mass="0.5" forcePointRatio="0.25" initialCompression="22" suspTravel="0.07" spring="115" damper="150" yOffset="0.016" frictionScale="1.7"/>
@@ -138,7 +138,7 @@
             </wheelConfiguration>
 
             <!-- 6x4 Short Wheelbase -->
-            <wheelConfiguration name="$l10n_configuration_tandemShort" brand="CONTINENTAL" saveId="WHEELBASE_SHORT" price="0">
+            <wheelConfiguration name="$l10n_configuration_tandemShort" brand="CONTINENTAL" saveId="CONTINENTAL_WHEELBASE_SHORT" price="0">
                 <wheels autoRotateBackSpeed="2.1" differentialIndex="1">
                     <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/385_65R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="1" restLoad="2.1" repr="wheelFrontLeftRepr"  driveNode="wheelFrontLeft"  mass="0.5" forcePointRatio="0.25" initialCompression="22" suspTravel="0.07" spring="100" damper="150" yOffset="0.016" frictionScale="1.7"/>
@@ -168,7 +168,7 @@
                 <size length="6.1" lengthOffset="0.7"/>
             </wheelConfiguration>
 
-            <wheelConfiguration name="$l10n_configuration_tandemShort" brand="BKT" saveId="WHEELBASE_SHORT" price="0">
+            <wheelConfiguration name="$l10n_configuration_tandemShort" brand="BKT" saveId="BKT_WHEELBASE_SHORT" price="0">
                 <wheels autoRotateBackSpeed="2.1" differentialIndex="1">
                     <wheel filename="shared/wheels/tires/bkt/multimaxMP527/400_70R20.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="1" restLoad="2.1" repr="wheelFrontLeftRepr"  driveNode="wheelFrontLeft"  mass="0.5" forcePointRatio="0.25" initialCompression="22" suspTravel="0.07" spring="100" damper="150" yOffset="0.016" frictionScale="1.7"/>
@@ -847,56 +847,56 @@
 
     <baseColorConfigurations useDefaultColors="true" price="0" defaultColorIndex="7">
         <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <baseColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" isDefault="true" />
+        <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" isDefault="true" />
         <material materialSlotName="transtarII_mainColor01_mat" />
     </baseColorConfigurations>
    
     <designColorConfigurations useDefaultColors="true" price="0" title="Secondary Color" defaultColorIndex="6">
         <designColorConfiguration materialTemplateName="GMNG_HELLABLACK" isDefault="true" />
-        <designColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <material materialSlotName="transtarII_mainColor02_mat"/>
     </designColorConfigurations>
 
     <designColor2Configurations useDefaultColors="true" price="0" title="Tertiary Color" defaultColorIndex="7">
         <designColor2Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor2Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor2Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <material materialSlotName="transtarII_mainColor03_mat"/>
     </designColor2Configurations>
 
     <designColor3Configurations useDefaultColors="true" price="0" title="Frame Color" defaultColorIndex="7">
         <designColor3Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor3Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor3Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <material materialSlotName="transtarII_frameColor01_mat"/>
     </designColor3Configurations>
 
     <designColor4Configurations useDefaultColors="true" price="0" title="Interior Color One" defaultColorIndex="7">
         <designColor4Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor4Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor4Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <material materialSlotName="transtarII_interior01_mat" materialTemplateUseColorOnly="true"/>
     </designColor4Configurations>
 
     <designColor5Configurations useDefaultColors="true" price="0" title="Interior Color Two" defaultColorIndex="5">
         <designColor5Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor5Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor5Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <material materialSlotName="transtarII_interior02_mat" materialTemplateUseColorOnly="true"/>
     </designColor5Configurations>
 
     <designColor6Configurations useDefaultColors="true" price="0" title="Interior Color Three" defaultColorIndex="5">
         <designColor6Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor6Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor6Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <material materialSlotName="transtarII_interior03_mat" materialTemplateUseColorOnly="true"/>
     </designColor6Configurations>
 
     <designColor7Configurations useDefaultColors="true" price="0" title="Interior Color Four" defaultColorIndex="4">
         <designColor7Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor7Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor7Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <material materialSlotName="transtarII_interior04_mat" materialTemplateUseColorOnly="true"/>
         <material materialSlotName="transtarII_interior05_mat" materialTemplateUseColorOnly="true"/>
     </designColor7Configurations>
 
     <designColor8Configurations useDefaultColors="true" price="0" title="Chrome Color" defaultColorIndex="7">
         <designColor8Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor8Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor8Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <material materialSlotName="transtarII_chrome01_mat" materialTemplateUseColorOnly="true"/>
         <material materialSlotName="transtarII_chrome02_mat" materialTemplateUseColorOnly="true"/>
         <material materialSlotName="transtarII_chrome03_mat" materialTemplateUseColorOnly="true"/>
@@ -905,7 +905,7 @@
 
     <designColor9Configurations useDefaultColors="true" price="0" title="Motor Color" defaultColorIndex="7">
         <designColor9Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor9Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor9Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <material materialSlotName="transtarII_motor_mat"/>
     </designColor9Configurations>
 
@@ -915,7 +915,7 @@
         <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_WHITE"/>
         <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_BLACK"/>
         <rimColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <rimColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <rimColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
     </rimColorConfigurations>
 
     <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>

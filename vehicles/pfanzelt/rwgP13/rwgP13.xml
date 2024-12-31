@@ -624,7 +624,7 @@
 
     <baseColorConfigurations useDefaultColors="true" price="0" title="Frame Color">
         <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <baseColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <baseColorConfiguration materialTemplateName="PFANZELT_TURQOISE1" />
         <baseColorConfiguration materialTemplateName="PFANZELT_GREY1" isDefault="true" />
         <baseColorConfiguration materialTemplateName="PFANZELT_GREY2"/>
@@ -637,7 +637,7 @@
    
     <designColorConfigurations useDefaultColors="true" price="0" title="Secondary Color">
         <designColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <designColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColorConfiguration materialTemplateName="PFANZELT_TURQOISE1" isDefault="true" />
         <designColorConfiguration materialTemplateName="PFANZELT_GREY1" />
         <designColorConfiguration materialTemplateName="PFANZELT_GREY2"/>
@@ -649,7 +649,7 @@
 
     <designColor2Configurations useDefaultColors="true" price="0" title="Crane Arm Color">
         <designColor2Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor2Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor2Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor2Configuration materialTemplateName="PFANZELT_TURQOISE1" isDefault="true" />
         <designColor2Configuration materialTemplateName="PFANZELT_GREY1" />
         <designColor2Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -659,7 +659,7 @@
 
     <designColor3Configurations useDefaultColors="true" price="0" title="Crane Base COlor">
         <designColor3Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor3Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor3Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor3Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor3Configuration materialTemplateName="PFANZELT_GREY1" isDefault="true"/>
         <designColor3Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -670,7 +670,7 @@
 
     <designColor4Configurations useDefaultColors="true" price="0" title="Crane Platform Color" defaultColorIndex="1">
         <designColor4Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor4Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor4Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor4Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor4Configuration materialTemplateName="PFANZELT_GREY1" />
         <designColor4Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -680,7 +680,7 @@
 
     <rimColorConfigurations useDefaultColors="true" price="0">
         <rimColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <rimColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <rimColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <rimColorConfiguration materialTemplateName="PFANZELT_TURQOISE1" />
         <rimColorConfiguration materialTemplateName="PFANZELT_GREY1"/>
         <rimColorConfiguration materialTemplateName="PFANZELT_GREY2"/>

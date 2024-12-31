@@ -1065,7 +1065,7 @@
 
     <baseColorConfigurations useDefaultColors="true" price="0">
         <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <baseColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <baseColorConfiguration materialTemplateName="PFANZELT_TURQOISE1" isDefault="true" />
         <baseColorConfiguration materialTemplateName="PFANZELT_GREY1"/>
         <baseColorConfiguration materialTemplateName="PFANZELT_GREY2"/>
@@ -1077,7 +1077,7 @@
    
     <designColorConfigurations useDefaultColors="true" price="0" title="Crane Color">
         <designColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <designColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColorConfiguration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColorConfiguration materialTemplateName="PFANZELT_GREY1" />
         <designColorConfiguration materialTemplateName="PFANZELT_GREY2"/>
@@ -1087,7 +1087,7 @@
 
     <designColor2Configurations useDefaultColors="true" price="0" title="Frame Color" >
         <designColor2Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor2Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor2Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor2Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor2Configuration materialTemplateName="PFANZELT_GREY1" />
         <designColor2Configuration materialTemplateName="PFANZELT_GREY2" isDefault="true"/>
@@ -1099,7 +1099,7 @@
 
     <designColor3Configurations useDefaultColors="true" price="0" title="Roof Color" defaultColorIndex="5" defaultColorMaterialTemplateName="plasticPainted">
         <designColor3Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor3Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor3Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor3Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor3Configuration materialTemplateName="PFANZELT_GREY1" />
         <designColor3Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -1109,7 +1109,7 @@
 
     <designColor4Configurations useDefaultColors="true" price="0" title="Safety Frame Color">
         <designColor4Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor4Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor4Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor4Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor4Configuration materialTemplateName="PFANZELT_GREY1" isDefault="true" />
         <designColor4Configuration materialTemplateName="PFANZELT_GREY2"  />
@@ -1119,7 +1119,7 @@
 
     <designColor5Configurations useDefaultColors="true" price="0" title="Log Bunk &amp; Blades">
         <designColor5Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor5Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor5Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor5Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor5Configuration materialTemplateName="PFANZELT_GREY1"  />
         <designColor5Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -1129,7 +1129,7 @@
 
     <designColor6Configurations useDefaultColors="true" price="0" title="Details Color" defaultColorIndex="1" defaultColorMaterialTemplateName="calibratedMetallicPaint">
         <designColor6Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor6Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor6Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor6Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor6Configuration materialTemplateName="PFANZELT_GREY1"  />
         <designColor6Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -1140,7 +1140,7 @@
 
     <designColor7Configurations useDefaultColors="true" price="0" title="Grid Color" defaultColorIndex="8">
         <designColor7Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor7Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor7Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor7Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor7Configuration materialTemplateName="PFANZELT_GREY1"  isDefault="true" />
         <designColor7Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -1150,7 +1150,7 @@
 
     <designColor8Configurations useDefaultColors="true" price="0" title="Exhaust Color" defaultColorIndex="6" defaultColorMaterialTemplateName="metalPaintedOld">
         <designColor8Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor8Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor8Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor8Configuration materialTemplateName="PFANZELT_TURQOISE1" />
         <designColor8Configuration materialTemplateName="PFANZELT_GREY1" />
         <designColor8Configuration materialTemplateName="PFANZELT_GREY2"/>
@@ -1160,7 +1160,7 @@
 
     <rimColorConfigurations useDefaultColors="true" price="0">
         <rimColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <rimColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <rimColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <rimColorConfiguration materialTemplateName="PFANZELT_TURQOISE1"  />
         <rimColorConfiguration materialTemplateName="PFANZELT_GREY1"/>
         <rimColorConfiguration materialTemplateName="PFANZELT_GREY2"/>

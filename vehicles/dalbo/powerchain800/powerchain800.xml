@@ -703,27 +703,27 @@
 
     <baseColorConfigurations useDefaultColors="true" price="0" title="Frame Color">
         <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <baseColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <baseColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <baseColorConfiguration materialTemplateName="DALBO_BLUE1" isDefault="true" />
         <material materialSlotName="mainFrame_mat" materialTemplateUseColorOnly="true" />
     </baseColorConfigurations>
 
     <designColorConfigurations useDefaultColors="true" price="0" title="Chain Color">
         <designColorConfiguration materialTemplateName="GMNG_HELLABLACK" />
-        <designColorConfiguration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColorConfiguration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColorConfiguration materialTemplateName="DALBO_BLUE1" isDefault="true" />
         <material materialSlotName="chainLink_mat"/>
     </designColorConfigurations>
 
     <designColor2Configurations useDefaultColors="true" price="0" title="Seeder Tank Color" defaultColorIndex="14">
         <designColor2Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor2Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor2Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <material materialSlotName="seederBox_mat"/>
     </designColor2Configurations>
 
     <designColor3Configurations useDefaultColors="true" price="0" title="Hose Color" defaultColorIndex="1">
         <designColor3Configuration materialTemplateName="GMNG_HELLABLACK" />
-        <designColor3Configuration materialTemplateName="GMNG_HELLAOLDBLACK" />
+        <designColor3Configuration materialTemplateName="GMNG_HELLABLACK_OLD" />
         <designColor3Configuration materialTemplateName="SHARED_BLUE3" isDefault="true"/>
         <material materialSlotName="hoses_mat"/>
     </designColor3Configurations>
