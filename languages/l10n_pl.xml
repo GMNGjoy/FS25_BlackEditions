@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>
+		<translationContributor>Lisek</translationContributor>
+	</translationContributors>	
+    <texts>
+        <text name="storeItem_batwing" text="BatWing MM8000"/>
+
+        <text name="color_hellaBlack" text="Bardzo czarny, ziomek!"/>
+        <text name="color_hellaOldBlack" text="Bardzo stary czarny"/>
+
+        <text name="configuration_valueExtension2x" text="Podwójne rozszerzenie"/> 
+        <text name="configuration_valueExtension10x" text="Ekstremalne rozszerzenie"/> 
+        <text name="configuration_valueExtension100x" text="Absurdalne rozszerzenie"/>
+
+        <text name="configuration_winchBlade" text="Wyciągarka i ostrze"/>
+        
+
+    </texts>
+</l10n>
